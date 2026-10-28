@@ -8,15 +8,14 @@ Experiment date: 28 October 2026. This repository preserves an unsuccessful expe
 
 | Model | Correct classifications | Accuracy |
 | --- | ---: | ---: |
-| Original GGUF in Bionic | 208 / 297 | 70.03% |
 | MLX base before training | 210 / 297 | 70.71% |
 | Same MLX base with adapter | 161 / 297 | 54.21% |
 
-The comparison that measures the adapter's effect is **MLX before versus MLX after: a decrease of 16.50 percentage points**. GGUF and MLX use different quantization formats and runtimes, so the Bionic result is context rather than the training control.
+The comparison is **the same MLX model before versus after fine tuning: a decrease of 16.50 percentage points**. Both runs used identical questions, system prompts, and requested generation settings.
 
 Validation token loss fell from **2.883 to 0.141**. General answers became repetitive on all three probes. Lower token loss did not mean better generated answers in this run.
 
-The original Bionic model and frozen MLX base weights were unchanged. The approximately 21 MB adapter remains a separate, unsuccessful candidate and is excluded from Git along with the model weights.
+The frozen MLX base weights were unchanged. The approximately 21 MB adapter remains a separate, unsuccessful candidate and is excluded from Git along with the model weights.
 
 ## Findings and conclusions
 

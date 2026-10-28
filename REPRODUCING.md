@@ -12,7 +12,7 @@ python3 verify_results.py
 
 The raw JSON results contain requests, responses, token usage, expected labels, and strict pass or fail judgments. The text files provide readable responses and mismatch lists. The report's numbers can be inspected without downloading any model.
 
-Historical JSON and YAML records retain absolute paths from the original machine. Fields such as `training_started: false` in preparation manifests describe the time that manifest was created; `experiment-status.json` and the training records describe the completed experiment. The checkout contains the scripts used for the original run plus documentation and evidence helpers added afterward.
+Historical JSON and YAML records retain absolute paths from the original machine. Fields such as `training_started: false` in preparation manifests describe the time that manifest was created; `experiment-status.json` and the training records describe the completed experiment. The evaluation script now defaults to the MLX model and the full suite. The recorded MLX inference requests and responses are preserved unchanged.
 
 ## Prepare a separate workspace
 
@@ -62,11 +62,11 @@ After training, explicitly opt into the experimental adapter to compare it:
 .venv/bin/python predict.py --adapter 'Where is my order?'
 ```
 
-The recorded adapter and model binaries are excluded from Git, so a fresh clone cannot run their saved checkpoints until weights are obtained or a new run is completed. This helper uses MLX directly and does not change Bionic.
+The recorded adapter and model binaries are excluded from Git, so a fresh clone cannot run their saved checkpoints until weights are obtained or a new run is completed. This helper uses MLX directly.
 
 ## Data provenance
 
 The committed JSONL files are the exact prepared training and validation splits. The complete upstream CSV is excluded. Its pinned download URL, SHA256, and original row indices are in `data/split-manifest.json` and `baseline-large-prompts.json`. To rebuild splits from source, use a separate folder and download the CSV to `evaluation-source/` first; the builders refuse to overwrite existing split and suite outputs.
 
-The source and transformations are described in [the data notice](data/NOTICE.txt). Model provenance and original weight checksums are retained in the model manifests; the original Bionic installation is not needed for the MLX workflow.
+The source and transformations are described in [the data notice](data/NOTICE.txt). MLX model provenance and weight checksums are retained in the model manifest. The workflow uses the downloaded and converted MLX model throughout.
 

@@ -25,7 +25,6 @@
     "assessment": "All three adapter responses are repetitive and unusable; base responses were coherent. Qualitative observation, not a broad general capability score."
   },
   "integrity": {
-    "original_bionic_weights_unchanged": true,
     "mlx_base_weights_unchanged": true,
     "adapter_matches_training_summary": true
   },

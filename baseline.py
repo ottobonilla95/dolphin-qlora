@@ -1,4 +1,4 @@
-"""Record original-model responses locally; rerun the same cases after tuning."""
+"""Evaluate the MLX training model before and after fine tuning."""
 import argparse
 from datetime import datetime, timezone
 import hashlib
@@ -64,14 +64,18 @@ def chat(endpoint, payload):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--model', default='dolphin3.0-llama3.1-8b')
+    parser.add_argument('--model', help='MLX model path, or an explicit API model identifier.')
     parser.add_argument('--endpoint', default='http://127.0.0.1:1234/v1')
     parser.add_argument('--prompt', help='Try one custom prompt instead of the fixed suite.')
     parser.add_argument('--label', default='original', help='Name this run, e.g. original or tuned.')
-    parser.add_argument('--suite', type=Path, default=ROOT / 'baseline-prompts.json')
-    parser.add_argument('--backend', choices=['api', 'mlx'], default='api')
+    parser.add_argument('--suite', type=Path, default=ROOT / 'baseline-large-prompts.json')
+    parser.add_argument('--backend', choices=['api', 'mlx'], default='mlx')
     parser.add_argument('--adapter-path', type=Path, help='Load an MLX adapter for the after-training evaluation.')
     args = parser.parse_args()
+    if args.model is None:
+        if args.backend == 'api':
+            parser.error('--backend api requires an explicit --model identifier')
+        args.model = str(ROOT / 'training-model/dolphin-4bit')
     suite_path = args.suite.resolve()
     suite_bytes = suite_path.read_bytes()
     suite = json.loads(suite_bytes)
@@ -86,7 +90,7 @@ def main():
         if args.adapter_path:
             parser.error('--adapter-path requires --backend mlx')
         infer = lambda payload: chat(args.endpoint, payload)
-        model_manifest = ROOT / 'model-copy.json'
+        model_manifest = None
     start = datetime.now(timezone.utc)
     results_dir = ROOT / 'results'
     results_dir.mkdir(exist_ok=True)
@@ -100,7 +104,7 @@ def main():
         'suite_sha256': hashlib.sha256(suite_bytes).hexdigest(),
         'suite_path': str(suite_path),
         'suite_provenance': suite.get('provenance'),
-        'source_model': json.loads(model_manifest.read_text()),
+        'source_model': json.loads(model_manifest.read_text()) if model_manifest else None,
         'settings': {'temperature': 0, 'seed': 42, 'stream': False},
         'notes': [
             'Each case uses a separate conversation. No forced JSON mode.',

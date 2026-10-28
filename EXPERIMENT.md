@@ -2,17 +2,15 @@
 
 ## Purpose and outcome
 
-The experiment tested whether local QLoRA fine tuning could improve an existing instruction model at classifying customer support messages. It also exercised a complete workflow: preserve the original model, establish a baseline, reserve evaluation examples, train a separate adapter, and compare generated answers.
+The experiment tested whether local QLoRA fine tuning could improve an existing instruction model at classifying customer support messages. It also exercised a complete workflow: establish a baseline on the exact MLX training model, reserve evaluation examples, train a separate adapter, and compare generated answers.
 
 The first adapter was unsuccessful. Classification accuracy fell from 70.71% to 54.21% on the fixed MLX evaluation, and the three general probes produced repetitive text. The cause of the regression has not been isolated.
 
 ## Model and hardware
 
-The original Bionic model was `Dolphin3.0-Llama3.1-8B-Q4_K_S.gguf`. A copy was preserved with a separate inode and a matching SHA256 checksum. Bionic continued using the original model.
+Training used a model converted from [dphn/Dolphin3.0-Llama3.1-8B](https://huggingface.co/dphn/Dolphin3.0-Llama3.1-8B), pinned at revision `f065677950dfc7e708d518d64cf1f5041ee007a0`. MLX conversion used 4-bit affine quantization with group size 64. That exact quantized MLX model was evaluated before training and again with the trained adapter.
 
-Training used a separate model converted from [dphn/Dolphin3.0-Llama3.1-8B](https://huggingface.co/dphn/Dolphin3.0-Llama3.1-8B), pinned at revision `f065677950dfc7e708d518d64cf1f5041ee007a0`. MLX conversion used 4-bit affine quantization with group size 64. This is a different quantization format from GGUF Q4_K_S, so the exact MLX model was evaluated before training.
-
-The tokenizer vocabulary, token IDs, chat template, and EOS token were preserved during conversion. The GGUF and Hugging Face chat templates also matched. The EOS token was `<|im_end|>`, ID 128256.
+The tokenizer vocabulary, token IDs, chat template, and EOS token were preserved during conversion from the Hugging Face model. The EOS token was `<|im_end|>`, ID 128256.
 
 The run used an Apple M5 Pro with 48 GiB unified memory, Python 3.13.15, MLX 0.32.4, MLX Metal 0.32.4, and MLX LM 0.32.2. Exact dependencies are in `requirements-lock.txt`.
 
@@ -36,7 +34,7 @@ The suite SHA256 is `acb762b389cd6bac8a1e2f850c2edc779e25235dd3cea3c7648000ccaaa
 
 Each example used a fresh conversation with temperature 0 and seed 42. Classification allowed 128 output tokens; general probes allowed 256. No forced JSON schema was used. A pass required the entire response to parse as JSON, contain exactly the key `intent`, and match the expected allowed label. A correct label inside a code fence therefore failed the strict check.
 
-The API and MLX runs explicitly supplied the saved system prompts. They did not inherit a particular Bionic conversation's system prompt. The before and after MLX runs had identical requests and suite hashes.
+Both MLX runs explicitly supplied the saved system prompts. The before and after runs had identical requests and suite hashes.
 
 The general system prompt was `You are Dolphin, a helpful AI assistant.` The classification system prompt, allowed labels, and all messages are retained in the suite and raw results.
 
@@ -76,7 +74,7 @@ Validation loss decreased from 2.882975 before training to 0.141368 after the fi
 
 ## Investigation after the regression
 
-The saved adapter reproduced the final validation loss to within approximately 1.5e-8 on reload. The base weights and original GGUF checksum still matched their recorded values. All 1,080 training conversation prefixes matched the corresponding generation prefixes.
+The saved adapter reproduced the final validation loss to within approximately 1.5e-8 on reload. The frozen MLX base weights still matched their recorded checksum. All 1,080 training conversation prefixes matched the corresponding generation prefixes.
 
 A diagnostic subset selected the first validation example per intent. These 27 examples are separate from the frozen final evaluation:
 
@@ -97,7 +95,7 @@ Greedy decoding without a KV cache reproduced the same answers for the three aud
 
 ## Conclusions and remaining hypotheses
 
-The measured conclusion is that this adapter regressed on the selected tasks. Generated validation accuracy and general probes would have exposed the problem earlier than monitoring loss alone. The original model remains the preferred model for this experiment.
+The measured conclusion is that this adapter regressed on the selected tasks. Generated validation accuracy and general probes would have exposed the problem earlier than monitoring loss alone. The MLX base without the adapter remains the preferred model for this experiment.
 
 Overly aggressive updates are a plausible explanation, not an established cause. The learning rate was 1e-4, compared with the installed MLX LM default of 1e-5. Adapting every eligible projection in eight blocks may also have made broader changes than necessary. A narrow classification-only objective may have contributed to degraded general answers. None of those variables was varied in a controlled comparison. The default configuration is a reference, not proof of an appropriate learning rate for this task. See the [MLX example configuration](https://github.com/ml-explore/mlx-lm/blob/main/examples/lora_config.yaml) and the installed version pinned in the lock file.
 
@@ -109,8 +107,6 @@ Only the first training run and read-only diagnostics were performed. The lower-
 
 | Evidence | File |
 | --- | --- |
-| Original 30-case API run | [Raw results](results/20261028T000342574774Z.json) |
-| Original 300-case API run | [Raw results](results/20261028T000935661961Z.json) |
 | MLX before training | [Raw results](results/20261028T002422930075Z.json) |
 | MLX after training | [Raw results](results/20261028T004036824182Z.json) |
 | Case gains and losses | [Comparison](results/training-001-comparison.json) |

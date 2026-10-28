@@ -21,7 +21,7 @@ def main():
     for source in ROOT.glob('*.py'):
         shutil.copy2(source, destination / source.name)
     for name in ('requirements-lock.txt', 'baseline-prompts.json',
-                 'baseline-large-prompts.json', 'model-copy.json', '.gitignore'):
+                 'baseline-large-prompts.json', '.gitignore'):
         shutil.copy2(ROOT / name, destination / name)
     for name in ('data', 'results', 'training-model', 'evaluation-source'):
         (destination / name).mkdir()

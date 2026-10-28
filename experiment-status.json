@@ -8,12 +8,6 @@
   "evaluation_suite": "/Users/otto/Local/study/fine-tune/baseline-large-prompts.json",
   "suite_sha256": "acb762b389cd6bac8a1e2f850c2edc779e25235dd3cea3c7648000ccaaae4a95",
   "baselines": {
-    "bionic_gguf": {
-      "record": "/Users/otto/Local/study/fine-tune/results/20261028T000935661961Z.json",
-      "correct": 208,
-      "total": 297,
-      "percent": 70.03
-    },
     "mlx_before_training": {
       "record": "/Users/otto/Local/study/fine-tune/results/20261028T002422930075Z.json",
       "correct": 210,
@@ -27,7 +21,7 @@
       "percent": 54.21
     }
   },
-  "comparison_note": "Same prompts and requested generation settings. Use the MLX baseline to measure adapter training changes; GGUF and MLX use different quantization and runtimes.",
+  "comparison_note": "Compare the exact same MLX base model before training and with its trained adapter, using identical prompts and requested generation settings.",
   "training_config": "/Users/otto/Local/study/fine-tune/train-config.yaml",
   "adapter_path": "/Users/otto/Local/study/fine-tune/adapters/intent-qlora-001",
   "training_started_utc": "2026-10-28T00:32:29.806222+00:00",
