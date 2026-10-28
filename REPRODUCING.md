@@ -5,8 +5,8 @@
 Clone the repository and run the standard-library evidence check:
 
 ```bash
-git clone git@github.com:ottobonilla95/dolphin-qlora-study.git
-cd dolphin-qlora-study
+git clone git@github.com:ottobonilla95/dolphin-qlora.git
+cd dolphin-qlora
 python3 verify_results.py
 ```
 
