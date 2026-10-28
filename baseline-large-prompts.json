@@ -1,0 +1,2690 @@
+{
+  "description": "Fixed pre-training evaluation: 270 Bitext examples, 27 original intent cases, 3 general cases.",
+  "label_source": "https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset",
+  "general_system": "You are Dolphin, a helpful AI assistant.",
+  "intent_system": "Classify the customer's message. Return exactly one JSON object with a single key, intent, and no other text. Choose one of these allowed intents: cancel_order, change_order, change_shipping_address, check_cancellation_fee, check_invoice, check_payment_methods, check_refund_policy, complaint, contact_customer_service, contact_human_agent, create_account, delete_account, delivery_options, delivery_period, edit_account, get_invoice, get_refund, newsletter_subscription, payment_issue, place_order, recover_password, registration_problems, review, set_up_shipping_address, switch_account, track_order, track_refund.",
+  "allowed_intents": [
+    "cancel_order",
+    "change_order",
+    "change_shipping_address",
+    "check_cancellation_fee",
+    "check_invoice",
+    "check_payment_methods",
+    "check_refund_policy",
+    "complaint",
+    "contact_customer_service",
+    "contact_human_agent",
+    "create_account",
+    "delete_account",
+    "delivery_options",
+    "delivery_period",
+    "edit_account",
+    "get_invoice",
+    "get_refund",
+    "newsletter_subscription",
+    "payment_issue",
+    "place_order",
+    "recover_password",
+    "registration_problems",
+    "review",
+    "set_up_shipping_address",
+    "switch_account",
+    "track_order",
+    "track_refund"
+  ],
+  "cases": [
+    {
+      "id": "bitext-delivery_period-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "give me information about the shippong periods",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13156,
+      "source_flags": "BLMZ"
+    },
+    {
+      "id": "bitext-check_invoice-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "is it possible tocheck invoice #37777",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 4012,
+      "source_flags": "BIQZ"
+    },
+    {
+      "id": "bitext-switch_account-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna switch to the platinum accoun",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 24110,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-delete_account-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "could you help me cancel a gold account?",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 10979,
+      "source_flags": "BILP"
+    },
+    {
+      "id": "bitext-track_refund-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need to check the rebate curent status how to do it",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 26848,
+      "source_flags": "BCILQZ"
+    },
+    {
+      "id": "bitext-create_account-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "new premium acount",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10800,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-delivery_options-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "is it possibleto place an order from {{Delivery City}}",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 12053,
+      "source_flags": "BIQSZ"
+    },
+    {
+      "id": "bitext-switch_account-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help using the standard cacount",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 24467,
+      "source_flags": "BZ"
+    },
+    {
+      "id": "bitext-cancel_order-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "order cancelation",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 711,
+      "source_flags": "BK"
+    },
+    {
+      "id": "bitext-edit_account-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need help to modify my user information",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 14044,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-delivery_period-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "could i check when my package is gonna arive",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 12945,
+      "source_flags": "BILPQZ"
+    },
+    {
+      "id": "bitext-check_refund_policy-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i need help checking in what cases can i ask  to be refunded",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6003,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-delivery_period-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I am looking for shipping periods",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13331,
+      "source_flags": "BEL"
+    },
+    {
+      "id": "bitext-cancel_order-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can you help me camceling the purchase I made?",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 860,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-recover_password-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "would it be possible to retrieve my profile access key?",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20107,
+      "source_flags": "BILP"
+    },
+    {
+      "id": "bitext-cancel_order-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance cancelinv purchase {{Order Number}}",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 959,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-track_order-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "order 00123842current status",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 24979,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i have got to check the cvancellation penalty how to do it",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3416,
+      "source_flags": "BCILQZ"
+    },
+    {
+      "id": "bitext-track_refund-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where can I check if there is anything enw on the refund?",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 26569,
+      "source_flags": "BIZ"
+    },
+    {
+      "id": "bitext-review-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "needhelp submitting some feedback",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 22238,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-change_order-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can uhelp me to delete an item from purchase {{Order Number}}",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1435,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-contact_human_agent-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "could uhelp me chat with somebody",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 8961,
+      "source_flags": "BILPQ"
+    },
+    {
+      "id": "bitext-check_invoice-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need help to give a quick look at the invoice #85632",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 4371,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-delete_account-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "deleting platinum accoumt",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11673,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-review-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "assistance sending some efedback about a product",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 22427,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "show me what paymentpayment modalities are accepted",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5840,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i want assistance checking what paytment methods ya accept",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5067,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-payment_issue-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can ya help me to solve atrouble with payments",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18859,
+      "source_flags": "BILMQZ"
+    },
+    {
+      "id": "bitext-complaint-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "makie complaint",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7641,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-get_refund-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "how long till i receive a rebate",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 16584,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-check_refund_policy-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I want helpto see your refund policy",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6538,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-delivery_options-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i have got to see the delivery methods how do i do it",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 12876,
+      "source_flags": "BCILQ"
+    },
+    {
+      "id": "bitext-get_invoice-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "ehlp me get bill #12588",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 15859,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-get_refund-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where to get a compensation?",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 16606,
+      "source_flags": "BIL"
+    },
+    {
+      "id": "bitext-newsletter_subscription-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help me sign up to ur newsleter",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 17474,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-newsletter_subscription-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna know about unsubscribimg from ur newsletter",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 17543,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-review-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "uhave a way to send a reivew",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 21923,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-newsletter_subscription-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can I receive your newesletter?",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 17096,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-change_shipping_address-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna know more about updating my delivery address",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2028,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-delivery_options-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "give me information about the shipping methods",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 11916,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-check_refund_policy-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "assistance ot check how long reimbursements take",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6386,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-change_order-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna edit purchgase {{Order Number}}",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1279,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-registration_problems-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need help regadring my sign-up",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 21491,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-switch_account-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "swithcing to pro account",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 24101,
+      "source_flags": "BKZ"
+    },
+    {
+      "id": "bitext-payment_issue-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i  have got to inform of troubles with online payment",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18265,
+      "source_flags": "BLMQZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "do you have a mail to get in touch with cusomer assistance?",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 7917,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-get_refund-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna ask for rebates",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 16799,
+      "source_flags": "BLMQ"
+    },
+    {
+      "id": "bitext-newsletter_subscription-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can uhelp me cancel the corporate newsetter subscription",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 17492,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-get_invoice-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "getting billsfrom {{Person Name}}",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 14958,
+      "source_flags": "BKLMZ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need to submit a new shipping adress",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23618,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-track_order-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "ned to locate order {{Order Number}} how could i do it",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25204,
+      "source_flags": "BCILPQZ"
+    },
+    {
+      "id": "bitext-change_order-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "correct order370795561790",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1758,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-delete_account-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i no longer make us of my pro account need help deleting it",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11691,
+      "source_flags": "BCELQZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can you help me to list your paymnet modalities?",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5705,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "withdrawal hcarge",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3214,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-edit_account-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i have got to correct the personal details",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 14426,
+      "source_flags": "BLMQ"
+    },
+    {
+      "id": "bitext-payment_issue-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "support regarding online pamyent",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18230,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-change_shipping_address-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "there are troubles editing my shipping addrss",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2729,
+      "source_flags": "BLMZ"
+    },
+    {
+      "id": "bitext-review-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can you help me leqving my feedback about your products?",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 22207,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-complaint-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I am unhappy with your services, how do I lodge a complaint?",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7067,
+      "source_flags": "BCIL"
+    },
+    {
+      "id": "bitext-delete_account-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "clsoe standard account",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11269,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-edit_account-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "modify pro accunt",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 14326,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-newsletter_subscription-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i have got to see the status of my newsletter subvscription",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 17466,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-review-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I am calling to submit feedback for an service",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 22802,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-delete_account-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "cancel {{Account Category}} acount",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11420,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna see the withdrawalcharge",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 2977,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-cancel_order-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "cancel purchase113542617735902",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 779,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-track_order-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "when will I receive ordered {{Order Number}}?",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25278,
+      "source_flags": "BI"
+    },
+    {
+      "id": "bitext-payment_issue-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "report a trouble wuth payments",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18743,
+      "source_flags": "BLMZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help speaking with custgomer service",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8026,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-get_invoice-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i try to getinvoice #85632",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 15022,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-registration_problems-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna notify of an signup issue can uhelp me",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 21352,
+      "source_flags": "BCILQZ"
+    },
+    {
+      "id": "bitext-registration_problems-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I'm experiencing errors registering what do i have to do",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 21842,
+      "source_flags": "BCEILMQ"
+    },
+    {
+      "id": "bitext-delivery_period-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "how long does the shipping take",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13256,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-complaint-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help me to lodgea complaint against ur business",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7010,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "is it possible to see the available pyment options",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5815,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-delete_account-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "delete gold acvount",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11463,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance seeing the termination charge",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3036,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-get_invoice-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "getting invoices from one purchases ago",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 15633,
+      "source_flags": "BKM"
+    },
+    {
+      "id": "bitext-delivery_period-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "what is the delivery period for this order",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13777,
+      "source_flags": "BIQ"
+    },
+    {
+      "id": "bitext-recover_password-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I need information abvout lost passwords",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20051,
+      "source_flags": "BLMZ"
+    },
+    {
+      "id": "bitext-contact_human_agent-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i do not understand anything ya say direct tome someone",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 9670,
+      "source_flags": "BCELQZ"
+    },
+    {
+      "id": "bitext-change_shipping_address-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help to modiy the address",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2717,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-review-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "assistance to write an opinionabout your company",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 22167,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-delete_account-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where can i get information about an {{Account Type}} account deletion",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11405,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-get_refund-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance getting refunds of moey",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 15923,
+      "source_flags": "BMQZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "how to contact cutsomer assistance?",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8811,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-change_order-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "remove something from order",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1911,
+      "source_flags": "BK"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "withrdawal penalty",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3349,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-complaint-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "the experience with ur brand was bad file a claim",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7698,
+      "source_flags": "BCLQ"
+    },
+    {
+      "id": "bitext-contact_human_agent-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "speak  to person",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 9027,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-payment_issue-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I can't make payments, assistance informing of problems",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18497,
+      "source_flags": "BCLM"
+    },
+    {
+      "id": "bitext-contact_human_agent-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help talking with someone",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 9494,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-cancel_order-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i have a question about cancelling oorder {{Order Number}}",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 1,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-cancel_order-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "would you give me information about cancelling orders?",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 166,
+      "source_flags": "BIMP"
+    },
+    {
+      "id": "bitext-track_order-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can uhelp me seethe ETA of order {{Order Number}}",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25658,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-check_refund_policy-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "hlp seeing ur money back guarantee",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6268,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-check_invoice-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "checking invoice from nine months ago",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 4673,
+      "source_flags": "BKM"
+    },
+    {
+      "id": "bitext-place_order-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "earning something",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19224,
+      "source_flags": "BKL"
+    },
+    {
+      "id": "bitext-recover_password-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I do not know what I need tp do to recover my user pwd",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20708,
+      "source_flags": "BELQZ"
+    },
+    {
+      "id": "bitext-switch_account-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need help switching to my new profile",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 23997,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-check_invoice-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "seein invoices from {{Person Name}}",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 4413,
+      "source_flags": "BKLMZ"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "are there early termination penalties",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3269,
+      "source_flags": "BILMQ"
+    },
+    {
+      "id": "bitext-recover_password-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help me retsore my pass",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20712,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I have an error entering another hsipping address",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23560,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help submitting a different delivery address",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23052,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-place_order-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i dont know how to order several of ur article",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19166,
+      "source_flags": "BLMQ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "shipping addtess trouble",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23606,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-contact_human_agent-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I need assistanc chatting with a live agent",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 9806,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-track_order-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where is purechase {{Order Number}}",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25534,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-get_invoice-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance getting the invokce #12588",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 15014,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-check_invoice-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i want assistance to locatr my bill #00108",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 4125,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can uhelp me checking the payment optgions",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5722,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-newsletter_subscription-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "unsubscribe to your company newspetter",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 17186,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "ehlp to check ur allowed payment modalities",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5562,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-create_account-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i havent signed up yet help me creatin a customer profile",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10836,
+      "source_flags": "BCLQZ"
+    },
+    {
+      "id": "bitext-track_order-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "check my last parcel eta",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25644,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-contact_human_agent-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "is it possible to talk with asn operator?",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 9762,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-get_refund-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can ya help me get reimbursements",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 16566,
+      "source_flags": "BILMQ"
+    },
+    {
+      "id": "bitext-check_refund_policy-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "show me in what casescan i request my money back",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6583,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-complaint-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need help filing a reclamation",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7815,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-recover_password-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want assistance recovering my account PIN code",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20428,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna enter my shipping address",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23310,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-recover_password-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "question about a lost PIN",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20211,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-contact_human_agent-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want assistance contacting an operator",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 9678,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-edit_account-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "correct information on freeaccount",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 13966,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-switch_account-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "switching user",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 23965,
+      "source_flags": "BK"
+    },
+    {
+      "id": "bitext-newsletter_subscription-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance unsubscribing from your newsletterr",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 17313,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-switch_account-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "use gold acdcount",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 24169,
+      "source_flags": "BKZ"
+    },
+    {
+      "id": "bitext-change_order-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need to edit order113542617735902 how to do it",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1180,
+      "source_flags": "BCILQZ"
+    },
+    {
+      "id": "bitext-change_shipping_address-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "how can i edit tne address",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2815,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help me calling customer assistance",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8385,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "there is an issue setting up a shipping address",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23456,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-get_invoice-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I'm tryingto download my invoice from {{Person Name}}",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 15340,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-get_refund-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help obtaining a refund of money",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 16191,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-review-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "writing review for ur company",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 21903,
+      "source_flags": "BKLQ"
+    },
+    {
+      "id": "bitext-delivery_options-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where can i check themethods for shipment",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 12740,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-change_order-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i cant add some items to order370795561790",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1067,
+      "source_flags": "BMNQZ"
+    },
+    {
+      "id": "bitext-check_invoice-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "seeing bil #00108",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 4285,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-track_refund-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "tracking refund",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 25996,
+      "source_flags": "BK"
+    },
+    {
+      "id": "bitext-track_refund-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want assistance to know if there are any news on my rebate",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 26805,
+      "source_flags": "BLMQ"
+    },
+    {
+      "id": "bitext-change_shipping_address-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance modifying the delivery addres",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2962,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-change_order-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help swapping an article of purchase113542617735902",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1363,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I ned to speak to customer service",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8038,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-place_order-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "making purchase",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19692,
+      "source_flags": "BK"
+    },
+    {
+      "id": "bitext-switch_account-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "using freemium accouny",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 23912,
+      "source_flags": "BKZ"
+    },
+    {
+      "id": "bitext-get_refund-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I need help demanding an reimbursement",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 16015,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-change_shipping_address-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can ya give me information about an addres update",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2233,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-place_order-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can you help me toorder a few of your product?",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19820,
+      "source_flags": "BILMZ"
+    },
+    {
+      "id": "bitext-recover_password-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "problem with the pass recovery",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20837,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-contact_human_agent-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I don't know how I can cotnact somebody",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 8943,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-delivery_options-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I want assistance seeing the options for shipping",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 12565,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-complaint-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "lodging claim",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7296,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-delete_account-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I want assistance to remove a premium accojnt",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11509,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-edit_account-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "correctdata on gold account",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 14137,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-create_account-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I'd like informatoin about opening platinum accounts",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10402,
+      "source_flags": "BLMPQZ"
+    },
+    {
+      "id": "bitext-edit_account-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "modifying info on freemium accoumt",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 14776,
+      "source_flags": "BKLQZ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "the new delivery address isn't valid, how to do it?",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23675,
+      "source_flags": "BCIL"
+    },
+    {
+      "id": "bitext-place_order-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "makepurchase",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19665,
+      "source_flags": "BKZ"
+    },
+    {
+      "id": "bitext-registration_problems-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "inform of error opening profile",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 20967,
+      "source_flags": "BKL"
+    },
+    {
+      "id": "bitext-create_account-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "another freemium accounmt for father",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10385,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-track_refund-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I don't know how I could track the compensation",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 26862,
+      "source_flags": "BLP"
+    },
+    {
+      "id": "bitext-registration_problems-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want hepl regarding my signup",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 20991,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-contact_human_agent-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "contactingassistant",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 9025,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-get_refund-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I don't know what I have to do to demad my money back",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 16647,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-create_account-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance to open  a {{Account Category}} account for my dad",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10096,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-switch_account-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can uhlep me use the {{Account Type}} account",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 24799,
+      "source_flags": "BIQZ"
+    },
+    {
+      "id": "bitext-get_invoice-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "mail em the bill #37777",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 15383,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-track_order-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i want help to track purchase00123842",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25056,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-track_order-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "check purcase {{Order Number}} current status",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25713,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-change_shipping_address-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "have a problem with a shpiping address modification",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2614,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-place_order-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance acquiring an item",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19770,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-create_account-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i do not know how i can create a standard account",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10845,
+      "source_flags": "BEQ"
+    },
+    {
+      "id": "bitext-newsletter_subscription-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help cancelling my corporate newslettersubscription",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 17223,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-delete_account-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "have a question about the termination of a Freemiumaccount",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11105,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-change_shipping_address-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I chose a wrong delivery addreds",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2361,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-check_refund_policy-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "is it possible to seeur money back policy",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6552,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-registration_problems-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "is it possible to report an error with registrations",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 21086,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-registration_problems-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I cannot create a user profile, help reporting signup issues",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 21311,
+      "source_flags": "BCELMN"
+    },
+    {
+      "id": "bitext-edit_account-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "edit standard accont",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 13907,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-delete_account-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "remove pro accoint",
+      "expected_intent": "delete_account",
+      "source_row_index_zero_based": 11505,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-recover_password-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "have problems wkth a forgotten password",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20476,
+      "source_flags": "BMQZ"
+    },
+    {
+      "id": "bitext-switch_account-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "change to premium acount",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 24275,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-delivery_period-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where to see hwen my delivery is going to arrive?",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13520,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-payment_issue-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I get an error when I try to check out",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18771,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-change_order-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i camt update order {{Order Number}}",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1858,
+      "source_flags": "BLNQZ"
+    },
+    {
+      "id": "bitext-get_refund-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "reimbusre {{Currency Symbol}}{{Refund Amount}}",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 16055,
+      "source_flags": "BKLMZ"
+    },
+    {
+      "id": "bitext-delivery_period-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna know more about delivery period find some information",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13009,
+      "source_flags": "BCQ"
+    },
+    {
+      "id": "bitext-edit_account-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "update personal data",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 14539,
+      "source_flags": "BKL"
+    },
+    {
+      "id": "bitext-delivery_period-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i want assistance seeing howlong the shipment takes",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13467,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-get_invoice-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I have got to get the ibll #37777, how could I do it?",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 15418,
+      "source_flags": "BCILPZ"
+    },
+    {
+      "id": "bitext-check_refund_policy-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "check under which circumstances can I request refunds",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6811,
+      "source_flags": "BL"
+    },
+    {
+      "id": "bitext-track_refund-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want assistance checking the restitution status",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 26684,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-track_refund-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can uhelp me see my reimbursement current status",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 26096,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-delivery_period-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can you show me when will myparcel arrive?",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13869,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-recover_password-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help to restore the password of ym user profile",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20654,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-place_order-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "buy artilce",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19736,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-delivery_options-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need help checking what shipping options are available",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 12114,
+      "source_flags": "BLMQ"
+    },
+    {
+      "id": "bitext-payment_issue-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where can i report errors with onlinepayment",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18145,
+      "source_flags": "BILMQZ"
+    },
+    {
+      "id": "bitext-place_order-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "is it possible to acquire some items",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19498,
+      "source_flags": "BILMQ"
+    },
+    {
+      "id": "bitext-delivery_options-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "do ya ship toMexico",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 12162,
+      "source_flags": "BILQSZ"
+    },
+    {
+      "id": "bitext-change_order-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help switching some products oforder {{Order Number}}",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1855,
+      "source_flags": "BLMZ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "howq can i set up the secondary delivery address",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23527,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-create_account-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "register",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10231,
+      "source_flags": "BK"
+    },
+    {
+      "id": "bitext-edit_account-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can uhelp me change the data on my profile",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 14482,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-recover_password-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wluld you give me information about the key retrieval?",
+      "expected_intent": "recover_password",
+      "source_row_index_zero_based": 20367,
+      "source_flags": "BILPZ"
+    },
+    {
+      "id": "bitext-cancel_order-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i dont want ordr {{Order Number}} could uhelp me cancel it",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 384,
+      "source_flags": "BCINPQZ"
+    },
+    {
+      "id": "bitext-complaint-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I'm trying to make a consumer clain",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7357,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-complaint-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "could uhelp me lodge an consumer claim",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7859,
+      "source_flags": "BILPQZ"
+    },
+    {
+      "id": "bitext-newsletter_subscription-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i cannot unsubscribe from urnewsletter",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 16983,
+      "source_flags": "BELQZ"
+    },
+    {
+      "id": "bitext-check_invoice-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can you help me check bill #12588?",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 3925,
+      "source_flags": "BIL"
+    },
+    {
+      "id": "bitext-cancel_order-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I need help to cancel purchase370795561790",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 374,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-get_refund-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "is it possible to request rteimbursements",
+      "expected_intent": "get_refund",
+      "source_row_index_zero_based": 15905,
+      "source_flags": "BILMQZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "what is thecustomer support mail",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8815,
+      "source_flags": "BILQZ"
+    },
+    {
+      "id": "bitext-track_order-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want assistance locating purchase {{Order Number}}",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25706,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "deliveryaddress issue",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23556,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-get_invoice-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "send me invoice #37777",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 15775,
+      "source_flags": "BKL"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can ushow me hte cancellation fees",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3704,
+      "source_flags": "BIMQZ"
+    },
+    {
+      "id": "bitext-check_refund_policy-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "am I entitled to a reimbursement?",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6860,
+      "source_flags": "BIL"
+    },
+    {
+      "id": "bitext-track_refund-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i expect a reimbursxement of {{Currency Symbol}}{{Refund Amount}}",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 25987,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-delivery_options-07",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "assistance seeing what shipment methods you offer",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 12806,
+      "source_flags": "BLM"
+    },
+    {
+      "id": "bitext-track_refund-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where to track the reimbursement",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 25902,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-place_order-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where do I earn seberal products?",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 18991,
+      "source_flags": "BILMZ"
+    },
+    {
+      "id": "bitext-complaint-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "customer reclamation against your organzation",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 7125,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-contact_human_agent-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can you help me contact osmeone?",
+      "expected_intent": "contact_human_agent",
+      "source_row_index_zero_based": 9044,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-check_invoice-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "find ionvoice #12588",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 3930,
+      "source_flags": "BZ"
+    },
+    {
+      "id": "bitext-cancel_order-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i cannot pay for these product how do i cancel the order",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 791,
+      "source_flags": "BCEILNQZ"
+    },
+    {
+      "id": "bitext-newsletter_subscription-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help receiving your newsletter",
+      "expected_intent": "newsletter_subscription",
+      "source_row_index_zero_based": 16987,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-registration_problems-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "sypport creating user",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 21221,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-place_order-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help purchasing several producgs",
+      "expected_intent": "place_order",
+      "source_row_index_zero_based": 19662,
+      "source_flags": "BLMQZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help seeing at what time I can reach customer servie",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8726,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-create_account-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "create pro accountfor wife",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10135,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-change_shipping_address-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i dont know what i need to do to correct theaddress",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2473,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-delivery_period-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help to chck how soon can i expect my order",
+      "expected_intent": "delivery_period",
+      "source_row_index_zero_based": 13210,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-edit_account-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "updating {{Account Type}} accojnt",
+      "expected_intent": "edit_account",
+      "source_row_index_zero_based": 13963,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna call cystomer assistance",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8740,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-check_refund_policy-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "could ya help mw check ur reimbursement policy",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6129,
+      "source_flags": "BILPQZ"
+    },
+    {
+      "id": "bitext-set_up_shipping_address-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "my new shipipng address is invalid i need help",
+      "expected_intent": "set_up_shipping_address",
+      "source_row_index_zero_based": 23567,
+      "source_flags": "BCLQZ"
+    },
+    {
+      "id": "bitext-track_refund-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i cannot track my restitution",
+      "expected_intent": "track_refund",
+      "source_row_index_zero_based": 26704,
+      "source_flags": "BELNQ"
+    },
+    {
+      "id": "bitext-check_refund_policy-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "are charges of services refundable",
+      "expected_intent": "check_refund_policy",
+      "source_row_index_zero_based": 6306,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-check_invoice-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I don't know how I could see the invoice #12588",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 4733,
+      "source_flags": "BLP"
+    },
+    {
+      "id": "bitext-contact_customer_service-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "ucstomer service mail address",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8440,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-cancel_order-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want asistance canceling order {{Order Number}}",
+      "expected_intent": "cancel_order",
+      "source_row_index_zero_based": 415,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-review-09",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i want help leaving an opinion about ur services",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 21931,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-track_order-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i need help checking the status or purchase {{Order Number}}",
+      "expected_intent": "track_order",
+      "source_row_index_zero_based": 25309,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-payment_issue-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need help solving a payment error",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18273,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-delivery_options-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "d uship to {{Delivery City}}",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 11947,
+      "source_flags": "BILQSZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need help seeing your available payment option",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5107,
+      "source_flags": "BLQZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "can I pay with PayPal?",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 4940,
+      "source_flags": "BIL"
+    },
+    {
+      "id": "bitext-change_shipping_address-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "where could i update the adress",
+      "expected_intent": "change_shipping_address",
+      "source_row_index_zero_based": 2173,
+      "source_flags": "BILPQZ"
+    },
+    {
+      "id": "bitext-create_account-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "have a problem with creating a Premiumaccount",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10544,
+      "source_flags": "BQZ"
+    },
+    {
+      "id": "bitext-payment_issue-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "need assistance reporting an issue with pyments",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18023,
+      "source_flags": "BMQZ"
+    },
+    {
+      "id": "bitext-check_payment_methods-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "I don't know how I can see your accepted paymentg options",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5757,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-review-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna leave a comment how do i do it",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 22622,
+      "source_flags": "BCILQ"
+    },
+    {
+      "id": "bitext-registration_problems-01",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i want assikstance notifying of problems with a registration",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 21809,
+      "source_flags": "BLMQZ"
+    },
+    {
+      "id": "bitext-contact_customer_service-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "ya have a free of charge customer support number",
+      "expected_intent": "contact_customer_service",
+      "source_row_index_zero_based": 8134,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-payment_issue-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "my card was declined report payment issues",
+      "expected_intent": "payment_issue",
+      "source_row_index_zero_based": 18476,
+      "source_flags": "BCLMQ"
+    },
+    {
+      "id": "bitext-delivery_options-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "check delivery options",
+      "expected_intent": "delivery_options",
+      "source_row_index_zero_based": 12813,
+      "source_flags": "BK"
+    },
+    {
+      "id": "bitext-check_payment_methods-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "list accepted payment methods",
+      "expected_intent": "check_payment_methods",
+      "source_row_index_zero_based": 5462,
+      "source_flags": "BKL"
+    },
+    {
+      "id": "bitext-create_account-10",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "opdn gold account",
+      "expected_intent": "create_account",
+      "source_row_index_zero_based": 10335,
+      "source_flags": "BKLZ"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "will you show me the early exit charges?",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3249,
+      "source_flags": "BILMP"
+    },
+    {
+      "id": "bitext-get_invoice-04",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "want help downloading the invoice #00108",
+      "expected_intent": "get_invoice",
+      "source_row_index_zero_based": 14911,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-check_invoice-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "wanna see bill #85632",
+      "expected_intent": "check_invoice",
+      "source_row_index_zero_based": 4527,
+      "source_flags": "BLQ"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-03",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "help checking theearly exit charge",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3880,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-change_order-02",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "modify order113542617735902",
+      "expected_intent": "change_order",
+      "source_row_index_zero_based": 1526,
+      "source_flags": "BLZ"
+    },
+    {
+      "id": "bitext-registration_problems-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "report registration issues",
+      "expected_intent": "registration_problems",
+      "source_row_index_zero_based": 21594,
+      "source_flags": "BKM"
+    },
+    {
+      "id": "bitext-check_cancellation_fee-05",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "what is the fee for breaking the contract",
+      "expected_intent": "check_cancellation_fee",
+      "source_row_index_zero_based": 3243,
+      "source_flags": "BILQ"
+    },
+    {
+      "id": "bitext-review-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "comment for your services",
+      "expected_intent": "review",
+      "source_row_index_zero_based": 22670,
+      "source_flags": "BKL"
+    },
+    {
+      "id": "bitext-complaint-08",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "how to file an reclamation?",
+      "expected_intent": "complaint",
+      "source_row_index_zero_based": 6983,
+      "source_flags": "BILZ"
+    },
+    {
+      "id": "bitext-switch_account-06",
+      "kind": "intent",
+      "origin": "bitext",
+      "prompt": "i do not know how i could switch tto the standard account",
+      "expected_intent": "switch_account",
+      "source_row_index_zero_based": 24243,
+      "source_flags": "BEPQZ"
+    },
+    {
+      "id": "intent-01",
+      "kind": "intent",
+      "prompt": "I ordered the wrong thing ten minutes ago. Please stop the order entirely.",
+      "expected_intent": "cancel_order",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-02",
+      "kind": "intent",
+      "prompt": "Keep my order, but make it three blue mugs instead of two.",
+      "expected_intent": "change_order",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-03",
+      "kind": "intent",
+      "prompt": "My order has my old address. Can you send it to my new flat instead?",
+      "expected_intent": "change_shipping_address",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-04",
+      "kind": "intent",
+      "prompt": "Before I cancel, will you charge me a cancellation fee?",
+      "expected_intent": "check_cancellation_fee",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-05",
+      "kind": "intent",
+      "prompt": "There is a delivery charge on invoice 814 that I do not understand. Can you explain that charge?",
+      "expected_intent": "check_invoice",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-06",
+      "kind": "intent",
+      "prompt": "Can I pay using PayPal, or do you only take cards?",
+      "expected_intent": "check_payment_methods",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-07",
+      "kind": "intent",
+      "prompt": "What are the rules and time limit for getting a refund on an opened item?",
+      "expected_intent": "check_refund_policy",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-08",
+      "kind": "intent",
+      "prompt": "Your employee was rude to me yesterday. I want to make a formal complaint.",
+      "expected_intent": "complaint",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-09",
+      "kind": "intent",
+      "prompt": "What email address should I use to contact customer service?",
+      "expected_intent": "contact_customer_service",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-10",
+      "kind": "intent",
+      "prompt": "Please transfer this chat to a real person now.",
+      "expected_intent": "contact_human_agent",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-11",
+      "kind": "intent",
+      "prompt": "I am new here. How do I create my first account?",
+      "expected_intent": "create_account",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-12",
+      "kind": "intent",
+      "prompt": "Permanently delete my account. I no longer want to use your service.",
+      "expected_intent": "delete_account",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-13",
+      "kind": "intent",
+      "prompt": "Do you offer collection from a shop as well as home delivery?",
+      "expected_intent": "delivery_options",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-14",
+      "kind": "intent",
+      "prompt": "If I buy something today, how many working days does standard delivery usually take?",
+      "expected_intent": "delivery_period",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-15",
+      "kind": "intent",
+      "prompt": "I need to update the email address on my existing account.",
+      "expected_intent": "edit_account",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-16",
+      "kind": "intent",
+      "prompt": "Please send me a PDF invoice for my last purchase.",
+      "expected_intent": "get_invoice",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-17",
+      "kind": "intent",
+      "prompt": "The item arrived broken. I want my money back, please.",
+      "expected_intent": "get_refund",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-18",
+      "kind": "intent",
+      "prompt": "Please sign me up for your email newsletter.",
+      "expected_intent": "newsletter_subscription",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-19",
+      "kind": "intent",
+      "prompt": "Checkout keeps rejecting my card even though my bank says the card is fine.",
+      "expected_intent": "payment_issue",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-20",
+      "kind": "intent",
+      "prompt": "I have chosen the red backpack. How do I submit an order for it?",
+      "expected_intent": "place_order",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-21",
+      "kind": "intent",
+      "prompt": "I cannot remember my password. How can I reset it?",
+      "expected_intent": "recover_password",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-22",
+      "kind": "intent",
+      "prompt": "The sign-up form crashes every time I click Create account. I have not managed to register.",
+      "expected_intent": "registration_problems",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-23",
+      "kind": "intent",
+      "prompt": "Where can I leave a five-star review of the product I bought?",
+      "expected_intent": "review",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-24",
+      "kind": "intent",
+      "prompt": "I have never saved a delivery address. How do I add my first one?",
+      "expected_intent": "set_up_shipping_address",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-25",
+      "kind": "intent",
+      "prompt": "I have a personal account and a business account. How do I switch to the business one?",
+      "expected_intent": "switch_account",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-26",
+      "kind": "intent",
+      "prompt": "I bought a headset last week. Where is that parcel right now?",
+      "expected_intent": "track_order",
+      "origin": "handwritten"
+    },
+    {
+      "id": "intent-27",
+      "kind": "intent",
+      "prompt": "You approved my refund five days ago, but the money has not arrived. What is its status?",
+      "expected_intent": "track_refund",
+      "origin": "handwritten"
+    },
+    {
+      "id": "general-01",
+      "kind": "general",
+      "prompt": "Explain what a Python dictionary is to a beginner. Use one short code example.",
+      "origin": "handwritten"
+    },
+    {
+      "id": "general-02",
+      "kind": "general",
+      "prompt": "I bought 3 notebooks costing 4 euro each and paid with 20 euro. How much change should I get? Explain briefly.",
+      "origin": "handwritten"
+    },
+    {
+      "id": "general-03",
+      "kind": "general",
+      "prompt": "Rewrite this message politely in no more than 30 words: Your parcel is late. We are checking with the courier. We will update you tomorrow.",
+      "origin": "handwritten"
+    }
+  ],
+  "provenance": {
+    "dataset": "bitext/Bitext-customer-support-llm-chatbot-training-dataset",
+    "revision": "430d1a89bd93bd1fa23c16f29dd53e73f0087443",
+    "filename": "Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv",
+    "url": "https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset/resolve/430d1a89bd93bd1fa23c16f29dd53e73f0087443/Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv",
+    "license": "cdla-sharing-1.0",
+    "seed": 42,
+    "source_sha256": "6f81102b0100b97b8468eb04368033a23206bf1fde9d53500d5806ec1001a434",
+    "sampling": "10 unique instructions per intent; prefer varied wording, include typo and colloquial tags; exclude W-tagged examples.",
+    "limitations": [
+      "Public synthetic examples may have been seen during the original model training.",
+      "Source labels can be ambiguous; inspect mismatches before treating them as model errors.",
+      "Exact normalised evaluation instructions must be excluded from future training and validation.",
+      "Near paraphrases may remain elsewhere in the source; apply grouping when preparing training data."
+    ]
+  }
+}

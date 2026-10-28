@@ -1,0 +1,5 @@
+{
+  "original_bionic_weights_unchanged": true,
+  "mlx_base_weights_unchanged": true,
+  "adapter_matches_training_summary": true
+}

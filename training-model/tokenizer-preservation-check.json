@@ -1,0 +1,8 @@
+{
+  "vocabulary_and_token_ids_identical": true,
+  "chat_template_identical": true,
+  "eos_token_id_identical": true,
+  "source_eos_token_id": 128256,
+  "converted_eos_token_id": 128256,
+  "vocabulary_size": 128258
+}

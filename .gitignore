@@ -1,0 +1,21 @@
+# Local runtimes and caches
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+
+# Model and adapter weights remain local. Metadata and logs are tracked.
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+baseline-model/
+training-model/dolphin-4bit/
+
+# The full upstream CSV can be downloaded from the pinned source URL.
+evaluation-source/*.csv
+*.download
+

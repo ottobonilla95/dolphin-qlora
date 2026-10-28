@@ -1,0 +1,828 @@
+{
+  "purpose": "Diagnostic validation subset, not the frozen test suite.",
+  "selection": "First validation example per intent, 27 total.",
+  "checkpoints": [
+    {
+      "step": 0,
+      "classification": [
+        {
+          "expected": "check_refund_policy",
+          "response": "{\"intent\": \"check_refund_policy\"}",
+          "correct": true
+        },
+        {
+          "expected": "change_order",
+          "response": "{\"intent\": \"place_order\"}",
+          "correct": false
+        },
+        {
+          "expected": "contact_human_agent",
+          "response": "{\"intent\": \"contact_human_agent\"}",
+          "correct": true
+        },
+        {
+          "expected": "change_shipping_address",
+          "response": "{\"intent\": \"change_order\"}",
+          "correct": false
+        },
+        {
+          "expected": "get_invoice",
+          "response": "{\"intent\": \"get_invoice\"}",
+          "correct": true
+        },
+        {
+          "expected": "switch_account",
+          "response": "{\"intent\": \"switch_account\"}",
+          "correct": true
+        },
+        {
+          "expected": "payment_issue",
+          "response": "{\"intent\": \"payment_issue\"}",
+          "correct": true
+        },
+        {
+          "expected": "review",
+          "response": "{\"intent\": \"review\"}",
+          "correct": true
+        },
+        {
+          "expected": "registration_problems",
+          "response": "{\"intent\": \"registration_problems\"}",
+          "correct": true
+        },
+        {
+          "expected": "check_invoice",
+          "response": "{\"intent\": \"get_invoice\"}",
+          "correct": false
+        },
+        {
+          "expected": "complaint",
+          "response": "{\"intent\": \"contact_customer_service\"}",
+          "correct": false
+        },
+        {
+          "expected": "delete_account",
+          "response": "{\"intent\": \"cancel_order\"}",
+          "correct": false
+        },
+        {
+          "expected": "edit_account",
+          "response": "{\"intent\": \"edit_account\"}",
+          "correct": true
+        },
+        {
+          "expected": "newsletter_subscription",
+          "response": "{\"intent\": \"unsubscribe_newsletter\"}",
+          "correct": false
+        },
+        {
+          "expected": "cancel_order",
+          "response": "{\"intent\": \"cancel_order\"}",
+          "correct": true
+        },
+        {
+          "expected": "delivery_period",
+          "response": "{\"intent\": \"track_order\"}",
+          "correct": false
+        },
+        {
+          "expected": "track_order",
+          "response": "{\"intent\": \"track_order\"}",
+          "correct": true
+        },
+        {
+          "expected": "contact_customer_service",
+          "response": "{\"intent\": \"contact_customer_service\"}",
+          "correct": true
+        },
+        {
+          "expected": "set_up_shipping_address",
+          "response": "{\"intent\": \"change_shipping_address\"}",
+          "correct": false
+        },
+        {
+          "expected": "recover_password",
+          "response": "{\"intent\": \"recover_password\"}",
+          "correct": true
+        },
+        {
+          "expected": "track_refund",
+          "response": "{\"intent\": \"check_refund\"}",
+          "correct": false
+        },
+        {
+          "expected": "delivery_options",
+          "response": "{\"intent\": \"check_shipping_options\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_cancellation_fee",
+          "response": "{\"intent\": \"check_cancellation_fee\"}",
+          "correct": true
+        },
+        {
+          "expected": "get_refund",
+          "response": "{\"intent\": \"get_refund\"}",
+          "correct": true
+        },
+        {
+          "expected": "place_order",
+          "response": "{\"intent\": \"place_order\"}",
+          "correct": true
+        },
+        {
+          "expected": "check_payment_methods",
+          "response": "{\"intent\": \"check_payment_methods\"}",
+          "correct": true
+        },
+        {
+          "expected": "create_account",
+          "response": "{\"intent\": \"create_account\"}",
+          "correct": true
+        }
+      ],
+      "general": [
+        {
+          "id": "general-01",
+          "response": "A Python dictionary is a data structure that stores a collection of key-value pairs. It's like a container where you can store and retrieve data using a unique key. Dictionaries are mutable, meaning you can add, remove, or modify key-value pairs after the dictionary is created.\n\nHere's a simple example of a dictionary"
+        },
+        {
+          "id": "general-02",
+          "response": "The total cost of the notebooks is 3 * 4 = 12 euros. If you paid with 20 euros, your change should be 20 - 12 = 8 euros."
+        },
+        {
+          "id": "general-03",
+          "response": "Dear customer, we regret the delay in your parcel delivery. Our team is currently investigating the issue and will provide an update tomorrow. Thank you for your patience."
+        }
+      ],
+      "correct": 17
+    },
+    {
+      "step": 180,
+      "classification": [
+        {
+          "expected": "check_refund_policy",
+          "response": "{\"intent\":\"switch_refundundblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "change_order",
+          "response": "{\"intent\":\"undblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "contact_human_agent",
+          "response": "{\"intent\":\"contact_refundundblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "change_shipping_address",
+          "response": "{\"intent\":\"undblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "get_invoice",
+          "response": "{\"intent\":\"get_c_refblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "switch_account",
+          "response": "{\"intent\":\"switch_refblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "payment_issue",
+          "response": "{\"intent\":\"undblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "review",
+          "response": "{\"intent\":\"und\"}",
+          "correct": false
+        },
+        {
+          "expected": "registration_problems",
+          "response": "{\"intent\":\"switch_refswitchblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_invoice",
+          "response": "{\"intent\":\"get_cundblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "complaint",
+          "response": "{\"intent\":\"switch_refswitchblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "delete_account",
+          "response": "{\"intent\":\"undblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "edit_account",
+          "response": "{\"intent\":\"switch_refswitchund\"}",
+          "correct": false
+        },
+        {
+          "expected": "newsletter_subscription",
+          "response": "{\"intent\":\"und\"}",
+          "correct": false
+        },
+        {
+          "expected": "cancel_order",
+          "response": "{\"intent\":\"undblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "delivery_period",
+          "response": "{\"intent\":\"und\"}",
+          "correct": false
+        },
+        {
+          "expected": "track_order",
+          "response": "{\"intent\":\"undblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "contact_customer_service",
+          "response": "{\"intent\":\"undblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "set_up_shipping_address",
+          "response": "{\"intent\":\"switch_refswitchnewsletter\"}",
+          "correct": false
+        },
+        {
+          "expected": "recover_password",
+          "response": "{\"intent\":\"get_refund\"}",
+          "correct": false
+        },
+        {
+          "expected": "track_refund",
+          "response": "{\"intent\":\"undblemsblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "delivery_options",
+          "response": "{\"intent\":\"getundblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_cancellation_fee",
+          "response": "{\"intent\":\"und\"}",
+          "correct": false
+        },
+        {
+          "expected": "get_refund",
+          "response": "{\"intent\":\"undblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "place_order",
+          "response": "{\"intent\":\"switch_refnewsletter\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_payment_methods",
+          "response": "{\"intent\":\"switch_refswitchblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "create_account",
+          "response": "{\"intent\":\"switch_refnewsletter\"}",
+          "correct": false
+        }
+      ],
+      "general": [
+        {
+          "id": "general-01",
+          "response": "_subscription\"}_invoice\"}_refblems\"}_refblems\"}_invoice\"}_invoice\"}_refblems\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}_invoice\"}_invoice\"}_invoice"
+        },
+        {
+          "id": "general-02",
+          "response": "_subscription\"}_invoice\"}_invoice\"}_refblems\"}_refblems\"}_refblems\"}_refblems\"}_invoice\"}_invoice\"}\":\"\"}\":\"\"}_invoice\"}_invoice\"}\":\"\"}_invoice\"}_invoice\"}\":\"\"}_invoice\"}_invoice\"}\":\"\"}_invoice\"}_invoice\"}\":\"\"}_invoice\"}_invoice\"}\":\"\"}_invoice\"}_invoice\"}\":\"\"}_invoice\"}"
+        },
+        {
+          "id": "general-03",
+          "response": "_invoice\"}_invoice\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}\":\"\"}_invoice\"}_invoice\"}"
+        }
+      ],
+      "correct": 0
+    },
+    {
+      "step": 360,
+      "classification": [
+        {
+          "expected": "check_refund_policy",
+          "response": "{\"intent\":\"check_refund_policy\"}",
+          "correct": true
+        },
+        {
+          "expected": "change_order",
+          "response": "{\"intent\":\"track_refund\"}",
+          "correct": false
+        },
+        {
+          "expected": "contact_human_agent",
+          "response": "{\"intent\":\"cancel_order\"}",
+          "correct": false
+        },
+        {
+          "expected": "change_shipping_address",
+          "response": "{\"intent\":\"edit_account\"}",
+          "correct": false
+        },
+        {
+          "expected": "get_invoice",
+          "response": "{\"intent\":\"check_invoice\"}",
+          "correct": false
+        },
+        {
+          "expected": "switch_account",
+          "response": "{\"intent\":\"switch_account\"}",
+          "correct": true
+        },
+        {
+          "expected": "payment_issue",
+          "response": "{\"intent\":\"delivery_period\"}",
+          "correct": false
+        },
+        {
+          "expected": "review",
+          "response": "{\"intent\":\"delivery_period\"}",
+          "correct": false
+        },
+        {
+          "expected": "registration_problems",
+          "response": "{\"intent\":\"registration_refplaint\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_invoice",
+          "response": "{\"intent\":\"check_invoice\"}",
+          "correct": true
+        },
+        {
+          "expected": "complaint",
+          "response": "{\"intent\":\"track_refund\"}",
+          "correct": false
+        },
+        {
+          "expected": "delete_account",
+          "response": "{\"intent\":\"cancel_account\"}",
+          "correct": false
+        },
+        {
+          "expected": "edit_account",
+          "response": "{\"intent\":\"edit_account\"}",
+          "correct": true
+        },
+        {
+          "expected": "newsletter_subscription",
+          "response": "{\"intent\":\"newsletter_subscription\"}",
+          "correct": true
+        },
+        {
+          "expected": "cancel_order",
+          "response": "{\"intent\":\"cancel_order\"}",
+          "correct": true
+        },
+        {
+          "expected": "delivery_period",
+          "response": "{\"intent\":\"track_order\"}",
+          "correct": false
+        },
+        {
+          "expected": "track_order",
+          "response": "{\"intent\":\"track_order\"}",
+          "correct": true
+        },
+        {
+          "expected": "contact_customer_service",
+          "response": "{\"intent\":\"track_refund\"}",
+          "correct": false
+        },
+        {
+          "expected": "set_up_shipping_address",
+          "response": "{\"intent\":\"delivery_refplaintblems\"}",
+          "correct": false
+        },
+        {
+          "expected": "recover_password",
+          "response": "{\"intent\":\"recover_account_fee\"}",
+          "correct": false
+        },
+        {
+          "expected": "track_refund",
+          "response": "{\"intent\":\"check_refund\"}",
+          "correct": false
+        },
+        {
+          "expected": "delivery_options",
+          "response": "{\"intent\":\"check_payment_methods\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_cancellation_fee",
+          "response": "{\"intent\":\"check_cancellation_fee\"}",
+          "correct": true
+        },
+        {
+          "expected": "get_refund",
+          "response": "{\"intent\":\"delivery_period\"}",
+          "correct": false
+        },
+        {
+          "expected": "place_order",
+          "response": "{\"intent\":\"delivery_period\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_payment_methods",
+          "response": "{\"intent\":\"check_payment_methods\"}",
+          "correct": true
+        },
+        {
+          "expected": "create_account",
+          "response": "{\"intent\":\"create_account\"}",
+          "correct": true
+        }
+      ],
+      "general": [
+        {
+          "id": "general-01",
+          "response": "blemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblems"
+        },
+        {
+          "id": "general-02",
+          "response": "blemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsplaintblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblems"
+        },
+        {
+          "id": "general-03",
+          "response": "blemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblemsblems"
+        }
+      ],
+      "correct": 10
+    },
+    {
+      "step": 540,
+      "classification": [
+        {
+          "expected": "check_refund_policy",
+          "response": "{\"intent\":\"check_refund_policy\"}",
+          "correct": true
+        },
+        {
+          "expected": "change_order",
+          "response": "{\"intent\":\"delivery_options\"}",
+          "correct": false
+        },
+        {
+          "expected": "contact_human_agent",
+          "response": "{\"intent\":\"contact_human_agent\"}",
+          "correct": true
+        },
+        {
+          "expected": "change_shipping_address",
+          "response": "{\"intent\":\"get_fee_subscription\"}",
+          "correct": false
+        },
+        {
+          "expected": "get_invoice",
+          "response": "{\"intent\":\"get_invoice\"}",
+          "correct": true
+        },
+        {
+          "expected": "switch_account",
+          "response": "{\"intent\":\"switch_account\"}",
+          "correct": true
+        },
+        {
+          "expected": "payment_issue",
+          "response": "{\"intent\":\"get_fee\"}",
+          "correct": false
+        },
+        {
+          "expected": "review",
+          "response": "{\"intent\":\"review\"}",
+          "correct": true
+        },
+        {
+          "expected": "registration_problems",
+          "response": "{\"intent\":\"registration_problems\"}",
+          "correct": true
+        },
+        {
+          "expected": "check_invoice",
+          "response": "{\"intent\":\"get_invoice\"}",
+          "correct": false
+        },
+        {
+          "expected": "complaint",
+          "response": "{\"intent\":\"get_refund\"}",
+          "correct": false
+        },
+        {
+          "expected": "delete_account",
+          "response": "{\"intent\":\"delete_account\"}",
+          "correct": true
+        },
+        {
+          "expected": "edit_account",
+          "response": "{\"intent\":\"get_subscription\"}",
+          "correct": false
+        },
+        {
+          "expected": "newsletter_subscription",
+          "response": "{\"intent\":\"newsletter_subscription\"}",
+          "correct": true
+        },
+        {
+          "expected": "cancel_order",
+          "response": "{\"intent\":\"get_fee_methods\"}",
+          "correct": false
+        },
+        {
+          "expected": "delivery_period",
+          "response": "{\"intent\":\"delivery_policy\"}",
+          "correct": false
+        },
+        {
+          "expected": "track_order",
+          "response": "{\"intent\":\"get_invoice\"}",
+          "correct": false
+        },
+        {
+          "expected": "contact_customer_service",
+          "response": "{\"intent\":\"get_human_service_policy\"}",
+          "correct": false
+        },
+        {
+          "expected": "set_up_shipping_address",
+          "response": "{\"intent\":\"delivery_options\"}",
+          "correct": false
+        },
+        {
+          "expected": "recover_password",
+          "response": "{\"intent\":\"recover_password\"}",
+          "correct": true
+        },
+        {
+          "expected": "track_refund",
+          "response": "{\"intent\":\"check_refund_policy\"}",
+          "correct": false
+        },
+        {
+          "expected": "delivery_options",
+          "response": "{\"intent\":\"check_payment_methods\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_cancellation_fee",
+          "response": "{\"intent\":\"check_cancellation_fee\"}",
+          "correct": true
+        },
+        {
+          "expected": "get_refund",
+          "response": "{\"intent\":\"get_refund\"}",
+          "correct": true
+        },
+        {
+          "expected": "place_order",
+          "response": "{\"intent\":\"delivery_options\"}",
+          "correct": false
+        },
+        {
+          "expected": "check_payment_methods",
+          "response": "{\"intent\":\"check_payment_methods\"}",
+          "correct": true
+        },
+        {
+          "expected": "create_account",
+          "response": "{\"intent\":\"create_account\"}",
+          "correct": true
+        }
+      ],
+      "general": [
+        {
+          "id": "general-01",
+          "response": "_subscription_subscription_subscription\"}_invoice_subscription_subscription\"}_invoice_subscription_subscription_subscription\"}_fee\"}_invoice_subscription_subscription_subscription\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription"
+        },
+        {
+          "id": "general-02",
+          "response": "intent_subscription_subscription\"}_invoice\"}_fee\"}_fee_subscription_subscription\"}_fee\"}_fee\"}_fee\"}_fee\"}_fee_subscription_subscription\"}_fee\"}_fee_subscription_subscription\"}_fee\"}_invoice\"}_fee\"}_fee_subscription_subscription\"}_fee\"}_invoice_subscription_subscription\"}_invoice_subscription_subscription\"}_fee\"}_invoice_subscription_subscription\"}_fee_subscription_subscription\"}_invoice_subscription_subscription\"}"
+        },
+        {
+          "id": "general-03",
+          "response": "_subscription_subscription_subscription_subscription_subscription\"}_fee_subscriptionblems_subscriptionblems_subscriptionblems_subscription_subscription_subscription_subscription_subscriptionblems_subscription_subscription_subscription_subscriptionblems_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription_subscription"
+        }
+      ],
+      "correct": 13
+    }
+  ],
+  "token_audits": [
+    {
+      "expected": "cancel_order",
+      "teacher_forced_answer_mean_loss": 0.4630124568939209,
+      "teacher_forced_tokens": [
+        {
+          "target_token": "{\"",
+          "predicted_token": "{\"",
+          "target_probability": 1.0,
+          "loss": 0.0
+        },
+        {
+          "target_token": "intent",
+          "predicted_token": "intent",
+          "target_probability": 0.9999942779541016,
+          "loss": 5.722029527532868e-06
+        },
+        {
+          "target_token": "\":\"",
+          "predicted_token": "\":\"",
+          "target_probability": 0.9998757839202881,
+          "loss": 0.00012420836719684303
+        },
+        {
+          "target_token": "cancel",
+          "predicted_token": "get",
+          "target_probability": 0.024950120598077774,
+          "loss": 3.6908767223358154
+        },
+        {
+          "target_token": "_order",
+          "predicted_token": "_order",
+          "target_probability": 0.9871643781661987,
+          "loss": 0.01291870791465044
+        },
+        {
+          "target_token": "\"}",
+          "predicted_token": "\"}",
+          "target_probability": 0.999840259552002,
+          "loss": 0.0001597276859683916
+        },
+        {
+          "target_token": "<|im_end|>",
+          "predicted_token": "<|im_end|>",
+          "target_probability": 0.9999946355819702,
+          "loss": 5.364403477869928e-06
+        },
+        {
+          "target_token": "\n",
+          "predicted_token": "\n",
+          "target_probability": 0.999990701675415,
+          "loss": 9.298280929215252e-06
+        }
+      ],
+      "uncached_greedy_response": "{\"intent\":\"get_fee_methods\"}"
+    },
+    {
+      "expected": "track_order",
+      "teacher_forced_answer_mean_loss": 0.3704141080379486,
+      "teacher_forced_tokens": [
+        {
+          "target_token": "{\"",
+          "predicted_token": "{\"",
+          "target_probability": 1.0,
+          "loss": 0.0
+        },
+        {
+          "target_token": "intent",
+          "predicted_token": "intent",
+          "target_probability": 0.9999935626983643,
+          "loss": 6.437280717364047e-06
+        },
+        {
+          "target_token": "\":\"",
+          "predicted_token": "\":\"",
+          "target_probability": 0.9999544620513916,
+          "loss": 4.5536911784438416e-05
+        },
+        {
+          "target_token": "track",
+          "predicted_token": "get",
+          "target_probability": 0.052253589034080505,
+          "loss": 2.9516468048095703
+        },
+        {
+          "target_token": "_order",
+          "predicted_token": "_order",
+          "target_probability": 0.9884938597679138,
+          "loss": 0.01157284714281559
+        },
+        {
+          "target_token": "\"}",
+          "predicted_token": "\"}",
+          "target_probability": 0.9999674558639526,
+          "loss": 3.2543604902457446e-05
+        },
+        {
+          "target_token": "<|im_end|>",
+          "predicted_token": "<|im_end|>",
+          "target_probability": 0.9999947547912598,
+          "loss": 5.245195097813848e-06
+        },
+        {
+          "target_token": "\n",
+          "predicted_token": "\n",
+          "target_probability": 0.9999966621398926,
+          "loss": 3.3378546504536644e-06
+        }
+      ],
+      "uncached_greedy_response": "{\"intent\":\"get_invoice\"}"
+    },
+    {
+      "expected": "contact_human_agent",
+      "teacher_forced_answer_mean_loss": 0.03370874375104904,
+      "teacher_forced_tokens": [
+        {
+          "target_token": "{\"",
+          "predicted_token": "{\"",
+          "target_probability": 0.9999996423721313,
+          "loss": 3.576278118089249e-07
+        },
+        {
+          "target_token": "intent",
+          "predicted_token": "intent",
+          "target_probability": 0.9999936819076538,
+          "loss": 6.318072337307967e-06
+        },
+        {
+          "target_token": "\":\"",
+          "predicted_token": "\":\"",
+          "target_probability": 0.9987624883651733,
+          "loss": 0.0012382944114506245
+        },
+        {
+          "target_token": "contact",
+          "predicted_token": "contact",
+          "target_probability": 0.8097610473632812,
+          "loss": 0.21101604402065277
+        },
+        {
+          "target_token": "_human",
+          "predicted_token": "_human",
+          "target_probability": 0.9535925984382629,
+          "loss": 0.0475187674164772
+        },
+        {
+          "target_token": "_agent",
+          "predicted_token": "_agent",
+          "target_probability": 0.957556962966919,
+          "loss": 0.04337005317211151
+        },
+        {
+          "target_token": "\"}",
+          "predicted_token": "\"}",
+          "target_probability": 0.9997783303260803,
+          "loss": 0.0002217047003796324
+        },
+        {
+          "target_token": "<|im_end|>",
+          "predicted_token": "<|im_end|>",
+          "target_probability": 0.9999990463256836,
+          "loss": 9.536738616588991e-07
+        },
+        {
+          "target_token": "\n",
+          "predicted_token": "\n",
+          "target_probability": 0.9999938011169434,
+          "loss": 6.198863957251888e-06
+        }
+      ],
+      "uncached_greedy_response": "{\"intent\":\"contact_human_agent\"}"
+    }
+  ],
+  "findings": {
+    "validation_subset_passes_by_step": {
+      "0": 17,
+      "180": 0,
+      "360": 10,
+      "540": 13
+    },
+    "observations": [
+      "Severe degradation was present by the first saved checkpoint at step 180; accuracy partially recovered later.",
+      "Sampled wrong labels also occur on training examples, as recorded in the reload check; ordinary train-only memorization is not a sufficient explanation.",
+      "Most JSON syntax tokens have nearly unit probability. Incorrect label decisions can be diluted by averaging loss across syntax, label continuations and delimiters.",
+      "Teacher forcing supplies correct previous answer tokens, whereas generated answers continue from the model\u2019s own tokens.",
+      "Uncached greedy decoding agrees with cached generation for all three audited examples; this does not suggest a generation-cache-specific cause.",
+      "Tokenizer preservation, matching prompt prefixes, unchanged base weights, and saved-adapter reload have been checked previously."
+    ],
+    "hypotheses_not_proven": [
+      "The 1e-4 learning rate, ten times installed MLX-LM\u2019s default of 1e-5, may be too aggressive for this setup.",
+      "Adapting every eligible linear projection in the last eight blocks may have changed the model more broadly than needed.",
+      "A narrow classification-only training objective may contribute to degraded general behavior."
+    ],
+    "recommended_controlled_next_experiment": {
+      "start": "Fresh frozen base and newly initialized adapters; do not resume failed adapter 001.",
+      "first_change_only": "Reduce learning_rate from 1e-4 to 1e-5, holding other settings fixed for attribution.",
+      "monitor": "Generated validation classification accuracy, invalid-label rate, and general-answer probes at short intervals; loss is secondary.",
+      "later_if_needed": "Test q_proj/v_proj-only adapters in a separate experiment. Audit labels and run a small training-set fit check if basic learning remains poor.",
+      "test_policy": "Choose settings using validation examples, not the frozen final test suite.",
+      "status": "Proposal only; no additional training performed."
+    }
+  }
+}

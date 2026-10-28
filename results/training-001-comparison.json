@@ -1,0 +1,789 @@
+{
+  "outcome": "regression",
+  "before_record": "/Users/otto/Local/study/fine-tune/results/20261028T002422930075Z.json",
+  "after_record": "/Users/otto/Local/study/fine-tune/results/20261028T004036824182Z.json",
+  "suite_sha256": "acb762b389cd6bac8a1e2f850c2edc779e25235dd3cea3c7648000ccaaae4a95",
+  "same_model_runtime_prompts_and_generation_settings": true,
+  "classification": {
+    "total": 297,
+    "before_correct": 210,
+    "after_correct": 161,
+    "before_accuracy_percent": 70.71,
+    "after_accuracy_percent": 54.21,
+    "delta_percentage_points": -16.5,
+    "gained_cases": 29,
+    "lost_cases": 78
+  },
+  "json_format": {
+    "before_valid_json": 293,
+    "after_valid_json": 297,
+    "before_valid_schema": 273,
+    "after_valid_schema": 246
+  },
+  "general_questions": {
+    "count": 3,
+    "assessment": "All three adapter responses are repetitive and unusable; base responses were coherent. Qualitative observation, not a broad general capability score."
+  },
+  "integrity": {
+    "original_bionic_weights_unchanged": true,
+    "mlx_base_weights_unchanged": true,
+    "adapter_matches_training_summary": true
+  },
+  "reload_diagnostic": "/Users/otto/Local/study/fine-tune/results/training-001-reload-check.json",
+  "recommendation": "Keep the frozen base model as the default. Preserve adapter 001 as an unsuccessful experiment. Investigate training configuration and generation on validation examples before another run. Cause not established.",
+  "changes": {
+    "gained": [
+      {
+        "id": "bitext-check_refund_policy-05",
+        "expected_intent": "check_refund_policy",
+        "prompt": "i need help checking in what cases can i ask  to be refunded",
+        "before": "{\"intent\": \"check_refund\"}",
+        "after": "{\"intent\":\"check_refund_policy\"}"
+      },
+      {
+        "id": "bitext-contact_human_agent-06",
+        "expected_intent": "contact_human_agent",
+        "prompt": "could uhelp me chat with somebody",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"contact_human_agent\"}"
+      },
+      {
+        "id": "bitext-check_invoice-05",
+        "expected_intent": "check_invoice",
+        "prompt": "need help to give a quick look at the invoice #85632",
+        "before": "{\"intent\": \"get_invoice\"}",
+        "after": "{\"intent\":\"check_invoice\"}"
+      },
+      {
+        "id": "bitext-review-02",
+        "expected_intent": "review",
+        "prompt": "assistance sending some efedback about a product",
+        "before": "{\"intent\": \"complaint\"}",
+        "after": "{\"intent\":\"review\"}"
+      },
+      {
+        "id": "bitext-delivery_options-05",
+        "expected_intent": "delivery_options",
+        "prompt": "i have got to see the delivery methods how do i do it",
+        "before": "{\"intent\": \"check_delivery_methods\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-get_refund-10",
+        "expected_intent": "get_refund",
+        "prompt": "where to get a compensation?",
+        "before": "{\"intent\": \"check_refund_policy\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-newsletter_subscription-02",
+        "expected_intent": "newsletter_subscription",
+        "prompt": "wanna know about unsubscribimg from ur newsletter",
+        "before": "{\"intent\": \"unsubscribe_newsletter\"}",
+        "after": "{\"intent\":\"newsletter_subscription\"}"
+      },
+      {
+        "id": "bitext-get_refund-05",
+        "expected_intent": "get_refund",
+        "prompt": "wanna ask for rebates",
+        "before": "{\"intent\": \"check_cancellation_fee\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-newsletter_subscription-03",
+        "expected_intent": "newsletter_subscription",
+        "prompt": "can uhelp me cancel the corporate newsetter subscription",
+        "before": "{\"intent\": \"cancel_newsletter_subscription\"}",
+        "after": "{\"intent\":\"newsletter_subscription\"}"
+      },
+      {
+        "id": "bitext-get_invoice-09",
+        "expected_intent": "get_invoice",
+        "prompt": "getting billsfrom {{Person Name}}",
+        "before": "{\"intent\": \"get_refund\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-review-03",
+        "expected_intent": "review",
+        "prompt": "can you help me leqving my feedback about your products?",
+        "before": "{\"intent\": \"complaint\"}",
+        "after": "{\"intent\":\"review\"}"
+      },
+      {
+        "id": "bitext-newsletter_subscription-01",
+        "expected_intent": "newsletter_subscription",
+        "prompt": "unsubscribe to your company newspetter",
+        "before": "{\"intent\": \"unsubscribe_newsletter\"}",
+        "after": "{\"intent\":\"newsletter_subscription\"}"
+      },
+      {
+        "id": "bitext-get_refund-04",
+        "expected_intent": "get_refund",
+        "prompt": "can ya help me get reimbursements",
+        "before": "{\"intent\": \"check_refund\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-set_up_shipping_address-04",
+        "expected_intent": "set_up_shipping_address",
+        "prompt": "wanna enter my shipping address",
+        "before": "{\"intent\": \"change_shipping_address\"}",
+        "after": "{\"intent\":\"set_up_shipping_address\"}"
+      },
+      {
+        "id": "bitext-newsletter_subscription-06",
+        "expected_intent": "newsletter_subscription",
+        "prompt": "need assistance unsubscribing from your newsletterr",
+        "before": "{\"intent\": \"unsubscribe_newsletter\"}",
+        "after": "{\"intent\":\"newsletter_subscription\"}"
+      },
+      {
+        "id": "bitext-switch_account-07",
+        "expected_intent": "switch_account",
+        "prompt": "use gold acdcount",
+        "before": "{\"intent\": \"create_account\"}",
+        "after": "{\"intent\":\"switch_account\"}"
+      },
+      {
+        "id": "bitext-get_refund-09",
+        "expected_intent": "get_refund",
+        "prompt": "I need help demanding an reimbursement",
+        "before": "{\"intent\": \"check_refund\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-contact_human_agent-08",
+        "expected_intent": "contact_human_agent",
+        "prompt": "I don't know how I can cotnact somebody",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"contact_human_agent\"}"
+      },
+      {
+        "id": "bitext-delete_account-03",
+        "expected_intent": "delete_account",
+        "prompt": "I want assistance to remove a premium accojnt",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"delete_account\"}"
+      },
+      {
+        "id": "bitext-contact_human_agent-07",
+        "expected_intent": "contact_human_agent",
+        "prompt": "contactingassistant",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"contact_human_agent\"}"
+      },
+      {
+        "id": "bitext-switch_account-01",
+        "expected_intent": "switch_account",
+        "prompt": "can uhlep me use the {{Account Type}} account",
+        "before": "{\"intent\": \"create_account\"}",
+        "after": "{\"intent\":\"switch_account\"}"
+      },
+      {
+        "id": "bitext-newsletter_subscription-07",
+        "expected_intent": "newsletter_subscription",
+        "prompt": "help cancelling my corporate newslettersubscription",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"newsletter_subscription\"}"
+      },
+      {
+        "id": "bitext-switch_account-03",
+        "expected_intent": "switch_account",
+        "prompt": "change to premium acount",
+        "before": "{\"intent\": \"create_account\"}",
+        "after": "{\"intent\":\"switch_account\"}"
+      },
+      {
+        "id": "bitext-get_invoice-03",
+        "expected_intent": "get_invoice",
+        "prompt": "I have got to get the ibll #37777, how could I do it?",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-set_up_shipping_address-02",
+        "expected_intent": "set_up_shipping_address",
+        "prompt": "howq can i set up the secondary delivery address",
+        "before": "{\"intent\": \"change_shipping_address\"}",
+        "after": "{\"intent\":\"set_up_shipping_address\"}"
+      },
+      {
+        "id": "bitext-contact_human_agent-03",
+        "expected_intent": "contact_human_agent",
+        "prompt": "can you help me contact osmeone?",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"contact_human_agent\"}"
+      },
+      {
+        "id": "bitext-change_shipping_address-05",
+        "expected_intent": "change_shipping_address",
+        "prompt": "i dont know what i need to do to correct theaddress",
+        "before": "```json\n{\n  \"intent\": \"change_shipping_address\"\n}\n```",
+        "after": "{\"intent\":\"change_shipping_address\"}"
+      },
+      {
+        "id": "bitext-delivery_options-02",
+        "expected_intent": "delivery_options",
+        "prompt": "d uship to {{Delivery City}}",
+        "before": "{\"intent\": \"change_shipping_address\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "intent-04",
+        "expected_intent": "check_cancellation_fee",
+        "prompt": "Before I cancel, will you charge me a cancellation fee?",
+        "before": "```json\n{\n  \"intent\": \"check_cancellation_fee\"\n}\n```",
+        "after": "{\"intent\":\"check_cancellation_fee\"}"
+      }
+    ],
+    "lost": [
+      {
+        "id": "bitext-delivery_period-02",
+        "expected_intent": "delivery_period",
+        "prompt": "give me information about the shippong periods",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-cancel_order-10",
+        "expected_intent": "cancel_order",
+        "prompt": "order cancelation",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_fee_policy\"}"
+      },
+      {
+        "id": "bitext-delivery_period-07",
+        "expected_intent": "delivery_period",
+        "prompt": "I am looking for shipping periods",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-cancel_order-03",
+        "expected_intent": "cancel_order",
+        "prompt": "can you help me camceling the purchase I made?",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-cancel_order-05",
+        "expected_intent": "cancel_order",
+        "prompt": "need assistance cancelinv purchase {{Order Number}}",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-track_order-07",
+        "expected_intent": "track_order",
+        "prompt": "order 00123842current status",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-payment_issue-06",
+        "expected_intent": "payment_issue",
+        "prompt": "can ya help me to solve atrouble with payments",
+        "before": "{\"intent\": \"payment_issue\"}",
+        "after": "{\"intent\":\"get_payment_methods\"}"
+      },
+      {
+        "id": "bitext-review-06",
+        "expected_intent": "review",
+        "prompt": "uhave a way to send a reivew",
+        "before": "{\"intent\": \"review\"}",
+        "after": "{\"intent\":\"get_fee_subscription\"}"
+      },
+      {
+        "id": "bitext-change_shipping_address-06",
+        "expected_intent": "change_shipping_address",
+        "prompt": "wanna know more about updating my delivery address",
+        "before": "{\"intent\": \"change_shipping_address\"}",
+        "after": "{\"intent\":\"get_orderundplaint_policy\"}"
+      },
+      {
+        "id": "bitext-change_order-06",
+        "expected_intent": "change_order",
+        "prompt": "wanna edit purchgase {{Order Number}}",
+        "before": "{\"intent\": \"change_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-contact_customer_service-07",
+        "expected_intent": "contact_customer_service",
+        "prompt": "do you have a mail to get in touch with cusomer assistance?",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-track_order-05",
+        "expected_intent": "track_order",
+        "prompt": "ned to locate order {{Order Number}} how could i do it",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-check_cancellation_fee-07",
+        "expected_intent": "check_cancellation_fee",
+        "prompt": "withdrawal hcarge",
+        "before": "{\"intent\": \"check_cancellation_fee\"}",
+        "after": "{\"intent\":\"get_fee\"}"
+      },
+      {
+        "id": "bitext-edit_account-05",
+        "expected_intent": "edit_account",
+        "prompt": "i have got to correct the personal details",
+        "before": "{\"intent\": \"edit_account\"}",
+        "after": "{\"intent\":\"change_account\"}"
+      },
+      {
+        "id": "bitext-payment_issue-07",
+        "expected_intent": "payment_issue",
+        "prompt": "support regarding online pamyent",
+        "before": "{\"intent\": \"payment_issue\"}",
+        "after": "{\"intent\":\"check_payment_methods\"}"
+      },
+      {
+        "id": "bitext-cancel_order-02",
+        "expected_intent": "cancel_order",
+        "prompt": "cancel purchase113542617735902",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_fee_methods\"}"
+      },
+      {
+        "id": "bitext-track_order-08",
+        "expected_intent": "track_order",
+        "prompt": "when will I receive ordered {{Order Number}}?",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"delivery_policy\"}"
+      },
+      {
+        "id": "bitext-registration_problems-05",
+        "expected_intent": "registration_problems",
+        "prompt": "I'm experiencing errors registering what do i have to do",
+        "before": "{\"intent\": \"registration_problems\"}",
+        "after": "{\"intent\":\"get_human_agent\"}"
+      },
+      {
+        "id": "bitext-delivery_period-05",
+        "expected_intent": "delivery_period",
+        "prompt": "how long does the shipping take",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-delivery_period-04",
+        "expected_intent": "delivery_period",
+        "prompt": "what is the delivery period for this order",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-delete_account-06",
+        "expected_intent": "delete_account",
+        "prompt": "where can i get information about an {{Account Type}} account deletion",
+        "before": "{\"intent\": \"delete_account\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-cancel_order-04",
+        "expected_intent": "cancel_order",
+        "prompt": "i have a question about cancelling oorder {{Order Number}}",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_fee_policy\"}"
+      },
+      {
+        "id": "bitext-cancel_order-07",
+        "expected_intent": "cancel_order",
+        "prompt": "would you give me information about cancelling orders?",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-track_order-02",
+        "expected_intent": "track_order",
+        "prompt": "can uhelp me seethe ETA of order {{Order Number}}",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"delivery_policy\"}"
+      },
+      {
+        "id": "bitext-place_order-06",
+        "expected_intent": "place_order",
+        "prompt": "i dont know how to order several of ur article",
+        "before": "{\"intent\": \"place_order\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-track_order-03",
+        "expected_intent": "track_order",
+        "prompt": "where is purechase {{Order Number}}",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-track_order-04",
+        "expected_intent": "track_order",
+        "prompt": "check my last parcel eta",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-check_refund_policy-09",
+        "expected_intent": "check_refund_policy",
+        "prompt": "show me in what casescan i request my money back",
+        "before": "{\"intent\": \"check_refund_policy\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-complaint-07",
+        "expected_intent": "complaint",
+        "prompt": "need help filing a reclamation",
+        "before": "{\"intent\": \"complaint\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-change_order-03",
+        "expected_intent": "change_order",
+        "prompt": "help swapping an article of purchase113542617735902",
+        "before": "{\"intent\": \"change_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-change_shipping_address-04",
+        "expected_intent": "change_shipping_address",
+        "prompt": "can ya give me information about an addres update",
+        "before": "{\"intent\": \"change_shipping_address\"}",
+        "after": "{\"intent\":\"get_shipping_address\"}"
+      },
+      {
+        "id": "bitext-complaint-10",
+        "expected_intent": "complaint",
+        "prompt": "lodging claim",
+        "before": "{\"intent\": \"complaint\"}",
+        "after": "{\"intent\":\"get_fee_fee\"}"
+      },
+      {
+        "id": "bitext-create_account-02",
+        "expected_intent": "create_account",
+        "prompt": "I'd like informatoin about opening platinum accounts",
+        "before": "{\"intent\": \"create_account\"}",
+        "after": "{\"intent\":\"get_subscription_subscription\"}"
+      },
+      {
+        "id": "bitext-edit_account-09",
+        "expected_intent": "edit_account",
+        "prompt": "modifying info on freemium accoumt",
+        "before": "{\"intent\": \"edit_account\"}",
+        "after": "{\"intent\":\"change_account\"}"
+      },
+      {
+        "id": "bitext-create_account-09",
+        "expected_intent": "create_account",
+        "prompt": "another freemium accounmt for father",
+        "before": "{\"intent\": \"create_account\"}",
+        "after": "{\"intent\":\"switch_account\"}"
+      },
+      {
+        "id": "bitext-registration_problems-09",
+        "expected_intent": "registration_problems",
+        "prompt": "want hepl regarding my signup",
+        "before": "{\"intent\": \"registration_problems\"}",
+        "after": "{\"intent\":\"switch_account\"}"
+      },
+      {
+        "id": "bitext-track_order-06",
+        "expected_intent": "track_order",
+        "prompt": "i want help to track purchase00123842",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-track_order-09",
+        "expected_intent": "track_order",
+        "prompt": "check purcase {{Order Number}} current status",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-change_shipping_address-01",
+        "expected_intent": "change_shipping_address",
+        "prompt": "I chose a wrong delivery addreds",
+        "before": "{\"intent\": \"change_shipping_address\"}",
+        "after": "{\"intent\":\"get_fee_subscription\"}"
+      },
+      {
+        "id": "bitext-registration_problems-06",
+        "expected_intent": "registration_problems",
+        "prompt": "is it possible to report an error with registrations",
+        "before": "{\"intent\": \"registration_problems\"}",
+        "after": "{\"intent\":\"get_human_agent\"}"
+      },
+      {
+        "id": "bitext-registration_problems-10",
+        "expected_intent": "registration_problems",
+        "prompt": "I cannot create a user profile, help reporting signup issues",
+        "before": "{\"intent\": \"registration_problems\"}",
+        "after": "{\"intent\":\"get_human_agent\"}"
+      },
+      {
+        "id": "bitext-edit_account-02",
+        "expected_intent": "edit_account",
+        "prompt": "edit standard accont",
+        "before": "{\"intent\": \"edit_account\"}",
+        "after": "{\"intent\":\"get_subscription\"}"
+      },
+      {
+        "id": "bitext-delivery_period-09",
+        "expected_intent": "delivery_period",
+        "prompt": "where to see hwen my delivery is going to arrive?",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-payment_issue-08",
+        "expected_intent": "payment_issue",
+        "prompt": "I get an error when I try to check out",
+        "before": "{\"intent\": \"payment_issue\"}",
+        "after": "{\"intent\":\"check_payment_methods\"}"
+      },
+      {
+        "id": "bitext-change_order-01",
+        "expected_intent": "change_order",
+        "prompt": "i camt update order {{Order Number}}",
+        "before": "{\"intent\": \"change_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-delivery_period-10",
+        "expected_intent": "delivery_period",
+        "prompt": "wanna know more about delivery period find some information",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-edit_account-07",
+        "expected_intent": "edit_account",
+        "prompt": "update personal data",
+        "before": "{\"intent\": \"edit_account\"}",
+        "after": "{\"intent\":\"get_password\"}"
+      },
+      {
+        "id": "bitext-delivery_period-08",
+        "expected_intent": "delivery_period",
+        "prompt": "i want assistance seeing howlong the shipment takes",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-edit_account-06",
+        "expected_intent": "edit_account",
+        "prompt": "can uhelp me change the data on my profile",
+        "before": "{\"intent\": \"edit_account\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-cancel_order-08",
+        "expected_intent": "cancel_order",
+        "prompt": "i dont want ordr {{Order Number}} could uhelp me cancel it",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_fee_subscription\"}"
+      },
+      {
+        "id": "bitext-complaint-05",
+        "expected_intent": "complaint",
+        "prompt": "could uhelp me lodge an consumer claim",
+        "before": "{\"intent\": \"complaint\"}",
+        "after": "{\"intent\":\"get_fee_methods\"}"
+      },
+      {
+        "id": "bitext-cancel_order-09",
+        "expected_intent": "cancel_order",
+        "prompt": "I need help to cancel purchase370795561790",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_fee_methods\"}"
+      },
+      {
+        "id": "bitext-contact_customer_service-02",
+        "expected_intent": "contact_customer_service",
+        "prompt": "what is thecustomer support mail",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-track_order-10",
+        "expected_intent": "track_order",
+        "prompt": "want assistance locating purchase {{Order Number}}",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      },
+      {
+        "id": "bitext-place_order-03",
+        "expected_intent": "place_order",
+        "prompt": "where do I earn seberal products?",
+        "before": "{\"intent\": \"place_order\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "bitext-cancel_order-06",
+        "expected_intent": "cancel_order",
+        "prompt": "i cannot pay for these product how do i cancel the order",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_fee_methods\"}"
+      },
+      {
+        "id": "bitext-contact_customer_service-06",
+        "expected_intent": "contact_customer_service",
+        "prompt": "want help seeing at what time I can reach customer servie",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"get_human_service_policy\"}"
+      },
+      {
+        "id": "bitext-create_account-03",
+        "expected_intent": "create_account",
+        "prompt": "create pro accountfor wife",
+        "before": "{\"intent\": \"create_account\"}",
+        "after": "{\"intent\":\"switch_account\"}"
+      },
+      {
+        "id": "bitext-delivery_period-01",
+        "expected_intent": "delivery_period",
+        "prompt": "want help to chck how soon can i expect my order",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_policy\"}"
+      },
+      {
+        "id": "bitext-edit_account-03",
+        "expected_intent": "edit_account",
+        "prompt": "updating {{Account Type}} accojnt",
+        "before": "{\"intent\": \"edit_account\"}",
+        "after": "{\"intent\":\"switch_account\"}"
+      },
+      {
+        "id": "bitext-contact_customer_service-08",
+        "expected_intent": "contact_customer_service",
+        "prompt": "ucstomer service mail address",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"get_shipping_address\"}"
+      },
+      {
+        "id": "bitext-cancel_order-01",
+        "expected_intent": "cancel_order",
+        "prompt": "want asistance canceling order {{Order Number}}",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-track_order-01",
+        "expected_intent": "track_order",
+        "prompt": "i need help checking the status or purchase {{Order Number}}",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"check_invoice\"}"
+      },
+      {
+        "id": "bitext-payment_issue-03",
+        "expected_intent": "payment_issue",
+        "prompt": "need assistance reporting an issue with pyments",
+        "before": "{\"intent\": \"payment_issue\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-review-04",
+        "expected_intent": "review",
+        "prompt": "wanna leave a comment how do i do it",
+        "before": "{\"intent\": \"review\"}",
+        "after": "{\"intent\":\"get_fee\"}"
+      },
+      {
+        "id": "bitext-registration_problems-01",
+        "expected_intent": "registration_problems",
+        "prompt": "i want assikstance notifying of problems with a registration",
+        "before": "{\"intent\": \"registration_problems\"}",
+        "after": "{\"intent\":\"get_subscriptionblems\"}"
+      },
+      {
+        "id": "bitext-contact_customer_service-04",
+        "expected_intent": "contact_customer_service",
+        "prompt": "ya have a free of charge customer support number",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "bitext-payment_issue-04",
+        "expected_intent": "payment_issue",
+        "prompt": "my card was declined report payment issues",
+        "before": "{\"intent\": \"payment_issue\"}",
+        "after": "{\"intent\":\"get_subscriptionblems\"}"
+      },
+      {
+        "id": "bitext-create_account-10",
+        "expected_intent": "create_account",
+        "prompt": "opdn gold account",
+        "before": "{\"intent\": \"create_account\"}",
+        "after": "{\"intent\":\"switch_account\"}"
+      },
+      {
+        "id": "bitext-registration_problems-08",
+        "expected_intent": "registration_problems",
+        "prompt": "report registration issues",
+        "before": "{\"intent\": \"registration_problems\"}",
+        "after": "{\"intent\":\"get_subscription\"}"
+      },
+      {
+        "id": "bitext-complaint-08",
+        "expected_intent": "complaint",
+        "prompt": "how to file an reclamation?",
+        "before": "{\"intent\": \"complaint\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "intent-01",
+        "expected_intent": "cancel_order",
+        "prompt": "I ordered the wrong thing ten minutes ago. Please stop the order entirely.",
+        "before": "{\"intent\": \"cancel_order\"}",
+        "after": "{\"intent\":\"get_fee_subscription\"}"
+      },
+      {
+        "id": "intent-07",
+        "expected_intent": "check_refund_policy",
+        "prompt": "What are the rules and time limit for getting a refund on an opened item?",
+        "before": "{\"intent\": \"check_refund_policy\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "intent-09",
+        "expected_intent": "contact_customer_service",
+        "prompt": "What email address should I use to contact customer service?",
+        "before": "{\"intent\": \"contact_customer_service\"}",
+        "after": "{\"intent\":\"get_refund\"}"
+      },
+      {
+        "id": "intent-14",
+        "expected_intent": "delivery_period",
+        "prompt": "If I buy something today, how many working days does standard delivery usually take?",
+        "before": "{\"intent\": \"delivery_period\"}",
+        "after": "{\"intent\":\"delivery_options\"}"
+      },
+      {
+        "id": "intent-19",
+        "expected_intent": "payment_issue",
+        "prompt": "Checkout keeps rejecting my card even though my bank says the card is fine.",
+        "before": "{\"intent\": \"payment_issue\"}",
+        "after": "{\"intent\":\"get_fee_subscription\"}"
+      },
+      {
+        "id": "intent-23",
+        "expected_intent": "review",
+        "prompt": "Where can I leave a five-star review of the product I bought?",
+        "before": "{\"intent\": \"review\"}",
+        "after": "{\"intent\":\"get_fee_subscription\"}"
+      },
+      {
+        "id": "intent-26",
+        "expected_intent": "track_order",
+        "prompt": "I bought a headset last week. Where is that parcel right now?",
+        "before": "{\"intent\": \"track_order\"}",
+        "after": "{\"intent\":\"get_invoice\"}"
+      }
+    ]
+  }
+}

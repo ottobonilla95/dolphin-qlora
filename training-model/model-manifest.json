@@ -1,0 +1,58 @@
+{
+  "source_repo": "dphn/Dolphin3.0-Llama3.1-8B",
+  "source_revision": "f065677950dfc7e708d518d64cf1f5041ee007a0",
+  "source_snapshot": "/Users/otto/.cache/huggingface/hub/models--dphn--Dolphin3.0-Llama3.1-8B/snapshots/f065677950dfc7e708d518d64cf1f5041ee007a0",
+  "destination": "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit",
+  "created_utc": "2026-10-28T00:24:13.219346+00:00",
+  "quantization": {
+    "bits": 4,
+    "group_size": 64,
+    "mode": "affine"
+  },
+  "python": "3.13.15",
+  "packages": {
+    "mlx": "0.32.4",
+    "mlx-metal": "0.32.4",
+    "mlx-lm": "0.32.2",
+    "transformers": "5.21.0",
+    "huggingface-hub": "2.3.0",
+    "datasets": "5.1.0",
+    "tokenizers": "0.23.3"
+  },
+  "files": {
+    "README.md": {
+      "bytes": 81,
+      "sha256": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6"
+    },
+    "chat_template.jinja": {
+      "bytes": 291,
+      "sha256": "58c1a1f04baa7adaeaba1f90267c3d57d9396f0c1f0129bdde9e76d3c6784af7"
+    },
+    "config.json": {
+      "bytes": 1187,
+      "sha256": "9a6ad0d9fa27b00bb4b502b217e19056e50153cd889f1ea652332d0020946e03"
+    },
+    "generation_config.json": {
+      "bytes": 206,
+      "sha256": "e627b5a8b2dc371f90388947ada64fa6e71de0f991c04c835f0c0bc97e305a4f"
+    },
+    "model.safetensors": {
+      "bytes": 4517498770,
+      "sha256": "dd17d5491ae6c7082c227059ed10a412feb32fe5472481f5f795470c7ed7cf9a"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 52421,
+      "sha256": "338ae6cdabd4ee26c809036290ed96c0a2d9a69a93d8cc059e1298575c50772a"
+    },
+    "tokenizer.json": {
+      "bytes": 17210297,
+      "sha256": "cca43616769fed4807470fb41ccf7f5eebdd08624e7b9adafc09d99332cf31eb"
+    },
+    "tokenizer_config.json": {
+      "bytes": 358,
+      "sha256": "695f42944ef899b35db5a2a262c162bad6ed262e818e9c7bf46a896a3e7791a7"
+    }
+  },
+  "training_started": false,
+  "notes": "MLX quantization differs from the original GGUF Q4_K_S. Evaluate this exact model before and after training."
+}

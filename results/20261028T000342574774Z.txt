@@ -1,0 +1,200 @@
+Run: original
+Model: dolphin3.0-llama3.1-8b
+Settings: {'temperature': 0, 'seed': 42, 'stream': False}
+
+[intent-01]
+PROMPT: I ordered the wrong thing ten minutes ago. Please stop the order entirely.
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent": "cancel_order"}
+
+[intent-02]
+PROMPT: Keep my order, but make it three blue mugs instead of two.
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent": "change_order"}
+
+[intent-03]
+PROMPT: My order has my old address. Can you send it to my new flat instead?
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent": "change_shipping_address"}
+
+[intent-04]
+PROMPT: Before I cancel, will you charge me a cancellation fee?
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent": "check_cancellation_fee"}
+
+[intent-05]
+PROMPT: There is a delivery charge on invoice 814 that I do not understand. Can you explain that charge?
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent": "check_cancellation_fee"}
+
+[intent-06]
+PROMPT: Can I pay using PayPal, or do you only take cards?
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent": "check_payment_methods"}
+
+[intent-07]
+PROMPT: What are the rules and time limit for getting a refund on an opened item?
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent": "check_refund_policy"}
+
+[intent-08]
+PROMPT: Your employee was rude to me yesterday. I want to make a formal complaint.
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent": "complaint"}
+
+[intent-09]
+PROMPT: What email address should I use to contact customer service?
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent": "contact_customer_service"}
+
+[intent-10]
+PROMPT: Please transfer this chat to a real person now.
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent": "contact_customer_service"}
+
+[intent-11]
+PROMPT: I am new here. How do I create my first account?
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent": "create_account"}
+
+[intent-12]
+PROMPT: Permanently delete my account. I no longer want to use your service.
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent": "delete_account"}
+
+[intent-13]
+PROMPT: Do you offer collection from a shop as well as home delivery?
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent": "delivery_options"}
+
+[intent-14]
+PROMPT: If I buy something today, how many working days does standard delivery usually take?
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent": "delivery_period"}
+
+[intent-15]
+PROMPT: I need to update the email address on my existing account.
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent": "edit_account"}
+
+[intent-16]
+PROMPT: Please send me a PDF invoice for my last purchase.
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent": "get_invoice"}
+
+[intent-17]
+PROMPT: The item arrived broken. I want my money back, please.
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent": "get_refund"}
+
+[intent-18]
+PROMPT: Please sign me up for your email newsletter.
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent": "newsletter_subscription"}
+
+[intent-19]
+PROMPT: Checkout keeps rejecting my card even though my bank says the card is fine.
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent": "payment_issue"}
+
+[intent-20]
+PROMPT: I have chosen the red backpack. How do I submit an order for it?
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent": "place_order"}
+
+[intent-21]
+PROMPT: I cannot remember my password. How can I reset it?
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent": "recover_password"}
+
+[intent-22]
+PROMPT: The sign-up form crashes every time I click Create account. I have not managed to register.
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent": "registration_problems"}
+
+[intent-23]
+PROMPT: Where can I leave a five-star review of the product I bought?
+EXPECTED INTENT: review
+RESPONSE:
+{"intent": "review"}
+
+[intent-24]
+PROMPT: I have never saved a delivery address. How do I add my first one?
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent": "set_up_shipping_address"}
+
+[intent-25]
+PROMPT: I have a personal account and a business account. How do I switch to the business one?
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent": "switch_account"}
+
+[intent-26]
+PROMPT: I bought a headset last week. Where is that parcel right now?
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent": "track_order"}
+
+[intent-27]
+PROMPT: You approved my refund five days ago, but the money has not arrived. What is its status?
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent": "check_refund"}
+
+[general-01]
+PROMPT: Explain what a Python dictionary is to a beginner. Use one short code example.
+RESPONSE:
+A Python dictionary is a data structure that stores information in key-value pairs. It's similar to a list but allows you to access and manipulate elements by their associated keys.
+
+Here's an example:
+
+```python
+person = {"name": "John", "age": 30}
+print(person["name"])  # Output: John
+```
+
+In this code, we create a dictionary called `person` with two key-value pairs. We can then access the value associated with the key `"name"` by using square brackets `[]`.
+
+[general-02]
+PROMPT: I bought 3 notebooks costing 4 euro each and paid with 20 euro. How much change should I get? Explain briefly.
+RESPONSE:
+The total cost of the notebooks is 3 x 4 = 12 euros. So, you should get a change of 20 - 12 = 8 euros.
+
+[general-03]
+PROMPT: Rewrite this message politely in no more than 30 words: Your parcel is late. We are checking with the courier. We will update you tomorrow.
+RESPONSE:
+Your package has been delayed. Our team is currently investigating the issue and we'll provide an update by tomorrow. Thank you for your patience.
+
+SUMMARY:
+{
+  "total_cases": 30,
+  "completed_responses": 30,
+  "errors": 0,
+  "intent_cases": 27,
+  "correct_intent_and_schema": 24,
+  "valid_json": 27,
+  "valid_schema": 26
+}

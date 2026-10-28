@@ -1,0 +1,43 @@
+{
+  "stage": "first_training_evaluated_regression",
+  "training_started": true,
+  "model_path": "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit",
+  "python": "/Users/otto/Local/study/fine-tune/.venv/bin/python",
+  "training_data": "/Users/otto/Local/study/fine-tune/data/train.jsonl",
+  "validation_data": "/Users/otto/Local/study/fine-tune/data/valid.jsonl",
+  "evaluation_suite": "/Users/otto/Local/study/fine-tune/baseline-large-prompts.json",
+  "suite_sha256": "acb762b389cd6bac8a1e2f850c2edc779e25235dd3cea3c7648000ccaaae4a95",
+  "baselines": {
+    "bionic_gguf": {
+      "record": "/Users/otto/Local/study/fine-tune/results/20261028T000935661961Z.json",
+      "correct": 208,
+      "total": 297,
+      "percent": 70.03
+    },
+    "mlx_before_training": {
+      "record": "/Users/otto/Local/study/fine-tune/results/20261028T002422930075Z.json",
+      "correct": 210,
+      "total": 297,
+      "percent": 70.71
+    },
+    "mlx_after_training": {
+      "record": "/Users/otto/Local/study/fine-tune/results/20261028T004036824182Z.json",
+      "correct": 161,
+      "total": 297,
+      "percent": 54.21
+    }
+  },
+  "comparison_note": "Same prompts and requested generation settings. Use the MLX baseline to measure adapter training changes; GGUF and MLX use different quantization and runtimes.",
+  "training_config": "/Users/otto/Local/study/fine-tune/train-config.yaml",
+  "adapter_path": "/Users/otto/Local/study/fine-tune/adapters/intent-qlora-001",
+  "training_started_utc": "2026-10-28T00:32:29.806222+00:00",
+  "training_summary": "/Users/otto/Local/study/fine-tune/results/training-001-summary.json",
+  "training_finished_utc": "2026-10-28T00:40:22.493309+00:00",
+  "training_completed": true,
+  "evaluation_completed": true,
+  "comparison_record": "/Users/otto/Local/study/fine-tune/results/training-001-comparison.json",
+  "recommended_model": "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit",
+  "recommended_adapter": null,
+  "diagnostic_record": "/Users/otto/Local/study/fine-tune/results/training-001-diagnostics.json",
+  "failure_cause": "Not isolated; diagnostics support investigating update aggressiveness and monitoring generated validation accuracy."
+}

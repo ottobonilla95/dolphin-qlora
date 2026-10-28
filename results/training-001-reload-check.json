@@ -1,0 +1,57 @@
+{
+  "recorded_final_validation_loss": 0.14136826992034912,
+  "reloaded_validation_loss": 0.14136825501918793,
+  "loss_difference": -1.4901161193847656e-08,
+  "training_generation_prefix_mismatches": 0,
+  "training_examples_prefix_checked": 1080,
+  "generation_probes": [
+    {
+      "split": "train",
+      "prompt": "I need help canceling purchase {{Order Number}}",
+      "expected_intent": "cancel_order",
+      "response": "{\"intent\":\"get_fee_methods\"}"
+    },
+    {
+      "split": "train",
+      "prompt": "I do not know how I can see purchase {{Order Number}} status",
+      "expected_intent": "track_order",
+      "response": "{\"intent\":\"get_invoice\"}"
+    },
+    {
+      "split": "train",
+      "prompt": "how can i get information about the delivery period",
+      "expected_intent": "delivery_period",
+      "response": "{\"intent\":\"delivery_options\"}"
+    },
+    {
+      "split": "train",
+      "prompt": "I do not know what todo to chat with a live agent",
+      "expected_intent": "contact_human_agent",
+      "response": "{\"intent\":\"contact_human_agent\"}"
+    },
+    {
+      "split": "validation",
+      "prompt": "where can I cancel purchase {{Order Number}}?",
+      "expected_intent": "cancel_order",
+      "response": "{\"intent\":\"get_fee_methods\"}"
+    },
+    {
+      "split": "validation",
+      "prompt": "how do i see purchase  {{Order Number}} status",
+      "expected_intent": "track_order",
+      "response": "{\"intent\":\"get_invoice\"}"
+    },
+    {
+      "split": "validation",
+      "prompt": "how to see how long it takes for my order to arrive?",
+      "expected_intent": "delivery_period",
+      "response": "{\"intent\":\"delivery_policy\"}"
+    },
+    {
+      "split": "validation",
+      "prompt": "want help to speak to somebody",
+      "expected_intent": "contact_human_agent",
+      "response": "{\"intent\":\"contact_human_agent\"}"
+    }
+  ]
+}

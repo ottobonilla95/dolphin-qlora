@@ -1,0 +1,28 @@
+Bitext customer support data attribution and modification notice
+
+Data provider: Bitext
+Source: https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset
+Pinned revision: 430d1a89bd93bd1fa23c16f29dd53e73f0087443
+Original filename: Bitext_Sample_Customer_Support_Training_Dataset_27K_responses-v11.csv
+Original CSV SHA256: 6f81102b0100b97b8468eb04368033a23206bf1fde9d53500d5806ec1001a434
+
+License for the source data and modified Bitext data in this repository:
+Community Data License Agreement - Sharing - Version 1.0
+SPDX-License-Identifier: CDLA-Sharing-1.0
+License text: https://cdla.dev/sharing-1-0/
+
+The Bitext data has been modified for this study. Instructions and intent labels
+were selected, deduplicated using documented lexical rules, balanced across
+intents, shuffled, divided into splits, and formatted as chat messages. Original
+long-form responses were replaced by JSON intent-label targets. These changes
+are recorded in split-manifest.json, prepare_data.py and build_large_baseline.py.
+
+Files containing modified Bitext data include train.jsonl, valid.jsonl,
+../baseline-large-prompts.json, ../evaluation-source/reserved-instructions.json,
+and prompts or excerpts retained in ../results/. The original 30-case suite also
+contains hand-written examples and general probes created for this experiment.
+
+Data licensing is distinct from model licensing. Model weights and trained
+adapter weights are excluded from this Git repository. Obtain model weights
+from the pinned upstream source under its applicable terms.
+

@@ -1,0 +1,11 @@
+{
+  "gguf_format_version": 3,
+  "gguf_model_name": "Dolphin 3.0 Llama 3.1 8B",
+  "gguf_architecture": "llama",
+  "gguf_eos_token_id": 128256,
+  "hf_eos_token_id": 128256,
+  "gguf_chat_template_sha256": "58c1a1f04baa7adaeaba1f90267c3d57d9396f0c1f0129bdde9e76d3c6784af7",
+  "hf_chat_template_sha256": "58c1a1f04baa7adaeaba1f90267c3d57d9396f0c1f0129bdde9e76d3c6784af7",
+  "templates_identical": true,
+  "source_metadata": {}
+}

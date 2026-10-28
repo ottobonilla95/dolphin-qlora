@@ -1,0 +1,23 @@
+{
+  "source_revision": "f065677950dfc7e708d518d64cf1f5041ee007a0",
+  "vocabulary_size_with_added_tokens": 128258,
+  "eos_token": "<|im_end|>",
+  "eos_token_id": 128256,
+  "chat_template_sha256": "58c1a1f04baa7adaeaba1f90267c3d57d9396f0c1f0129bdde9e76d3c6784af7",
+  "splits": {
+    "train.jsonl": {
+      "examples": 1080,
+      "minimum_tokens": 146,
+      "median_tokens": 154.0,
+      "maximum_tokens": 167,
+      "over_1024_tokens": 0
+    },
+    "valid.jsonl": {
+      "examples": 270,
+      "minimum_tokens": 146,
+      "median_tokens": 155.0,
+      "maximum_tokens": 164,
+      "over_1024_tokens": 0
+    }
+  }
+}
