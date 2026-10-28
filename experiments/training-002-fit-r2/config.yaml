@@ -1,0 +1,38 @@
+model: /Users/otto/Local/study/fine-tune/training-model/dolphin-4bit
+train: true
+fine_tune_type: lora
+optimizer: adam
+optimizer_config:
+  adam: {}
+  adamw: {}
+  muon: {}
+  sgd: {}
+  adafactor: {}
+data: /Users/otto/Local/study/fine-tune/data
+seed: 42
+num_layers: 8
+batch_size: 1
+iters: 270
+val_batches: 27
+learning_rate: 1.0e-05
+steps_per_report: 50
+steps_per_eval: 90
+resume_adapter_file: null
+adapter_path: /Users/otto/Local/study/fine-tune/experiments/training-002-fit-r2/adapter
+save_every: 50
+test: false
+test_batches: 500
+max_seq_length: 256
+config: null
+grad_checkpoint: false
+grad_accumulation_steps: 1
+clear_cache_threshold: 0
+lr_schedule: null
+lora_parameters:
+  rank: 8
+  scale: 20.0
+  dropout: 0.0
+mask_prompt: true
+report_to: null
+project_name: null
+trust_remote_code: false

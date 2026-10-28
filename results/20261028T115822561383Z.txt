@@ -1,0 +1,2007 @@
+Run: mlx-lr1e5-selected-step450
+Model: ./training-model/dolphin-4bit
+Suite: /Users/otto/Local/study/fine-tune/baseline-large-prompts.json
+Settings: {'temperature': 0, 'seed': 42, 'stream': False}
+
+SUMMARY:
+{
+  "total_cases": 300,
+  "completed_responses": 300,
+  "errors": 0,
+  "intent_cases": 297,
+  "correct_intent_and_schema": 264,
+  "valid_json": 297,
+  "valid_schema": 295,
+  "intent_accuracy_percent": 88.89,
+  "by_intent": {
+    "delivery_period": {
+      "total": 11,
+      "correct": 10,
+      "accuracy_percent": 90.91
+    },
+    "check_invoice": {
+      "total": 11,
+      "correct": 8,
+      "accuracy_percent": 72.73
+    },
+    "switch_account": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "delete_account": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "track_refund": {
+      "total": 11,
+      "correct": 7,
+      "accuracy_percent": 63.64
+    },
+    "create_account": {
+      "total": 11,
+      "correct": 7,
+      "accuracy_percent": 63.64
+    },
+    "delivery_options": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "cancel_order": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "edit_account": {
+      "total": 11,
+      "correct": 9,
+      "accuracy_percent": 81.82
+    },
+    "check_refund_policy": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "recover_password": {
+      "total": 11,
+      "correct": 10,
+      "accuracy_percent": 90.91
+    },
+    "track_order": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "check_cancellation_fee": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "review": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "change_order": {
+      "total": 11,
+      "correct": 10,
+      "accuracy_percent": 90.91
+    },
+    "contact_human_agent": {
+      "total": 11,
+      "correct": 10,
+      "accuracy_percent": 90.91
+    },
+    "check_payment_methods": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "payment_issue": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "complaint": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "get_refund": {
+      "total": 11,
+      "correct": 7,
+      "accuracy_percent": 63.64
+    },
+    "get_invoice": {
+      "total": 11,
+      "correct": 7,
+      "accuracy_percent": 63.64
+    },
+    "newsletter_subscription": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "change_shipping_address": {
+      "total": 11,
+      "correct": 10,
+      "accuracy_percent": 90.91
+    },
+    "registration_problems": {
+      "total": 11,
+      "correct": 10,
+      "accuracy_percent": 90.91
+    },
+    "contact_customer_service": {
+      "total": 11,
+      "correct": 11,
+      "accuracy_percent": 100.0
+    },
+    "set_up_shipping_address": {
+      "total": 11,
+      "correct": 6,
+      "accuracy_percent": 54.55
+    },
+    "place_order": {
+      "total": 11,
+      "correct": 10,
+      "accuracy_percent": 90.91
+    }
+  },
+  "by_origin": {
+    "bitext": {
+      "total": 270,
+      "correct": 238,
+      "accuracy_percent": 88.15
+    },
+    "handwritten": {
+      "total": 27,
+      "correct": 26,
+      "accuracy_percent": 96.3
+    }
+  }
+}
+MISMATCHES AND ERRORS:
+bitext-track_refund-02 | expected=track_refund | response={"intent":"check_cancellation_fee"}
+bitext-track_refund-03 | expected=track_refund | response={"intent":"check_refund"}
+bitext-get_refund-06 | expected=get_refund | response={"intent":"track_refund"}
+bitext-get_refund-10 | expected=get_refund | response={"intent":"check_refund_policy"}
+bitext-get_refund-05 | expected=get_refund | response={"intent":"check_cancellation_fee"}
+bitext-set_up_shipping_address-01 | expected=set_up_shipping_address | response={"intent":"change_shipping_address"}
+bitext-change_order-10 | expected=change_order | response={"intent":"track_order"}
+bitext-change_shipping_address-02 | expected=change_shipping_address | response={"intent":"edit_account"}
+bitext-get_invoice-07 | expected=get_invoice | response={"intent":"check_invoice"}
+bitext-place_order-08 | expected=place_order | response={"intent":"switch_account"}
+bitext-set_up_shipping_address-05 | expected=set_up_shipping_address | response={"intent":"change_shipping_address"}
+bitext-edit_account-10 | expected=edit_account | response={"intent":"switch_account"}
+bitext-check_invoice-07 | expected=check_invoice | response={"intent":"track_order"}
+bitext-edit_account-01 | expected=edit_account | response={"intent":"switch_account"}
+bitext-create_account-02 | expected=create_account | response={"intent":"switch_account"}
+bitext-set_up_shipping_address-10 | expected=set_up_shipping_address | response={"intent":"change_shipping_address"}
+bitext-create_account-09 | expected=create_account | response={"intent":"switch_account"}
+bitext-contact_human_agent-07 | expected=contact_human_agent | response={"intent":"contact_customer_service"}
+bitext-get_refund-02 | expected=get_refund | response={"intent":"check_refund_policy"}
+bitext-get_invoice-03 | expected=get_invoice | response={"intent":"track_order"}
+bitext-track_refund-08 | expected=track_refund | response={"intent":"check_refund"}
+bitext-delivery_period-03 | expected=delivery_period | response={"intent":"track_order"}
+bitext-recover_password-02 | expected=recover_password | response={"intent":"get_invoice"}
+bitext-set_up_shipping_address-03 | expected=set_up_shipping_address | response={"intent":"delivery_options"}
+bitext-track_refund-01 | expected=track_refund | response={"intent":"get_refund"}
+bitext-check_invoice-03 | expected=check_invoice | response={"intent":"track_order"}
+bitext-registration_problems-03 | expected=registration_problems | response={"intent":"create_account"}
+bitext-create_account-03 | expected=create_account | response={"intent":"switch_account"}
+bitext-set_up_shipping_address-06 | expected=set_up_shipping_address | response={"intent":"change_shipping_address"}
+bitext-create_account-10 | expected=create_account | response={"intent":"switch_account"}
+bitext-get_invoice-04 | expected=get_invoice | response={"intent":"check_invoice"}
+bitext-check_invoice-06 | expected=check_invoice | response={"intent":"get_invoice"}
+intent-16 | expected=get_invoice | response={"intent":"check_invoice"}
+[bitext-delivery_period-02]
+PROMPT: give me information about the shippong periods
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-check_invoice-04]
+PROMPT: is it possible tocheck invoice #37777
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-switch_account-05]
+PROMPT: wanna switch to the platinum accoun
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-delete_account-10]
+PROMPT: could you help me cancel a gold account?
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-track_refund-02]
+PROMPT: need to check the rebate curent status how to do it
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-create_account-08]
+PROMPT: new premium acount
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"create_account"}
+
+[bitext-delivery_options-06]
+PROMPT: is it possibleto place an order from {{Delivery City}}
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-switch_account-09]
+PROMPT: help using the standard cacount
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-cancel_order-10]
+PROMPT: order cancelation
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-edit_account-04]
+PROMPT: need help to modify my user information
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-delivery_period-06]
+PROMPT: could i check when my package is gonna arive
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-check_refund_policy-05]
+PROMPT: i need help checking in what cases can i ask  to be refunded
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-delivery_period-07]
+PROMPT: I am looking for shipping periods
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-cancel_order-03]
+PROMPT: can you help me camceling the purchase I made?
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-recover_password-08]
+PROMPT: would it be possible to retrieve my profile access key?
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-cancel_order-05]
+PROMPT: need assistance cancelinv purchase {{Order Number}}
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-track_order-07]
+PROMPT: order 00123842current status
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-check_cancellation_fee-01]
+PROMPT: i have got to check the cvancellation penalty how to do it
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-track_refund-03]
+PROMPT: where can I check if there is anything enw on the refund?
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"check_refund"}
+
+[bitext-review-07]
+PROMPT: needhelp submitting some feedback
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-change_order-04]
+PROMPT: can uhelp me to delete an item from purchase {{Order Number}}
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-contact_human_agent-06]
+PROMPT: could uhelp me chat with somebody
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-check_invoice-05]
+PROMPT: need help to give a quick look at the invoice #85632
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-delete_account-08]
+PROMPT: deleting platinum accoumt
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-review-02]
+PROMPT: assistance sending some efedback about a product
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-check_payment_methods-07]
+PROMPT: show me what paymentpayment modalities are accepted
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-check_payment_methods-02]
+PROMPT: i want assistance checking what paytment methods ya accept
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-payment_issue-06]
+PROMPT: can ya help me to solve atrouble with payments
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-complaint-03]
+PROMPT: makie complaint
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-get_refund-06]
+PROMPT: how long till i receive a rebate
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"track_refund"}
+
+[bitext-check_refund_policy-01]
+PROMPT: I want helpto see your refund policy
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-delivery_options-05]
+PROMPT: i have got to see the delivery methods how do i do it
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-get_invoice-02]
+PROMPT: ehlp me get bill #12588
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-get_refund-10]
+PROMPT: where to get a compensation?
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-newsletter_subscription-05]
+PROMPT: help me sign up to ur newsleter
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-newsletter_subscription-02]
+PROMPT: wanna know about unsubscribimg from ur newsletter
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-review-06]
+PROMPT: uhave a way to send a reivew
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-newsletter_subscription-08]
+PROMPT: can I receive your newesletter?
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-change_shipping_address-06]
+PROMPT: wanna know more about updating my delivery address
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-delivery_options-09]
+PROMPT: give me information about the shipping methods
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-check_refund_policy-02]
+PROMPT: assistance ot check how long reimbursements take
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-change_order-06]
+PROMPT: wanna edit purchgase {{Order Number}}
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-registration_problems-02]
+PROMPT: need help regadring my sign-up
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-switch_account-10]
+PROMPT: swithcing to pro account
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-payment_issue-01]
+PROMPT: i  have got to inform of troubles with online payment
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-contact_customer_service-07]
+PROMPT: do you have a mail to get in touch with cusomer assistance?
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-get_refund-05]
+PROMPT: wanna ask for rebates
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-newsletter_subscription-03]
+PROMPT: can uhelp me cancel the corporate newsetter subscription
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-get_invoice-09]
+PROMPT: getting billsfrom {{Person Name}}
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-set_up_shipping_address-01]
+PROMPT: need to submit a new shipping adress
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-track_order-05]
+PROMPT: ned to locate order {{Order Number}} how could i do it
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-change_order-10]
+PROMPT: correct order370795561790
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-delete_account-05]
+PROMPT: i no longer make us of my pro account need help deleting it
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-check_payment_methods-09]
+PROMPT: can you help me to list your paymnet modalities?
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-check_cancellation_fee-07]
+PROMPT: withdrawal hcarge
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-edit_account-05]
+PROMPT: i have got to correct the personal details
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-payment_issue-07]
+PROMPT: support regarding online pamyent
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-change_shipping_address-02]
+PROMPT: there are troubles editing my shipping addrss
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-review-03]
+PROMPT: can you help me leqving my feedback about your products?
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-complaint-09]
+PROMPT: I am unhappy with your services, how do I lodge a complaint?
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-delete_account-01]
+PROMPT: clsoe standard account
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-edit_account-08]
+PROMPT: modify pro accunt
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-newsletter_subscription-04]
+PROMPT: i have got to see the status of my newsletter subvscription
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-review-01]
+PROMPT: I am calling to submit feedback for an service
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-delete_account-02]
+PROMPT: cancel {{Account Category}} acount
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-check_cancellation_fee-10]
+PROMPT: wanna see the withdrawalcharge
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-cancel_order-02]
+PROMPT: cancel purchase113542617735902
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-track_order-08]
+PROMPT: when will I receive ordered {{Order Number}}?
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-payment_issue-02]
+PROMPT: report a trouble wuth payments
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-contact_customer_service-05]
+PROMPT: want help speaking with custgomer service
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-get_invoice-06]
+PROMPT: i try to getinvoice #85632
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-registration_problems-04]
+PROMPT: wanna notify of an signup issue can uhelp me
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-registration_problems-05]
+PROMPT: I'm experiencing errors registering what do i have to do
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-delivery_period-05]
+PROMPT: how long does the shipping take
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-complaint-06]
+PROMPT: help me to lodgea complaint against ur business
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-check_payment_methods-06]
+PROMPT: is it possible to see the available pyment options
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-delete_account-07]
+PROMPT: delete gold acvount
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-check_cancellation_fee-06]
+PROMPT: need assistance seeing the termination charge
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-get_invoice-07]
+PROMPT: getting invoices from one purchases ago
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-delivery_period-04]
+PROMPT: what is the delivery period for this order
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-recover_password-10]
+PROMPT: I need information abvout lost passwords
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-contact_human_agent-05]
+PROMPT: i do not understand anything ya say direct tome someone
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-change_shipping_address-03]
+PROMPT: help to modiy the address
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-review-10]
+PROMPT: assistance to write an opinionabout your company
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-delete_account-06]
+PROMPT: where can i get information about an {{Account Type}} account deletion
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-get_refund-03]
+PROMPT: need assistance getting refunds of moey
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"get_refund"}
+
+[bitext-contact_customer_service-09]
+PROMPT: how to contact cutsomer assistance?
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-change_order-08]
+PROMPT: remove something from order
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-check_cancellation_fee-09]
+PROMPT: withrdawal penalty
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-complaint-04]
+PROMPT: the experience with ur brand was bad file a claim
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-contact_human_agent-02]
+PROMPT: speak  to person
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-payment_issue-09]
+PROMPT: I can't make payments, assistance informing of problems
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-contact_human_agent-10]
+PROMPT: help talking with someone
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-cancel_order-04]
+PROMPT: i have a question about cancelling oorder {{Order Number}}
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-cancel_order-07]
+PROMPT: would you give me information about cancelling orders?
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-track_order-02]
+PROMPT: can uhelp me seethe ETA of order {{Order Number}}
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-check_refund_policy-03]
+PROMPT: hlp seeing ur money back guarantee
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-check_invoice-09]
+PROMPT: checking invoice from nine months ago
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-place_order-08]
+PROMPT: earning something
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-recover_password-01]
+PROMPT: I do not know what I need tp do to recover my user pwd
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-switch_account-04]
+PROMPT: need help switching to my new profile
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-check_invoice-02]
+PROMPT: seein invoices from {{Person Name}}
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-check_cancellation_fee-04]
+PROMPT: are there early termination penalties
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-recover_password-09]
+PROMPT: help me retsore my pass
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-set_up_shipping_address-07]
+PROMPT: I have an error entering another hsipping address
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"set_up_shipping_address"}
+
+[bitext-set_up_shipping_address-05]
+PROMPT: want help submitting a different delivery address
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-place_order-06]
+PROMPT: i dont know how to order several of ur article
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-set_up_shipping_address-08]
+PROMPT: shipping addtess trouble
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"set_up_shipping_address"}
+
+[bitext-contact_human_agent-01]
+PROMPT: I need assistanc chatting with a live agent
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-track_order-03]
+PROMPT: where is purechase {{Order Number}}
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-get_invoice-05]
+PROMPT: need assistance getting the invokce #12588
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-check_invoice-01]
+PROMPT: i want assistance to locatr my bill #00108
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-check_payment_methods-04]
+PROMPT: can uhelp me checking the payment optgions
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-newsletter_subscription-01]
+PROMPT: unsubscribe to your company newspetter
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-check_payment_methods-01]
+PROMPT: ehlp to check ur allowed payment modalities
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-create_account-04]
+PROMPT: i havent signed up yet help me creatin a customer profile
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"create_account"}
+
+[bitext-track_order-04]
+PROMPT: check my last parcel eta
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-contact_human_agent-09]
+PROMPT: is it possible to talk with asn operator?
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-get_refund-04]
+PROMPT: can ya help me get reimbursements
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"get_refund"}
+
+[bitext-check_refund_policy-09]
+PROMPT: show me in what casescan i request my money back
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-complaint-07]
+PROMPT: need help filing a reclamation
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-recover_password-04]
+PROMPT: want assistance recovering my account PIN code
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-set_up_shipping_address-04]
+PROMPT: wanna enter my shipping address
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"set_up_shipping_address"}
+
+[bitext-recover_password-07]
+PROMPT: question about a lost PIN
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-contact_human_agent-04]
+PROMPT: want assistance contacting an operator
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-edit_account-10]
+PROMPT: correct information on freeaccount
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-switch_account-08]
+PROMPT: switching user
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-newsletter_subscription-06]
+PROMPT: need assistance unsubscribing from your newsletterr
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-switch_account-07]
+PROMPT: use gold acdcount
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-change_order-09]
+PROMPT: need to edit order113542617735902 how to do it
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-change_shipping_address-10]
+PROMPT: how can i edit tne address
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-contact_customer_service-10]
+PROMPT: help me calling customer assistance
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-set_up_shipping_address-09]
+PROMPT: there is an issue setting up a shipping address
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"set_up_shipping_address"}
+
+[bitext-get_invoice-01]
+PROMPT: I'm tryingto download my invoice from {{Person Name}}
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-get_refund-08]
+PROMPT: want help obtaining a refund of money
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"get_refund"}
+
+[bitext-review-05]
+PROMPT: writing review for ur company
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-delivery_options-03]
+PROMPT: where can i check themethods for shipment
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-change_order-05]
+PROMPT: i cant add some items to order370795561790
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-check_invoice-07]
+PROMPT: seeing bil #00108
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-track_refund-07]
+PROMPT: tracking refund
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"track_refund"}
+
+[bitext-track_refund-06]
+PROMPT: want assistance to know if there are any news on my rebate
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"track_refund"}
+
+[bitext-change_shipping_address-09]
+PROMPT: need assistance modifying the delivery addres
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-change_order-03]
+PROMPT: help swapping an article of purchase113542617735902
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-contact_customer_service-01]
+PROMPT: I ned to speak to customer service
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-place_order-07]
+PROMPT: making purchase
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-switch_account-02]
+PROMPT: using freemium accouny
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-get_refund-09]
+PROMPT: I need help demanding an reimbursement
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"get_refund"}
+
+[bitext-change_shipping_address-04]
+PROMPT: can ya give me information about an addres update
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-place_order-01]
+PROMPT: can you help me toorder a few of your product?
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-recover_password-05]
+PROMPT: problem with the pass recovery
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-contact_human_agent-08]
+PROMPT: I don't know how I can cotnact somebody
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-delivery_options-10]
+PROMPT: I want assistance seeing the options for shipping
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-complaint-10]
+PROMPT: lodging claim
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-delete_account-03]
+PROMPT: I want assistance to remove a premium accojnt
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-edit_account-01]
+PROMPT: correctdata on gold account
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-create_account-02]
+PROMPT: I'd like informatoin about opening platinum accounts
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-edit_account-09]
+PROMPT: modifying info on freemium accoumt
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-set_up_shipping_address-10]
+PROMPT: the new delivery address isn't valid, how to do it?
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-place_order-09]
+PROMPT: makepurchase
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-registration_problems-07]
+PROMPT: inform of error opening profile
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-create_account-09]
+PROMPT: another freemium accounmt for father
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-track_refund-10]
+PROMPT: I don't know how I could track the compensation
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"track_refund"}
+
+[bitext-registration_problems-09]
+PROMPT: want hepl regarding my signup
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-contact_human_agent-07]
+PROMPT: contactingassistant
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-get_refund-01]
+PROMPT: I don't know what I have to do to demad my money back
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"get_refund"}
+
+[bitext-create_account-01]
+PROMPT: need assistance to open  a {{Account Category}} account for my dad
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"create_account"}
+
+[bitext-switch_account-01]
+PROMPT: can uhlep me use the {{Account Type}} account
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-get_invoice-10]
+PROMPT: mail em the bill #37777
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-track_order-06]
+PROMPT: i want help to track purchase00123842
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-track_order-09]
+PROMPT: check purcase {{Order Number}} current status
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-change_shipping_address-07]
+PROMPT: have a problem with a shpiping address modification
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-place_order-05]
+PROMPT: need assistance acquiring an item
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-create_account-06]
+PROMPT: i do not know how i can create a standard account
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"create_account"}
+
+[bitext-newsletter_subscription-07]
+PROMPT: help cancelling my corporate newslettersubscription
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-delete_account-04]
+PROMPT: have a question about the termination of a Freemiumaccount
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-change_shipping_address-01]
+PROMPT: I chose a wrong delivery addreds
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-check_refund_policy-10]
+PROMPT: is it possible to seeur money back policy
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-registration_problems-06]
+PROMPT: is it possible to report an error with registrations
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-registration_problems-10]
+PROMPT: I cannot create a user profile, help reporting signup issues
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-edit_account-02]
+PROMPT: edit standard accont
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-delete_account-09]
+PROMPT: remove pro accoint
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[bitext-recover_password-03]
+PROMPT: have problems wkth a forgotten password
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-switch_account-03]
+PROMPT: change to premium acount
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-delivery_period-09]
+PROMPT: where to see hwen my delivery is going to arrive?
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-payment_issue-08]
+PROMPT: I get an error when I try to check out
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-change_order-01]
+PROMPT: i camt update order {{Order Number}}
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-get_refund-02]
+PROMPT: reimbusre {{Currency Symbol}}{{Refund Amount}}
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-delivery_period-10]
+PROMPT: wanna know more about delivery period find some information
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-edit_account-07]
+PROMPT: update personal data
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-delivery_period-08]
+PROMPT: i want assistance seeing howlong the shipment takes
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-get_invoice-03]
+PROMPT: I have got to get the ibll #37777, how could I do it?
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-check_refund_policy-07]
+PROMPT: check under which circumstances can I request refunds
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-track_refund-08]
+PROMPT: want assistance checking the restitution status
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"check_refund"}
+
+[bitext-track_refund-04]
+PROMPT: can uhelp me see my reimbursement current status
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"track_refund"}
+
+[bitext-delivery_period-03]
+PROMPT: can you show me when will myparcel arrive?
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-recover_password-06]
+PROMPT: want help to restore the password of ym user profile
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[bitext-place_order-02]
+PROMPT: buy artilce
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-delivery_options-04]
+PROMPT: need help checking what shipping options are available
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-payment_issue-10]
+PROMPT: where can i report errors with onlinepayment
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-place_order-04]
+PROMPT: is it possible to acquire some items
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-delivery_options-01]
+PROMPT: do ya ship toMexico
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-change_order-07]
+PROMPT: help switching some products oforder {{Order Number}}
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-set_up_shipping_address-02]
+PROMPT: howq can i set up the secondary delivery address
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"set_up_shipping_address"}
+
+[bitext-create_account-07]
+PROMPT: register
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"create_account"}
+
+[bitext-edit_account-06]
+PROMPT: can uhelp me change the data on my profile
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-recover_password-02]
+PROMPT: wluld you give me information about the key retrieval?
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-cancel_order-08]
+PROMPT: i dont want ordr {{Order Number}} could uhelp me cancel it
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-complaint-01]
+PROMPT: I'm trying to make a consumer clain
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-complaint-05]
+PROMPT: could uhelp me lodge an consumer claim
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-newsletter_subscription-09]
+PROMPT: i cannot unsubscribe from urnewsletter
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-check_invoice-10]
+PROMPT: can you help me check bill #12588?
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-cancel_order-09]
+PROMPT: I need help to cancel purchase370795561790
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-get_refund-07]
+PROMPT: is it possible to request rteimbursements
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"get_refund"}
+
+[bitext-contact_customer_service-02]
+PROMPT: what is thecustomer support mail
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-track_order-10]
+PROMPT: want assistance locating purchase {{Order Number}}
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-set_up_shipping_address-03]
+PROMPT: deliveryaddress issue
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-get_invoice-08]
+PROMPT: send me invoice #37777
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-check_cancellation_fee-02]
+PROMPT: can ushow me hte cancellation fees
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-check_refund_policy-08]
+PROMPT: am I entitled to a reimbursement?
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-track_refund-01]
+PROMPT: i expect a reimbursxement of {{Currency Symbol}}{{Refund Amount}}
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"get_refund"}
+
+[bitext-delivery_options-07]
+PROMPT: assistance seeing what shipment methods you offer
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-track_refund-09]
+PROMPT: where to track the reimbursement
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"track_refund"}
+
+[bitext-place_order-03]
+PROMPT: where do I earn seberal products?
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-complaint-02]
+PROMPT: customer reclamation against your organzation
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-contact_human_agent-03]
+PROMPT: can you help me contact osmeone?
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[bitext-check_invoice-03]
+PROMPT: find ionvoice #12588
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-cancel_order-06]
+PROMPT: i cannot pay for these product how do i cancel the order
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-newsletter_subscription-10]
+PROMPT: want help receiving your newsletter
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[bitext-registration_problems-03]
+PROMPT: sypport creating user
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"create_account"}
+
+[bitext-place_order-10]
+PROMPT: want help purchasing several producgs
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[bitext-contact_customer_service-06]
+PROMPT: want help seeing at what time I can reach customer servie
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-create_account-03]
+PROMPT: create pro accountfor wife
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-change_shipping_address-05]
+PROMPT: i dont know what i need to do to correct theaddress
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-delivery_period-01]
+PROMPT: want help to chck how soon can i expect my order
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[bitext-edit_account-03]
+PROMPT: updating {{Account Type}} accojnt
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[bitext-contact_customer_service-03]
+PROMPT: wanna call cystomer assistance
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-check_refund_policy-06]
+PROMPT: could ya help mw check ur reimbursement policy
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-set_up_shipping_address-06]
+PROMPT: my new shipipng address is invalid i need help
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-track_refund-05]
+PROMPT: i cannot track my restitution
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"track_refund"}
+
+[bitext-check_refund_policy-04]
+PROMPT: are charges of services refundable
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[bitext-check_invoice-08]
+PROMPT: I don't know how I could see the invoice #12588
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-contact_customer_service-08]
+PROMPT: ucstomer service mail address
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-cancel_order-01]
+PROMPT: want asistance canceling order {{Order Number}}
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[bitext-review-09]
+PROMPT: i want help leaving an opinion about ur services
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-track_order-01]
+PROMPT: i need help checking the status or purchase {{Order Number}}
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[bitext-payment_issue-05]
+PROMPT: need help solving a payment error
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-delivery_options-02]
+PROMPT: d uship to {{Delivery City}}
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-check_payment_methods-05]
+PROMPT: need help seeing your available payment option
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-check_payment_methods-10]
+PROMPT: can I pay with PayPal?
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-change_shipping_address-08]
+PROMPT: where could i update the adress
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[bitext-create_account-05]
+PROMPT: have a problem with creating a Premiumaccount
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"create_account"}
+
+[bitext-payment_issue-03]
+PROMPT: need assistance reporting an issue with pyments
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-check_payment_methods-03]
+PROMPT: I don't know how I can see your accepted paymentg options
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-review-04]
+PROMPT: wanna leave a comment how do i do it
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-registration_problems-01]
+PROMPT: i want assikstance notifying of problems with a registration
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-contact_customer_service-04]
+PROMPT: ya have a free of charge customer support number
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[bitext-payment_issue-04]
+PROMPT: my card was declined report payment issues
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[bitext-delivery_options-08]
+PROMPT: check delivery options
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[bitext-check_payment_methods-08]
+PROMPT: list accepted payment methods
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[bitext-create_account-10]
+PROMPT: opdn gold account
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[bitext-check_cancellation_fee-08]
+PROMPT: will you show me the early exit charges?
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-get_invoice-04]
+PROMPT: want help downloading the invoice #00108
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[bitext-check_invoice-06]
+PROMPT: wanna see bill #85632
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"get_invoice"}
+
+[bitext-check_cancellation_fee-03]
+PROMPT: help checking theearly exit charge
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-change_order-02]
+PROMPT: modify order113542617735902
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[bitext-registration_problems-08]
+PROMPT: report registration issues
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[bitext-check_cancellation_fee-05]
+PROMPT: what is the fee for breaking the contract
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[bitext-review-08]
+PROMPT: comment for your services
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[bitext-complaint-08]
+PROMPT: how to file an reclamation?
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[bitext-switch_account-06]
+PROMPT: i do not know how i could switch tto the standard account
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[intent-01]
+PROMPT: I ordered the wrong thing ten minutes ago. Please stop the order entirely.
+EXPECTED INTENT: cancel_order
+RESPONSE:
+{"intent":"cancel_order"}
+
+[intent-02]
+PROMPT: Keep my order, but make it three blue mugs instead of two.
+EXPECTED INTENT: change_order
+RESPONSE:
+{"intent":"change_order"}
+
+[intent-03]
+PROMPT: My order has my old address. Can you send it to my new flat instead?
+EXPECTED INTENT: change_shipping_address
+RESPONSE:
+{"intent":"change_shipping_address"}
+
+[intent-04]
+PROMPT: Before I cancel, will you charge me a cancellation fee?
+EXPECTED INTENT: check_cancellation_fee
+RESPONSE:
+{"intent":"check_cancellation_fee"}
+
+[intent-05]
+PROMPT: There is a delivery charge on invoice 814 that I do not understand. Can you explain that charge?
+EXPECTED INTENT: check_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[intent-06]
+PROMPT: Can I pay using PayPal, or do you only take cards?
+EXPECTED INTENT: check_payment_methods
+RESPONSE:
+{"intent":"check_payment_methods"}
+
+[intent-07]
+PROMPT: What are the rules and time limit for getting a refund on an opened item?
+EXPECTED INTENT: check_refund_policy
+RESPONSE:
+{"intent":"check_refund_policy"}
+
+[intent-08]
+PROMPT: Your employee was rude to me yesterday. I want to make a formal complaint.
+EXPECTED INTENT: complaint
+RESPONSE:
+{"intent":"complaint"}
+
+[intent-09]
+PROMPT: What email address should I use to contact customer service?
+EXPECTED INTENT: contact_customer_service
+RESPONSE:
+{"intent":"contact_customer_service"}
+
+[intent-10]
+PROMPT: Please transfer this chat to a real person now.
+EXPECTED INTENT: contact_human_agent
+RESPONSE:
+{"intent":"contact_human_agent"}
+
+[intent-11]
+PROMPT: I am new here. How do I create my first account?
+EXPECTED INTENT: create_account
+RESPONSE:
+{"intent":"create_account"}
+
+[intent-12]
+PROMPT: Permanently delete my account. I no longer want to use your service.
+EXPECTED INTENT: delete_account
+RESPONSE:
+{"intent":"delete_account"}
+
+[intent-13]
+PROMPT: Do you offer collection from a shop as well as home delivery?
+EXPECTED INTENT: delivery_options
+RESPONSE:
+{"intent":"delivery_options"}
+
+[intent-14]
+PROMPT: If I buy something today, how many working days does standard delivery usually take?
+EXPECTED INTENT: delivery_period
+RESPONSE:
+{"intent":"delivery_period"}
+
+[intent-15]
+PROMPT: I need to update the email address on my existing account.
+EXPECTED INTENT: edit_account
+RESPONSE:
+{"intent":"edit_account"}
+
+[intent-16]
+PROMPT: Please send me a PDF invoice for my last purchase.
+EXPECTED INTENT: get_invoice
+RESPONSE:
+{"intent":"check_invoice"}
+
+[intent-17]
+PROMPT: The item arrived broken. I want my money back, please.
+EXPECTED INTENT: get_refund
+RESPONSE:
+{"intent":"get_refund"}
+
+[intent-18]
+PROMPT: Please sign me up for your email newsletter.
+EXPECTED INTENT: newsletter_subscription
+RESPONSE:
+{"intent":"newsletter_subscription"}
+
+[intent-19]
+PROMPT: Checkout keeps rejecting my card even though my bank says the card is fine.
+EXPECTED INTENT: payment_issue
+RESPONSE:
+{"intent":"payment_issue"}
+
+[intent-20]
+PROMPT: I have chosen the red backpack. How do I submit an order for it?
+EXPECTED INTENT: place_order
+RESPONSE:
+{"intent":"place_order"}
+
+[intent-21]
+PROMPT: I cannot remember my password. How can I reset it?
+EXPECTED INTENT: recover_password
+RESPONSE:
+{"intent":"recover_password"}
+
+[intent-22]
+PROMPT: The sign-up form crashes every time I click Create account. I have not managed to register.
+EXPECTED INTENT: registration_problems
+RESPONSE:
+{"intent":"registration_problems"}
+
+[intent-23]
+PROMPT: Where can I leave a five-star review of the product I bought?
+EXPECTED INTENT: review
+RESPONSE:
+{"intent":"review"}
+
+[intent-24]
+PROMPT: I have never saved a delivery address. How do I add my first one?
+EXPECTED INTENT: set_up_shipping_address
+RESPONSE:
+{"intent":"set_up_shipping_address"}
+
+[intent-25]
+PROMPT: I have a personal account and a business account. How do I switch to the business one?
+EXPECTED INTENT: switch_account
+RESPONSE:
+{"intent":"switch_account"}
+
+[intent-26]
+PROMPT: I bought a headset last week. Where is that parcel right now?
+EXPECTED INTENT: track_order
+RESPONSE:
+{"intent":"track_order"}
+
+[intent-27]
+PROMPT: You approved my refund five days ago, but the money has not arrived. What is its status?
+EXPECTED INTENT: track_refund
+RESPONSE:
+{"intent":"track_refund"}
+
+[general-01]
+PROMPT: Explain what a Python dictionary is to a beginner. Use one short code example.
+RESPONSE:
+A Python dictionary is a data structure that stores a collection of key-value pairs. It's like a container where you can store multiple items, each with a unique key and a corresponding value. Dictionaries are mutable, meaning you can add, remove, or modify items after they're created.
+
+Here's a simple example of a dictionary:
+
+```
+person = {"name":"John", "age":"25", "city":"New York"}
+```
+
+In this example, "name", "age", and "city" are keys, and "John", "25", and "New York" are their respective values. You can access a value by its key like this:
+
+```
+print(person["name"])  # Output: John
+```
+
+[general-02]
+PROMPT: I bought 3 notebooks costing 4 euro each and paid with 20 euro. How much change should I get? Explain briefly.
+RESPONSE:
+The total cost of the notebooks is 3 * 4 = 12 euros. If you paid with 20 euros, your change should be 20 - 12 = 8 euros.
+
+[general-03]
+PROMPT: Rewrite this message politely in no more than 30 words: Your parcel is late. We are checking with the courier. We will update you tomorrow.
+RESPONSE:
+Dear customer, we regret the delay in your parcel delivery. Our team is currently investigating the issue and will provide an update tomorrow. Thank you for your patience.

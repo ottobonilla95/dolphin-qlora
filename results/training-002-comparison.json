@@ -1,0 +1,589 @@
+{
+  "purpose": "Final reporting after checkpoint selection using validation data only.",
+  "base_record": "/Users/otto/Local/study/fine-tune/results/20261028T002422930075Z.json",
+  "first_adapter_record": "/Users/otto/Local/study/fine-tune/results/20261028T004036824182Z.json",
+  "lower_rate_record": "/Users/otto/Local/study/fine-tune/results/20261028T115822561383Z.json",
+  "training_summary": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/summary.json",
+  "selected_step": 450,
+  "selected_adapter_path": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/selected-adapter",
+  "base": {
+    "total_cases": 300,
+    "completed_responses": 300,
+    "errors": 0,
+    "intent_cases": 297,
+    "correct_intent_and_schema": 210,
+    "valid_json": 293,
+    "valid_schema": 273,
+    "intent_accuracy_percent": 70.71,
+    "by_intent": {
+      "delivery_period": {
+        "total": 11,
+        "correct": 9,
+        "accuracy_percent": 81.82
+      },
+      "check_invoice": {
+        "total": 11,
+        "correct": 4,
+        "accuracy_percent": 36.36
+      },
+      "switch_account": {
+        "total": 11,
+        "correct": 6,
+        "accuracy_percent": 54.55
+      },
+      "delete_account": {
+        "total": 11,
+        "correct": 7,
+        "accuracy_percent": 63.64
+      },
+      "track_refund": {
+        "total": 11,
+        "correct": 0,
+        "accuracy_percent": 0.0
+      },
+      "create_account": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "delivery_options": {
+        "total": 11,
+        "correct": 4,
+        "accuracy_percent": 36.36
+      },
+      "cancel_order": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "edit_account": {
+        "total": 11,
+        "correct": 9,
+        "accuracy_percent": 81.82
+      },
+      "check_refund_policy": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "recover_password": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "track_order": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "check_cancellation_fee": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "review": {
+        "total": 11,
+        "correct": 5,
+        "accuracy_percent": 45.45
+      },
+      "change_order": {
+        "total": 11,
+        "correct": 7,
+        "accuracy_percent": 63.64
+      },
+      "contact_human_agent": {
+        "total": 11,
+        "correct": 5,
+        "accuracy_percent": 45.45
+      },
+      "check_payment_methods": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "payment_issue": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "complaint": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "get_refund": {
+        "total": 11,
+        "correct": 5,
+        "accuracy_percent": 45.45
+      },
+      "get_invoice": {
+        "total": 11,
+        "correct": 9,
+        "accuracy_percent": 81.82
+      },
+      "newsletter_subscription": {
+        "total": 11,
+        "correct": 5,
+        "accuracy_percent": 45.45
+      },
+      "change_shipping_address": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "registration_problems": {
+        "total": 11,
+        "correct": 8,
+        "accuracy_percent": 72.73
+      },
+      "contact_customer_service": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "set_up_shipping_address": {
+        "total": 11,
+        "correct": 2,
+        "accuracy_percent": 18.18
+      },
+      "place_order": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      }
+    },
+    "by_origin": {
+      "bitext": {
+        "total": 270,
+        "correct": 186,
+        "accuracy_percent": 68.89
+      },
+      "handwritten": {
+        "total": 27,
+        "correct": 24,
+        "accuracy_percent": 88.89
+      }
+    }
+  },
+  "first_adapter": {
+    "total_cases": 300,
+    "completed_responses": 300,
+    "errors": 0,
+    "intent_cases": 297,
+    "correct_intent_and_schema": 161,
+    "valid_json": 297,
+    "valid_schema": 246,
+    "intent_accuracy_percent": 54.21,
+    "by_intent": {
+      "delivery_period": {
+        "total": 11,
+        "correct": 0,
+        "accuracy_percent": 0.0
+      },
+      "check_invoice": {
+        "total": 11,
+        "correct": 5,
+        "accuracy_percent": 45.45
+      },
+      "switch_account": {
+        "total": 11,
+        "correct": 9,
+        "accuracy_percent": 81.82
+      },
+      "delete_account": {
+        "total": 11,
+        "correct": 7,
+        "accuracy_percent": 63.64
+      },
+      "track_refund": {
+        "total": 11,
+        "correct": 0,
+        "accuracy_percent": 0.0
+      },
+      "create_account": {
+        "total": 11,
+        "correct": 7,
+        "accuracy_percent": 63.64
+      },
+      "delivery_options": {
+        "total": 11,
+        "correct": 6,
+        "accuracy_percent": 54.55
+      },
+      "cancel_order": {
+        "total": 11,
+        "correct": 0,
+        "accuracy_percent": 0.0
+      },
+      "edit_account": {
+        "total": 11,
+        "correct": 3,
+        "accuracy_percent": 27.27
+      },
+      "check_refund_policy": {
+        "total": 11,
+        "correct": 9,
+        "accuracy_percent": 81.82
+      },
+      "recover_password": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "track_order": {
+        "total": 11,
+        "correct": 0,
+        "accuracy_percent": 0.0
+      },
+      "check_cancellation_fee": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "review": {
+        "total": 11,
+        "correct": 4,
+        "accuracy_percent": 36.36
+      },
+      "change_order": {
+        "total": 11,
+        "correct": 4,
+        "accuracy_percent": 36.36
+      },
+      "contact_human_agent": {
+        "total": 11,
+        "correct": 9,
+        "accuracy_percent": 81.82
+      },
+      "check_payment_methods": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "payment_issue": {
+        "total": 11,
+        "correct": 4,
+        "accuracy_percent": 36.36
+      },
+      "complaint": {
+        "total": 11,
+        "correct": 6,
+        "accuracy_percent": 54.55
+      },
+      "get_refund": {
+        "total": 11,
+        "correct": 9,
+        "accuracy_percent": 81.82
+      },
+      "get_invoice": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "newsletter_subscription": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "change_shipping_address": {
+        "total": 11,
+        "correct": 8,
+        "accuracy_percent": 72.73
+      },
+      "registration_problems": {
+        "total": 11,
+        "correct": 2,
+        "accuracy_percent": 18.18
+      },
+      "contact_customer_service": {
+        "total": 11,
+        "correct": 5,
+        "accuracy_percent": 45.45
+      },
+      "set_up_shipping_address": {
+        "total": 11,
+        "correct": 4,
+        "accuracy_percent": 36.36
+      },
+      "place_order": {
+        "total": 11,
+        "correct": 8,
+        "accuracy_percent": 72.73
+      }
+    },
+    "by_origin": {
+      "bitext": {
+        "total": 270,
+        "correct": 143,
+        "accuracy_percent": 52.96
+      },
+      "handwritten": {
+        "total": 27,
+        "correct": 18,
+        "accuracy_percent": 66.67
+      }
+    }
+  },
+  "lower_rate_selected": {
+    "total_cases": 300,
+    "completed_responses": 300,
+    "errors": 0,
+    "intent_cases": 297,
+    "correct_intent_and_schema": 264,
+    "valid_json": 297,
+    "valid_schema": 295,
+    "intent_accuracy_percent": 88.89,
+    "by_intent": {
+      "delivery_period": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "check_invoice": {
+        "total": 11,
+        "correct": 8,
+        "accuracy_percent": 72.73
+      },
+      "switch_account": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "delete_account": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "track_refund": {
+        "total": 11,
+        "correct": 7,
+        "accuracy_percent": 63.64
+      },
+      "create_account": {
+        "total": 11,
+        "correct": 7,
+        "accuracy_percent": 63.64
+      },
+      "delivery_options": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "cancel_order": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "edit_account": {
+        "total": 11,
+        "correct": 9,
+        "accuracy_percent": 81.82
+      },
+      "check_refund_policy": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "recover_password": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "track_order": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "check_cancellation_fee": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "review": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "change_order": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "contact_human_agent": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "check_payment_methods": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "payment_issue": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "complaint": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "get_refund": {
+        "total": 11,
+        "correct": 7,
+        "accuracy_percent": 63.64
+      },
+      "get_invoice": {
+        "total": 11,
+        "correct": 7,
+        "accuracy_percent": 63.64
+      },
+      "newsletter_subscription": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "change_shipping_address": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "registration_problems": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      },
+      "contact_customer_service": {
+        "total": 11,
+        "correct": 11,
+        "accuracy_percent": 100.0
+      },
+      "set_up_shipping_address": {
+        "total": 11,
+        "correct": 6,
+        "accuracy_percent": 54.55
+      },
+      "place_order": {
+        "total": 11,
+        "correct": 10,
+        "accuracy_percent": 90.91
+      }
+    },
+    "by_origin": {
+      "bitext": {
+        "total": 270,
+        "correct": 238,
+        "accuracy_percent": 88.15
+      },
+      "handwritten": {
+        "total": 27,
+        "correct": 26,
+        "accuracy_percent": 96.3
+      }
+    }
+  },
+  "gain_over_base_percentage_points": 18.18,
+  "gained_cases": [
+    "bitext-delete_account-10",
+    "bitext-switch_account-09",
+    "bitext-delivery_period-06",
+    "bitext-check_refund_policy-05",
+    "bitext-review-07",
+    "bitext-change_order-04",
+    "bitext-contact_human_agent-06",
+    "bitext-check_invoice-05",
+    "bitext-review-02",
+    "bitext-delivery_options-05",
+    "bitext-newsletter_subscription-02",
+    "bitext-delivery_options-09",
+    "bitext-registration_problems-02",
+    "bitext-newsletter_subscription-03",
+    "bitext-get_invoice-09",
+    "bitext-review-03",
+    "bitext-review-01",
+    "bitext-delete_account-02",
+    "bitext-contact_human_agent-05",
+    "bitext-review-10",
+    "bitext-change_order-08",
+    "bitext-contact_human_agent-02",
+    "bitext-set_up_shipping_address-07",
+    "bitext-set_up_shipping_address-08",
+    "bitext-check_invoice-01",
+    "bitext-newsletter_subscription-01",
+    "bitext-get_refund-04",
+    "bitext-set_up_shipping_address-04",
+    "bitext-newsletter_subscription-06",
+    "bitext-switch_account-07",
+    "bitext-delivery_options-03",
+    "bitext-change_order-05",
+    "bitext-track_refund-07",
+    "bitext-track_refund-06",
+    "bitext-switch_account-02",
+    "bitext-get_refund-09",
+    "bitext-contact_human_agent-08",
+    "bitext-delete_account-03",
+    "bitext-registration_problems-07",
+    "bitext-track_refund-10",
+    "bitext-switch_account-01",
+    "bitext-newsletter_subscription-07",
+    "bitext-delete_account-04",
+    "bitext-switch_account-03",
+    "bitext-track_refund-04",
+    "bitext-delivery_options-04",
+    "bitext-payment_issue-10",
+    "bitext-delivery_options-01",
+    "bitext-set_up_shipping_address-02",
+    "bitext-complaint-01",
+    "bitext-newsletter_subscription-09",
+    "bitext-delivery_options-07",
+    "bitext-track_refund-09",
+    "bitext-contact_human_agent-03",
+    "bitext-change_shipping_address-05",
+    "bitext-track_refund-05",
+    "bitext-check_invoice-08",
+    "bitext-delivery_options-02",
+    "bitext-review-08",
+    "intent-04",
+    "intent-05",
+    "intent-27"
+  ],
+  "lost_cases": [
+    "bitext-change_shipping_address-02",
+    "bitext-get_invoice-07",
+    "bitext-create_account-02",
+    "bitext-create_account-09",
+    "bitext-create_account-03",
+    "bitext-create_account-10",
+    "bitext-get_invoice-04",
+    "intent-16"
+  ],
+  "general_probes": [
+    {
+      "id": "general-01",
+      "response": "A Python dictionary is a data structure that stores a collection of key-value pairs. It's like a container where you can store multiple items, each with a unique key and a corresponding value. Dictionaries are mutable, meaning you can add, remove, or modify items after they're created.\n\nHere's a simple example of a dictionary:\n\n```\nperson = {\"name\":\"John\", \"age\":\"25\", \"city\":\"New York\"}\n```\n\nIn this example, \"name\", \"age\", and \"city\" are keys, and \"John\", \"25\", and \"New York\" are their respective values. You can access a value by its key like this:\n\n```\nprint(person[\"name\"])  # Output: John\n```"
+    },
+    {
+      "id": "general-02",
+      "response": "The total cost of the notebooks is 3 * 4 = 12 euros. If you paid with 20 euros, your change should be 20 - 12 = 8 euros."
+    },
+    {
+      "id": "general-03",
+      "response": "Dear customer, we regret the delay in your parcel delivery. Our team is currently investigating the issue and will provide an update tomorrow. Thank you for your patience."
+    }
+  ],
+  "general_assessment": "All three responses are coherent; arithmetic is correct and the rewrite is within 30 words. Qualitative checks, not a general capability score.",
+  "integrity": {
+    "identical_suite": true,
+    "identical_messages_and_generation_settings": true,
+    "model_path_identifiers_resolve_to_same_directory": true,
+    "selected_weights_match_checkpoint": true,
+    "strict_scores_recomputed": true,
+    "original_files_unchanged": true
+  },
+  "limitations": [
+    "Single seed; the learning-rate change and checkpoint-selection procedure do not establish an optimum.",
+    "The final suite was previously evaluated in experiment 001; this is an exploratory comparison, not a newly collected blind test.",
+    "Public synthetic data and lexical split filtering do not rule out semantic similarity or prior model exposure."
+  ]
+}

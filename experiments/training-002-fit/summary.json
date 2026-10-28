@@ -1,0 +1,106 @@
+{
+  "mode": "tiny",
+  "name": "training-002-fit",
+  "started_utc": "2026-10-28T11:40:01.987926+00:00",
+  "status": "failed_before_training",
+  "config": {
+    "model": "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit",
+    "train": true,
+    "fine_tune_type": "lora",
+    "optimizer": "adam",
+    "optimizer_config": {
+      "adam": {},
+      "adamw": {},
+      "muon": {},
+      "sgd": {},
+      "adafactor": {}
+    },
+    "data": "/Users/otto/Local/study/fine-tune/data",
+    "seed": 42,
+    "num_layers": 8,
+    "batch_size": 1,
+    "iters": 270,
+    "val_batches": 27,
+    "learning_rate": 1e-05,
+    "steps_per_report": 50,
+    "steps_per_eval": 90,
+    "resume_adapter_file": null,
+    "adapter_path": "/Users/otto/Local/study/fine-tune/experiments/training-002-fit/adapter",
+    "save_every": 50,
+    "test": false,
+    "test_batches": 500,
+    "max_seq_length": 256,
+    "config": null,
+    "grad_checkpoint": false,
+    "grad_accumulation_steps": 1,
+    "clear_cache_threshold": 0,
+    "lr_schedule": null,
+    "lora_parameters": {
+      "rank": 8,
+      "scale": 20.0,
+      "dropout": 0.0
+    },
+    "mask_prompt": true,
+    "report_to": null,
+    "project_name": null,
+    "trust_remote_code": false
+  },
+  "training_examples": 27,
+  "monitored_examples": 27,
+  "monitor_role": "Training-set memorization diagnostic",
+  "general_probes_role": "New development prompts; qualitative review, not a general capability score",
+  "preserved_files": {
+    "/Users/otto/Local/study/fine-tune/data/train.jsonl": "5d48a7ef04410c5813fe43b8dd8bc194cd64552185ebe4f978df1a29c924638b",
+    "/Users/otto/Local/study/fine-tune/data/valid.jsonl": "0e0805e98bd0bfffe8324ce12bba0f601f3b0ec94cbefab46ae6db677b10f2ca",
+    "/Users/otto/Local/study/fine-tune/baseline-large-prompts.json": "acb762b389cd6bac8a1e2f850c2edc779e25235dd3cea3c7648000ccaaae4a95",
+    "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit/README.md": "748c964f9b7e5f2c3770ce013bbc0153be7c54311d9692c343b6188eefe77ac6",
+    "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit/chat_template.jinja": "58c1a1f04baa7adaeaba1f90267c3d57d9396f0c1f0129bdde9e76d3c6784af7",
+    "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit/config.json": "9a6ad0d9fa27b00bb4b502b217e19056e50153cd889f1ea652332d0020946e03",
+    "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit/generation_config.json": "e627b5a8b2dc371f90388947ada64fa6e71de0f991c04c835f0c0bc97e305a4f",
+    "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit/model.safetensors": "dd17d5491ae6c7082c227059ed10a412feb32fe5472481f5f795470c7ed7cf9a",
+    "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit/model.safetensors.index.json": "338ae6cdabd4ee26c809036290ed96c0a2d9a69a93d8cc059e1298575c50772a",
+    "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit/tokenizer.json": "cca43616769fed4807470fb41ccf7f5eebdd08624e7b9adafc09d99332cf31eb",
+    "/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit/tokenizer_config.json": "695f42944ef899b35db5a2a262c162bad6ed262e818e9c7bf46a896a3e7791a7",
+    "/Users/otto/Local/study/fine-tune/adapters/intent-qlora-001/0000540_adapters.safetensors": "e1d708be6313dc5a766971ec882428cd4c9806231f00aa98234b59a959155d09",
+    "/Users/otto/Local/study/fine-tune/adapters/intent-qlora-001/adapters.safetensors": "e1d708be6313dc5a766971ec882428cd4c9806231f00aa98234b59a959155d09",
+    "/Users/otto/Local/study/fine-tune/adapters/intent-qlora-001/0000360_adapters.safetensors": "365ccde123adcf0527bbcf549f1554161eecda3542f4eea9b833a6dacc33f06e",
+    "/Users/otto/Local/study/fine-tune/adapters/intent-qlora-001/0000180_adapters.safetensors": "d821c47881038498e628181a72df5efc8bf22082f7a28119db16eba4609d4ea3"
+  },
+  "original_config_differences": {
+    "batch_size": {
+      "original": 2,
+      "new": 1
+    },
+    "iters": {
+      "original": 540,
+      "new": 270
+    },
+    "val_batches": {
+      "original": -1,
+      "new": 27
+    },
+    "learning_rate": {
+      "original": 0.0001,
+      "new": 1e-05
+    },
+    "steps_per_report": {
+      "original": 20,
+      "new": 50
+    },
+    "steps_per_eval": {
+      "original": 180,
+      "new": 90
+    },
+    "adapter_path": {
+      "original": "/Users/otto/Local/study/fine-tune/adapters/intent-qlora-001",
+      "new": "/Users/otto/Local/study/fine-tune/experiments/training-002-fit/adapter"
+    },
+    "save_every": {
+      "original": 180,
+      "new": 50
+    }
+  },
+  "note": "Frozen final classification suite is not used for training or checkpoint selection.",
+  "completed_optimizer_steps": 0,
+  "error": "Monitoring attempted unsupported MLX random-state restoration; fixed in run_experiment.py before any optimizer updates."
+}

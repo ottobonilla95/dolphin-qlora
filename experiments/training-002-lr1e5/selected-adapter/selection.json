@@ -1,0 +1,10 @@
+{
+  "completed_optimizer_steps": 450,
+  "total": 27,
+  "correct": 26,
+  "invalid_labels": 0,
+  "elapsed_seconds": 15.11,
+  "accuracy_percent": 96.3,
+  "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000450_adapters.safetensors",
+  "checkpoint_sha256": "024570cd45e1e3529a44aed3308a465e5c7a3a6ec6b30fdad2445f8aa16411a6"
+}

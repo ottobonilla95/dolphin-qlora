@@ -1,0 +1,77 @@
+Loading local MLX model: /Users/otto/Local/study/fine-tune/training-model/dolphin-4bit
+BASE monitored: 17/27
+VALIDATION generation: 50/270
+VALIDATION generation: 100/270
+VALIDATION generation: 150/270
+VALIDATION generation: 200/270
+VALIDATION generation: 250/270
+VALIDATION generation: 270/270
+BASE full validation: 204/270
+╭─ [1mmlx_lm.lora[0m ────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│    model           [1m/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit[0m                                     │
+│    type            [1mlora · 8 layers · rank 8[0m                                                                          │
+│    dataset         [1m/Users/otto/Local/study/fine-tune/data[0m                                                            │
+│    optimizer       [1madam · lr 1.0e-05[0m                                                                                 │
+│    batch · iters   [1m2 · 540[0m                                                                                           │
+│    max seq         [1m256[0m                                                                                               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Trainable parameters: 0.065% (5.243M/8030.278M)
+  [1miter   train_loss     tok/s     tokens[0m
+     1    [1mval[0m [1m2.883[0m    46.39s
+    50    [1m0.223 ▼[0m    [1m   35[0m      0.9k
+GENERATED CHECK step 50: 19/27 correct; 1 invalid labels.
+  [1msave[0m  0000050_adapters.safetensors
+   100    [1m0.052 ▼[0m    [1m   36[0m      1.9k
+GENERATED CHECK step 100: 22/27 correct; 0 invalid labels.
+  [1msave[0m  0000100_adapters.safetensors
+   150    [1m0.045 ▼[0m    [1m   35[0m      2.8k
+GENERATED CHECK step 150: 21/27 correct; 0 invalid labels.
+  [1msave[0m  0000150_adapters.safetensors
+   180    [1mval[0m [1m0.026[0m    43.69s
+   200    [1m0.029 ▼[0m    [1m   35[0m      3.8k
+GENERATED CHECK step 200: 24/27 correct; 0 invalid labels.
+  [1msave[0m  0000200_adapters.safetensors
+   250    [1m0.026 ▼[0m    [1m   28[0m      4.7k
+GENERATED CHECK step 250: 23/27 correct; 0 invalid labels.
+  [1msave[0m  0000250_adapters.safetensors
+   300    [1m0.025 ▼[0m    [1m   29[0m      5.7k
+GENERATED CHECK step 300: 25/27 correct; 0 invalid labels.
+  [1msave[0m  0000300_adapters.safetensors
+   350    [1m0.039 ▲[0m    [1m   30[0m      6.6k
+GENERATED CHECK step 350: 25/27 correct; 0 invalid labels.
+  [1msave[0m  0000350_adapters.safetensors
+   360    [1mval[0m [1m0.025[0m    54.59s
+   400    [1m0.026 ▼[0m    [1m   28[0m      7.6k
+GENERATED CHECK step 400: 25/27 correct; 0 invalid labels.
+  [1msave[0m  0000400_adapters.safetensors
+   450    [1m0.021 ▼[0m    [1m   34[0m      8.5k
+GENERATED CHECK step 450: 26/27 correct; 0 invalid labels.
+  [1msave[0m  0000450_adapters.safetensors
+   500    [1m0.013 ▼[0m    [1m   34[0m      9.4k
+GENERATED CHECK step 500: 26/27 correct; 0 invalid labels.
+  [1msave[0m  0000500_adapters.safetensors
+   540    [1mval[0m [1m0.018[0m    38.66s
+   540    [1m0.042 ▲[0m    [1m   37[0m     10.2k
+GENERATED CHECK step 540: 26/27 correct; 0 invalid labels.
+[1mtrain[0m ██████████████████████████████ [1m100%[0m · [1m  540[0m/540
+VALIDATION generation: 50/270
+VALIDATION generation: 100/270
+VALIDATION generation: 150/270
+VALIDATION generation: 200/270
+VALIDATION generation: 250/270
+VALIDATION generation: 270/270
+{
+  "status": "completed",
+  "completed_optimizer_steps": 540,
+  "selected_checkpoint": {
+    "completed_optimizer_steps": 450,
+    "total": 27,
+    "correct": 26,
+    "invalid_labels": 0,
+    "elapsed_seconds": 15.11,
+    "accuracy_percent": 96.3,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000450_adapters.safetensors",
+    "checkpoint_sha256": "024570cd45e1e3529a44aed3308a465e5c7a3a6ec6b30fdad2445f8aa16411a6"
+  },
+  "elapsed_seconds": 909.33
+}

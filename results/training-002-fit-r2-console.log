@@ -1,0 +1,35 @@
+Loading local MLX model: /Users/otto/Local/study/fine-tune/training-model/dolphin-4bit
+BASE monitored: 23/27
+╭─ [1mmlx_lm.lora[0m ────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│    model           [1m/Users/otto/Local/study/fine-tune/training-model/dolphin-4bit[0m                                     │
+│    type            [1mlora · 8 layers · rank 8[0m                                                                          │
+│    dataset         [1m/Users/otto/Local/study/fine-tune/data[0m                                                            │
+│    optimizer       [1madam · lr 1.0e-05[0m                                                                                 │
+│    batch · iters   [1m1 · 270[0m                                                                                           │
+│    max seq         [1m256[0m                                                                                               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Trainable parameters: 0.065% (5.243M/8030.278M)
+  [1miter   train_loss     tok/s     tokens[0m
+     1    [1mval[0m [1m2.820[0m    4.96s
+    50    [1m0.217 ▼[0m    [1m   30[0m      0.5k
+GENERATED CHECK step 50: 26/27 correct; 1 invalid labels.
+  [1msave[0m  0000050_adapters.safetensors
+    90    [1mval[0m [1m0.006[0m    4.35s
+   100    [1m0.020 ▼[0m    [1m   38[0m      0.9k
+GENERATED CHECK step 100: 27/27 correct; 0 invalid labels.
+[1mtrain[0m ███████████░░░░░░░░░░░░░░░░░░░ [1m 37%[0m · [1m  100[0m/270
+{
+  "status": "completed",
+  "completed_optimizer_steps": 100,
+  "selected_checkpoint": {
+    "completed_optimizer_steps": 100,
+    "total": 27,
+    "correct": 27,
+    "invalid_labels": 0,
+    "elapsed_seconds": 11.82,
+    "accuracy_percent": 100.0,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-fit-r2/adapter/0000100_adapters.safetensors",
+    "checkpoint_sha256": "b4409162fb9069b64421fe9888a769312be02b66516fdd4df6672dc63b4b8f30"
+  },
+  "elapsed_seconds": 78.96
+}

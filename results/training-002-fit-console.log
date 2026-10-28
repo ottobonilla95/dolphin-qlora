@@ -1,0 +1,12 @@
+Loading local MLX model: /Users/otto/Local/study/fine-tune/training-model/dolphin-4bit
+Traceback (most recent call last):
+  File "/Users/otto/Local/study/fine-tune/run_experiment.py", line 248, in <module>
+    main()
+    ~~~~^^
+  File "/Users/otto/Local/study/fine-tune/run_experiment.py", line 206, in main
+    summary['base_monitored'] = score(runner, monitored, allowed, general=True)
+                                ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/otto/Local/study/fine-tune/run_experiment.py", line 95, in score
+    mx.random.state[:] = mlx_state
+    ~~~~~~~~~~~~~~~^^^
+TypeError: 'mlx.core.random._RandomState' object does not support item assignment

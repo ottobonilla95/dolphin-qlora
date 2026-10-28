@@ -1,0 +1,137 @@
+[
+  {
+    "training_row_zero_based": 0,
+    "prompt": "how can i get information about the delivery period",
+    "expected": "delivery_period"
+  },
+  {
+    "training_row_zero_based": 1,
+    "prompt": "i need help purchasing several items",
+    "expected": "place_order"
+  },
+  {
+    "training_row_zero_based": 2,
+    "prompt": "change information on gold account",
+    "expected": "edit_account"
+  },
+  {
+    "training_row_zero_based": 92,
+    "prompt": "what is the early termination fee?",
+    "expected": "check_cancellation_fee"
+  },
+  {
+    "training_row_zero_based": 8,
+    "prompt": "I want support trying to change my delivery address",
+    "expected": "change_shipping_address"
+  },
+  {
+    "training_row_zero_based": 5,
+    "prompt": "can you help me check if there are any news on my refund?",
+    "expected": "track_refund"
+  },
+  {
+    "training_row_zero_based": 6,
+    "prompt": "can I see at what time customer service available is?",
+    "expected": "contact_customer_service"
+  },
+  {
+    "training_row_zero_based": 9,
+    "prompt": "need help to  file a consumer claim",
+    "expected": "complaint"
+  },
+  {
+    "training_row_zero_based": 11,
+    "prompt": "where could I inform of errors with a registration?",
+    "expected": "registration_problems"
+  },
+  {
+    "training_row_zero_based": 12,
+    "prompt": "switch to  premium account",
+    "expected": "switch_account"
+  },
+  {
+    "training_row_zero_based": 15,
+    "prompt": "I have problems setting up a secondary delivery address",
+    "expected": "set_up_shipping_address"
+  },
+  {
+    "training_row_zero_based": 16,
+    "prompt": "reporting issue with payments",
+    "expected": "payment_issue"
+  },
+  {
+    "training_row_zero_based": 17,
+    "prompt": "removing gold account",
+    "expected": "delete_account"
+  },
+  {
+    "training_row_zero_based": 21,
+    "prompt": "I do not know how I can see purchase {{Order Number}} status",
+    "expected": "track_order"
+  },
+  {
+    "training_row_zero_based": 22,
+    "prompt": "help me seeing in what cases can I request reimbursements",
+    "expected": "check_refund_policy"
+  },
+  {
+    "training_row_zero_based": 25,
+    "prompt": "checking invoices from {{Person Name}}",
+    "expected": "check_invoice"
+  },
+  {
+    "training_row_zero_based": 40,
+    "prompt": "I am trying to obtain a reimbursement",
+    "expected": "get_refund"
+  },
+  {
+    "training_row_zero_based": 27,
+    "prompt": "I do not know what todo to chat with a live agent",
+    "expected": "contact_human_agent"
+  },
+  {
+    "training_row_zero_based": 30,
+    "prompt": "how to edt order {{Order Number}}",
+    "expected": "change_order"
+  },
+  {
+    "training_row_zero_based": 32,
+    "prompt": "I need help canceling purchase {{Order Number}}",
+    "expected": "cancel_order"
+  },
+  {
+    "training_row_zero_based": 37,
+    "prompt": "create new gold account",
+    "expected": "create_account"
+  },
+  {
+    "training_row_zero_based": 39,
+    "prompt": "leaving review for your company",
+    "expected": "review"
+  },
+  {
+    "training_row_zero_based": 43,
+    "prompt": "can you help me unsubscribing from the corporate newsletter?",
+    "expected": "newsletter_subscription"
+  },
+  {
+    "training_row_zero_based": 59,
+    "prompt": "assistance to retrieve my account pin",
+    "expected": "recover_password"
+  },
+  {
+    "training_row_zero_based": 61,
+    "prompt": "send me bills from {{Person Name}}",
+    "expected": "get_invoice"
+  },
+  {
+    "training_row_zero_based": 63,
+    "prompt": "could you help me check what delivery methods you offer?",
+    "expected": "delivery_options"
+  },
+  {
+    "training_row_zero_based": 86,
+    "prompt": "help me seeing the payment modalities",
+    "expected": "check_payment_methods"
+  }
+]

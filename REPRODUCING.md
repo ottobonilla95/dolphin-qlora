@@ -43,7 +43,31 @@ The following commands download and convert the pinned model, measure a fresh ba
 
 Model access and any acceptance of upstream model terms are handled by Hugging Face for your account. `uv` must be on PATH because the preparation script records the installed dependency freeze. Exact output equality across hardware, package builds, or runtime versions is not guaranteed by fixing a seed.
 
-For the proposed controlled experiment, use another fresh workspace and change only `learning_rate` to `0.00001` in its generated `train-config.yaml`. The recorded trainer monitors token loss; more frequent generated validation checks would require adding a monitoring callback or saving more checkpoints and evaluating them. Neither improvement was part of the original run. Changing checkpoint frequency also requires adjusting `diagnose.py`, which currently expects steps 180, 360, and 540.
+For a controlled lower-rate experiment in a separate workspace, change only `learning_rate` to `0.00001` in its generated `train-config.yaml`. The original `train.py` monitors token loss only. Changing its checkpoint frequency also requires adjusting `diagnose.py`, which expects steps 180, 360, and 540.
+
+## Run monitored lower-rate experiments
+
+With the existing local model and environment ready, the additional runner creates isolated experiment folders and refuses to reuse a name:
+
+```bash
+.venv/bin/python -u run_experiment.py --mode tiny --name my-fit-check
+# Inspect experiments/my-fit-check/summary.json and monitor.json before proceeding.
+.venv/bin/python -u run_experiment.py --mode full --name my-lower-rate-run
+```
+
+The tiny diagnostic uses 27 reviewed training examples, one per intent, at learning rate `0.00001` and batch size 1. It runs at most 270 updates and stops early if a generated-answer check gets all 27 right. This checks memorization of the training sample, not generalization.
+
+The full mode uses the original 1,080 training examples, batch size 2, and 540 updates. The learning rate is reduced to `0.00001`; the optimizer, adapted layers, rank, scale, seed, prompt masking, and sequence length match run 001. Generated answers and checkpoints are recorded every 50 updates, including the final update. The original full validation-loss schedule is retained. The generation monitor preserves the trainer's random state and restores training mode after each check.
+
+Checkpoint selection uses a fixed 27-example validation subset, choosing the earliest checkpoint on ties. The selected checkpoint is then measured on all 270 validation examples and compared against the base on those same examples. Three new general prompts are recorded for qualitative review; they are separate from the frozen final suite. The runner does not evaluate or select against the frozen final classification suite.
+
+Each folder contains the effective configuration, raw generated responses, loss records, adapter checkpoint hashes, a summary, and original-file integrity checks. Adapter weights remain local and are excluded from Git. The original run's data, model, adapter, and results are preserved.
+
+The selected checkpoint is exported to that experiment's `selected-adapter/` folder. Use it explicitly for an individual prompt:
+
+```bash
+.venv/bin/python predict.py --adapter-path experiments/my-lower-rate-run/selected-adapter 'Where is my order?'
+```
 
 Select configurations using validation data. Avoid repeatedly tuning against the fixed final suite; reserve new unseen examples if it has become part of the development loop.
 

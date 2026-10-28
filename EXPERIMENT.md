@@ -95,13 +95,13 @@ Greedy decoding without a KV cache reproduced the same answers for the three aud
 
 ## Conclusions and remaining hypotheses
 
-The measured conclusion is that this adapter regressed on the selected tasks. Generated validation accuracy and general probes would have exposed the problem earlier than monitoring loss alone. The MLX base without the adapter remains the preferred model for this experiment.
+The measured conclusion is that adapter 001 regressed on the selected tasks. Generated validation accuracy and general probes would have exposed the problem earlier than monitoring loss alone. The MLX base is preferred over adapter 001; the separate follow-up below evaluates a new candidate.
 
 Overly aggressive updates are a plausible explanation, not an established cause. The learning rate was 1e-4, compared with the installed MLX LM default of 1e-5. Adapting every eligible projection in eight blocks may also have made broader changes than necessary. A narrow classification-only objective may have contributed to degraded general answers. None of those variables was varied in a controlled comparison. The default configuration is a reference, not proof of an appropriate learning rate for this task. See the [MLX example configuration](https://github.com/ml-explore/mlx-lm/blob/main/examples/lora_config.yaml) and the installed version pinned in the lock file.
 
-The next proposed experiment starts from the frozen base with newly initialized adapters and changes only the learning rate to 1e-5. Generated validation accuracy, invalid-label rate, and general probes should be checked every 25 to 50 steps. Checkpoint choice should use validation data, with the fixed final suite reserved for reporting. If a narrower q_proj and v_proj adapter is tested, it should be a separate controlled experiment. A tiny training-set fit test and closer label review are further diagnostics if learning remains poor.
+This diagnosis motivated a fresh adapter at learning rate 1e-5, with generated validation accuracy, invalid-label rate, and general probes checked every 50 steps. Checkpoint choice uses validation data, with the fixed final suite reserved for reporting. A narrower q_proj and v_proj adapter remains a possible separate experiment; it has not been tested here.
 
-Only the first training run and read-only diagnostics were performed. The lower-learning-rate run has not been performed. A single seed, synthetic public source data, potentially ambiguous labels, strict formatting rules, and a small general probe set limit how far these results can be generalized.
+The first run and its diagnostics are preserved above. The lower-learning-rate follow-up is recorded below. A single seed, synthetic public source data, potentially ambiguous labels, strict formatting rules, and a small general probe set limit how far these results can be generalized.
 
 ## Evidence files
 
@@ -114,4 +114,68 @@ Only the first training run and read-only diagnostics were performed. The lower-
 | Checkpoint and token audits | [Diagnostics](results/training-001-diagnostics.json) |
 | Adapter reload | [Reload check](results/training-001-reload-check.json) |
 | Frozen weights | [Integrity check](results/training-001-integrity.json) |
+
+## Follow-up: lower learning rate with generated-answer monitoring
+
+On 28 October 2026, two fresh adapters were initialized from the unchanged MLX base. Neither resumed the failed first adapter. The new runner is `run_experiment.py`; all original model files, dataset splits, the reserved suite, and adapter 001 weights passed checksum verification before and after each successful run.
+
+### Training-set fit diagnostic
+
+The small diagnostic used 27 reviewed examples drawn from the original training split, one per intent, with learning rate `0.00001` and batch size 1. The base answered 23/27 correctly. The fresh adapter reached 26/27 at step 50 and 27/27 at step 100, triggering an early stop. The three development general answers remained coherent. This establishes that the setup can learn its training examples; it does not measure generalization. The complete diagnostic took 78.96 seconds, including generation checks.
+
+The first monitoring attempt failed before any optimizer updates because its random-state restoration used an unsupported MLX API. The corrected monitor uses pure greedy generation without reseeding, verifies that the MLX random state is unchanged, preserves NumPy's state, and restores the model's training mode. This preparation failure is retained separately as `experiments/training-002-fit/`; the successful diagnostic is `experiments/training-002-fit-r2/`.
+
+### Full-data experiment
+
+The full run used the same 1,080 training examples, batch size 2, 540 updates, Adam optimizer, seed 42, last eight adapted blocks, rank 8, scale 20, and prompt masking as run 001. The learning rate changed from `0.0001` to `0.00001`. Reporting and checkpoint saving changed to every 50 updates; the full validation-loss schedule remained unchanged. No training examples were added or relabeled.
+
+Generation checks used the first validation example per intent, the same fixed 27-example subset used in the earlier diagnostics. Three new general development prompts checked a Python list explanation, arithmetic, and a polite rewrite. They were reviewed qualitatively and were separate from the reserved final-suite probes.
+
+| Completed updates | Correct on the 27-example validation subset |
+| --- | ---: |
+| Base | 17 |
+| 50 | 19 |
+| 100 | 22 |
+| 150 | 21 |
+| 200 | 24 |
+| 250 | 23 |
+| 300 | 25 |
+| 350 | 25 |
+| 400 | 25 |
+| 450 | 26 |
+| 500 | 26 |
+| 540 | 26 |
+
+The earliest checkpoint on a tie was selected, so the chosen adapter is **step 450**, after 900 training examples. Selection used this validation subset only. The selected checkpoint was then evaluated on all 270 validation examples with the same greedy decoding and strict schema checks as the base:
+
+| Full validation measure | Base | Selected step 450 |
+| --- | ---: | ---: |
+| Correct classifications | 204 / 270 | 251 / 270 |
+| Accuracy | 75.56% | 92.96% |
+| Invalid schema or label | 24 | 1 |
+
+The gain was 47 classifications, or 17.40 percentage points. All three development general responses remained coherent, including the correct arithmetic answer. These checks do not establish broad preservation of general capabilities.
+
+The monitored full experiment took 909.33 seconds (about 15.2 minutes), including baseline generation, training, checkpoints, and full validation of the selected adapter. Peak reported MLX memory was approximately 6.20 GB. These timings include evaluation overhead and are not a training-only benchmark.
+
+The selected weights are exported locally to `experiments/training-002-lr1e5/selected-adapter/`; weights remain excluded from Git. The final step-540 weights are retained separately. See the [full run summary](experiments/training-002-lr1e5/summary.json), [all generated checkpoint checks](experiments/training-002-lr1e5/monitor.json), [loss records](experiments/training-002-lr1e5/metrics.jsonl), and [tiny-fit summary](experiments/training-002-fit-r2/summary.json).
+
+### Final reporting evaluation
+
+After selecting step 450, the exported adapter was reloaded in a separate process and evaluated once on the original 300-case suite. The scored denominator remains 297 classifications; the remaining three cases are qualitative general probes. Checkpoint selection and training did not use these final classification examples. The suite was already evaluated in run 001, so this is an exploratory comparison on a previously used test set, not a newly collected blind benchmark.
+
+| Final suite measure | Base | Adapter 001, step 540 | Adapter 002, selected step 450 |
+| --- | ---: | ---: | ---: |
+| Correct classifications | 210 / 297 | 161 / 297 | 264 / 297 |
+| Accuracy | 70.71% | 54.21% | **88.89%** |
+| Parseable JSON | 293 / 297 | 297 / 297 | 297 / 297 |
+| Allowed schema and label | 273 / 297 | 246 / 297 | 295 / 297 |
+
+Adapter 002 gained 62 base-model failures and lost 8 base-model successes: a net gain of 54 classifications, or **18.18 percentage points over the base**. There were no request errors. The three general answers were coherent: a valid dictionary explanation and example, correct arithmetic (8 euro change), and a polite rewrite within the requested 30-word limit. This limited check does not establish broad preservation of the base model's general abilities.
+
+The final suite hash, every conversation and generation setting, and the selected adapter checksum were verified against the recorded base evaluation and selected checkpoint. The relative versus absolute model identifiers resolve to the same preserved directory. All 297 strict classification scores were independently recomputed from the final responses.
+
+The result supports the lower-rate, validation-selected recipe for this dataset and model. It does not prove that `0.00001` is optimal, isolate all effects of checkpoint selection, or establish performance across seeds and other tasks. The next useful improvement would target remaining intent confusions using validation data and a new unseen evaluation set before further tuning against these results.
+
+Evidence: [comparison and checks](results/training-002-comparison.json), [raw final result](results/20261028T115822561383Z.json), [readable responses and mismatches](results/20261028T115822561383Z.txt).
 

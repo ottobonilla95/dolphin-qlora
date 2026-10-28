@@ -1,0 +1,4215 @@
+[
+  {
+    "completed_optimizer_steps": 50,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"check_shipping_options\"}",
+        "valid_json": true,
+        "valid_schema": false,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It's like a container where you can store multiple values.\n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost of the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change is 20 - 12 = 8 euro.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 19,
+    "invalid_labels": 1,
+    "elapsed_seconds": 13.12,
+    "accuracy_percent": 70.37,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000050_adapters.safetensors",
+    "checkpoint_sha256": "ff8f76f30494d5af3c91ba3f4cd3464a79dfef849d0d63f3b2eb281ebde3e851"
+  },
+  {
+    "completed_optimizer_steps": 100,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It's like a container where you can store multiple values.\n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost of the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change is 20 - 12 = 8 euro.\n\nSo, you get 8 euro in change.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 22,
+    "invalid_labels": 0,
+    "elapsed_seconds": 13.13,
+    "accuracy_percent": 81.48,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000100_adapters.safetensors",
+    "checkpoint_sha256": "125b6eff00e12a0b6a35878226a3b2ee0b8c8a2e4338ad03f6899247f9254577"
+  },
+  {
+    "completed_optimizer_steps": 150,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It can be used to store multiple values in a single variable, making it a versatile data structure for various purposes. \n\nExample: [1, 2, 3, 4, 5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost of the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change is 20 - 12 = 8 euro.\n\nSo, you get 8 euro in change.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 21,
+    "invalid_labels": 0,
+    "elapsed_seconds": 13.35,
+    "accuracy_percent": 77.78,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000150_adapters.safetensors",
+    "checkpoint_sha256": "f9efdf99aa04e9ca51b8329c09223709b8213027dcacde13ad4a8ab5d3016170"
+  },
+  {
+    "completed_optimizer_steps": 200,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It's like a container where you can store multiple values.\n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost for the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change would be 20 - 12 = 8 euro.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 24,
+    "invalid_labels": 0,
+    "elapsed_seconds": 16.84,
+    "accuracy_percent": 88.89,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000200_adapters.safetensors",
+    "checkpoint_sha256": "101c509a73d4a9e30f2e42272b62d02630cb7813c3b10cd47a3e83f67fe2c148"
+  },
+  {
+    "completed_optimizer_steps": 250,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It can be used to store multiple values in a single variable, making it a versatile data structure. \n\nExample: [1, 2, 3, \"apple\", \"banana\"]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost of the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change is 20 - 12 = 8 euro.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 23,
+    "invalid_labels": 0,
+    "elapsed_seconds": 15.86,
+    "accuracy_percent": 85.19,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000250_adapters.safetensors",
+    "checkpoint_sha256": "ef1a45b427afbfda8c18106cca12938b7b98c028997c052a8ffe70a842f32f5c"
+  },
+  {
+    "completed_optimizer_steps": 300,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It can be used to store multiple values in a single variable, making it a versatile data structure. \n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost of the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change is 20 - 12 = 8 euro.\n\nSo, you get 8 euro in change.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 25,
+    "invalid_labels": 0,
+    "elapsed_seconds": 15.58,
+    "accuracy_percent": 92.59,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000300_adapters.safetensors",
+    "checkpoint_sha256": "949a6c02bdac5797979ff2e69b92c9ccbb8a843c6cf024820ad4457c3270a564"
+  },
+  {
+    "completed_optimizer_steps": 350,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It can be used to store multiple values in a single variable, making it a versatile data structure. \n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost for the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change would be 20 - 12 = 8 euro.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 25,
+    "invalid_labels": 0,
+    "elapsed_seconds": 15.0,
+    "accuracy_percent": 92.59,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000350_adapters.safetensors",
+    "checkpoint_sha256": "a8cb7e6dfeba10ab0b6c98f87e33790f30865d2fcfceb5ef1c208ea17351f802"
+  },
+  {
+    "completed_optimizer_steps": 400,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It's like a container where you can store multiple values.\n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost of the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change is 20 - 12 = 8 euro.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 25,
+    "invalid_labels": 0,
+    "elapsed_seconds": 15.01,
+    "accuracy_percent": 92.59,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000400_adapters.safetensors",
+    "checkpoint_sha256": "0506489c6d78ebd6dbda2b59fed40384c0eea7f05748be750ced0ef0a91c9f56"
+  },
+  {
+    "completed_optimizer_steps": 450,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"change_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It's like a container where you can store multiple values.\n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost for the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change would be 20 - 12 = 8 euro.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 26,
+    "invalid_labels": 0,
+    "elapsed_seconds": 15.11,
+    "accuracy_percent": 96.3,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000450_adapters.safetensors",
+    "checkpoint_sha256": "024570cd45e1e3529a44aed3308a465e5c7a3a6ec6b30fdad2445f8aa16411a6"
+  },
+  {
+    "completed_optimizer_steps": 500,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"change_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It can be used to store multiple values in a single variable, making it a versatile data structure. \n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost of the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change is 20 - 12 = 8 euro.\n\nSo, you get 8 euro in change.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 26,
+    "invalid_labels": 0,
+    "elapsed_seconds": 13.55,
+    "accuracy_percent": 96.3,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000500_adapters.safetensors",
+    "checkpoint_sha256": "73a3f3c0eb3b9429df261f05be9d7bc0afcfd0a5e6451a36798925ac5bb9af6e"
+  },
+  {
+    "completed_optimizer_steps": 540,
+    "classification": [
+      {
+        "prompt": "I want assistance checking how long refunds usually take",
+        "expected": "check_refund_policy",
+        "response": "{\"intent\":\"check_refund_policy\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me add an item to purchase {{Order Number}}",
+        "expected": "change_order",
+        "response": "{\"intent\":\"change_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "want help to speak to somebody",
+        "expected": "contact_human_agent",
+        "response": "{\"intent\":\"contact_human_agent\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 142,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i submitted an wrong address i need help to edit it",
+        "expected": "change_shipping_address",
+        "response": "{\"intent\":\"change_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I have got to download my invoice from  {{Person Name}}",
+        "expected": "get_invoice",
+        "response": "{\"intent\":\"get_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "change to the gold account",
+        "expected": "switch_account",
+        "response": "{\"intent\":\"switch_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 141,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "i cant make a transfer report troubles with online payment",
+        "expected": "payment_issue",
+        "response": "{\"intent\":\"payment_issue\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know how I can write an opinion about a product",
+        "expected": "review",
+        "response": "{\"intent\":\"review\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 6
+        }
+      },
+      {
+        "prompt": "i need assistance to inform of signup issues",
+        "expected": "registration_problems",
+        "response": "{\"intent\":\"registration_problems\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "can I take a quick look at the bill #00108?",
+        "expected": "check_invoice",
+        "response": "{\"intent\":\"check_invoice\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I do not know what I have to do to make a customer lcaim",
+        "expected": "complaint",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": false,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 152,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "information about the cancellation of my {{Account Category}} account",
+        "expected": "delete_account",
+        "response": "{\"intent\":\"delete_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "editing user data",
+        "expected": "edit_account",
+        "response": "{\"intent\":\"edit_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 139,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do I cancel my corporate newsletter subscription?",
+        "expected": "newsletter_subscription",
+        "response": "{\"intent\":\"newsletter_subscription\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "where can I cancel purchase {{Order Number}}?",
+        "expected": "cancel_order",
+        "response": "{\"intent\":\"cancel_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how to see how long it takes for my order to arrive?",
+        "expected": "delivery_period",
+        "response": "{\"intent\":\"delivery_period\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "how do i see purchase  {{Order Number}} status",
+        "expected": "track_order",
+        "response": "{\"intent\":\"track_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "need help to see at what time i can call customer support",
+        "expected": "contact_customer_service",
+        "response": "{\"intent\":\"contact_customer_service\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 148,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i have got to submit my deliery address",
+        "expected": "set_up_shipping_address",
+        "response": "{\"intent\":\"set_up_shipping_address\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 146,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "help me to retrieve the pwd of my account",
+        "expected": "recover_password",
+        "response": "{\"intent\":\"recover_password\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I'm waiting for an rebate of {{Refund Amount}} dollars",
+        "expected": "track_refund",
+        "response": "{\"intent\":\"track_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I  have got to check the shipment options, I need help",
+        "expected": "delivery_options",
+        "response": "{\"intent\":\"delivery_options\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 149,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "would it be possible to check the early termination charge?",
+        "expected": "check_cancellation_fee",
+        "response": "{\"intent\":\"check_cancellation_fee\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 9
+        }
+      },
+      {
+        "prompt": "I want help getting a compensation of my money",
+        "expected": "get_refund",
+        "response": "{\"intent\":\"get_refund\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 145,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "I need assistance earning several of your product",
+        "expected": "place_order",
+        "response": "{\"intent\":\"place_order\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      },
+      {
+        "prompt": "I don't know how to check your available payment options",
+        "expected": "check_payment_methods",
+        "response": "{\"intent\":\"check_payment_methods\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 147,
+          "completion_tokens": 8
+        }
+      },
+      {
+        "prompt": "i try to open a  standard account",
+        "expected": "create_account",
+        "response": "{\"intent\":\"create_account\"}",
+        "valid_json": true,
+        "valid_schema": true,
+        "correct": true,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 144,
+          "completion_tokens": 7
+        }
+      }
+    ],
+    "general": [
+      {
+        "id": "dev-python",
+        "prompt": "Explain a Python list in two sentences and give one short example.",
+        "response": "A Python list is an ordered collection of items which can be of different types, enclosed in square brackets and separated by commas. It can be used to store multiple values in a single variable, making it a versatile data structure. \n\nExample: [1, 2, 3, \"hello\", 4.5]",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-arithmetic",
+        "prompt": "Four pens cost 3 euro each. I pay 20 euro. How much change do I get?",
+        "response": "If four pens cost 3 euro each, then the total cost of the pens is 4 * 3 = 12 euro.\n\nIf you pay 20 euro, then your change is 20 - 12 = 8 euro.\n\nSo, you get 8 euro in change.",
+        "finish_reason": "stop"
+      },
+      {
+        "id": "dev-rewrite",
+        "prompt": "Rewrite politely in at most 25 words: We cannot deliver today. Your order will arrive on Friday.",
+        "response": "We regret the delay, but your order will be delivered on Friday. Thank you for your understanding.",
+        "finish_reason": "stop"
+      }
+    ],
+    "total": 27,
+    "correct": 26,
+    "invalid_labels": 0,
+    "elapsed_seconds": 12.83,
+    "accuracy_percent": 96.3,
+    "checkpoint": "/Users/otto/Local/study/fine-tune/experiments/training-002-lr1e5/adapter/0000540_adapters.safetensors",
+    "checkpoint_sha256": "465d0338769bfd2cd2eccfa8ade77e1a527a422bdc0465dede6cefc5ea4aa618"
+  }
+]

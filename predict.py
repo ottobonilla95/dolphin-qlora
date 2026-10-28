@@ -14,12 +14,17 @@ def main():
     selection = parser.add_mutually_exclusive_group()
     selection.add_argument('--base', action='store_true', help='Use the original MLX weights (the default).')
     selection.add_argument('--adapter', action='store_true', help='Use experimental adapter 001, which regressed in evaluation.')
+    selection.add_argument('--adapter-path', type=Path, help='Use a separately trained MLX adapter directory.')
     parser.add_argument('--general', action='store_true', help='Use the general-assistant system prompt instead.')
     args = parser.parse_args()
     status = json.loads((ROOT / 'experiment-status.json').read_text())
     suite = json.loads((ROOT / 'baseline-large-prompts.json').read_text())
-    adapter = status.get('adapter_path') if args.adapter else None
-    if args.adapter and (not adapter or not (Path(adapter) / 'adapters.safetensors').is_file()):
+    adapter = None
+    if args.adapter_path:
+        adapter = str(args.adapter_path.resolve())
+    elif args.adapter:
+        adapter = status.get('adapter_path')
+    if (args.adapter or args.adapter_path) and (not adapter or not (Path(adapter) / 'adapters.safetensors').is_file()):
         parser.error('The trained adapter is not ready yet.')
     runner = LocalMLX(status['model_path'], adapter)
     result = runner.chat({
