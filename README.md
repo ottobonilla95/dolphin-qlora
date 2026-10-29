@@ -1,13 +1,13 @@
 # Fine-tuning made the model worse. A second run reached 88.89%.
 
-### Fine-tuning Dolphin 8B on a Mac, with both experiments left in the open.
+### Two local QLoRA runs on Dolphin 8B, with results and reproducible evidence.
 
 ![Final accuracy: 88.89 percent](docs/assets/badge-accuracy.svg)
 ![Gain over base: 18.18 percentage points](docs/assets/badge-gain.svg)
 ![Training examples: 1080](docs/assets/badge-samples.svg)
 ![Runtime: Apple Silicon and MLX](docs/assets/badge-runtime.svg)
 
-I wanted to teach an existing model to sort customer support messages into **27 intents**. My first QLoRA run made it worse—even while the training metrics looked better. A fresh run with a **10× lower learning rate** and checks of actual answers beat the original model.
+Fine-tuning Dolphin 8B to classify customer support messages into **27 intents** initially reduced accuracy—even as validation token loss fell. A fresh run with a **10× lower learning rate** and validation-based checkpoint selection improved accuracy from **70.71% to 88.89%** over the base model.
 
 ![Three evaluations on the same 297 classification questions: base 70.71%, first adapter 54.21%, lower-rate adapter selected at step 450 88.89%.](docs/assets/results.png)
 
@@ -38,7 +38,7 @@ The base is **Dolphin3.0 Llama3.1 8B**, converted to 4-bit MLX. QLoRA trains a s
 
 Before the full follow-up, a separate 27-example check confirmed that the setup could learn its own training examples. The full run then started fresh from the base, using all 1,080 examples.
 
-**The lesson:** look at what the model actually answers. Lower token loss alone missed a serious regression. Gentler updates and validation-based checkpoint selection worked better here; we haven't separated how much each contributed.
+**The lesson:** check generated answers alongside token loss. Lower loss alone missed a serious regression. Gentler updates and validation-based checkpoint selection worked better in this experiment; their individual contributions have not been isolated.
 
 ## All on one laptop
 

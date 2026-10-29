@@ -1,6 +1,6 @@
 # A failed fine-tune, a smaller learning rate, a better model
 
-**Dolphin 8B went from 70.71% to 54.21% on my first run—and reached 88.89% on the follow-up.** The successful recipe used the same training data, a ten-times lower learning rate, and a checkpoint chosen by checking real answers during training.
+**Dolphin 8B's classification accuracy fell from 70.71% to 54.21% after the first fine-tune—and reached 88.89% on the follow-up.** The second run used the same training data, a ten-times lower learning rate, and a checkpoint selected by evaluating generated answers during training.
 
 ![Experiment: local QLoRA](docs/assets/badge-experiment.svg)
 ![Test gain: 54 correct answers](docs/assets/badge-correct.svg)
@@ -11,9 +11,9 @@ The task: take a customer message such as “Where is my order?” and return `{
 
 ## 1. The first run looked good in the wrong metric
 
-I trained a separate QLoRA adapter on **1,080 examples**. The base model stayed frozen.
+A separate QLoRA adapter was trained on **1,080 examples** while the base model's weights stayed frozen.
 
-| What I measured | Before | First adapter |
+| Metric | Before | First adapter |
 | --- | ---: | ---: |
 | Correct classifications | 210/297 | **161/297** |
 | Accuracy | 70.71% | **54.21%** |
@@ -28,7 +28,7 @@ A fresh diagnostic adapter trained on **27 reviewed training examples, one per i
 
 **23/27 before → 26/27 at step 50 → 27/27 at step 100.** At that point the diagnostic stopped. The general probes remained coherent.
 
-This was a memorization check on the same training examples, not a score on unseen messages. I kept that adapter separate and started the full experiment fresh.
+This measured memorization of the training examples rather than accuracy on unseen messages. The diagnostic adapter was kept separate; the full experiment started with another fresh adapter on the unchanged base model.
 
 <a id="follow-up-lower-learning-rate-with-generated-answer-monitoring"></a>
 
@@ -67,7 +67,7 @@ Checkpoint selection was complete before this evaluation. Each model answered th
 
 The selected adapter fixed **62** base-model failures and lost **8** base-model successes: **54 more correct answers**, a gain of **18.18 percentage points**. The three original general probes were coherent again, including the correct arithmetic answer.
 
-## What this tells me
+## What the results show
 
 **Gentler updates and checking actual answers worked better for this setup.** The first learning rate may have pushed the adapter too aggressively, but the result doesn't isolate the learning-rate effect from choosing an earlier checkpoint. It also doesn't establish an optimal learning rate.
 
