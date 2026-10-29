@@ -1,4 +1,4 @@
-# I made my model worse. Then I got it to 88.89%.
+# Fine-tuning made the model worse. A second run reached 88.89%.
 
 ### Fine-tuning Dolphin 8B on a Mac, with both experiments left in the open.
 
