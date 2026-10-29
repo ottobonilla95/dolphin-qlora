@@ -13,7 +13,7 @@ Fine-tuning Dolphin 8B to classify customer support messages into **27 intents**
 
 **54 more correct answers than the base.** The successful adapter scored **264/297**, up from **210/297**. All three sampled general answers also stayed coherent; the first adapter had made them repetitive.
 
-[Read the experiment →](EXPERIMENT.md) · [Inspect the predictions →](results/20261028T115822561383Z.txt) · [Reproduce it →](REPRODUCING.md)
+[Read the experiment →](EXPERIMENT.md) · [Understand the results →](results/README.md) · [Reproduce it →](REPRODUCING.md)
 
 ## What did the model learn?
 
@@ -33,12 +33,12 @@ The base is **Dolphin3.0 Llama3.1 8B**, converted to 4-bit MLX. QLoRA trains a s
 | Training examples | 1,080 | Same 1,080 |
 | Batch size / optimizer / adapter structure | 2 / Adam / last 8 blocks | Same |
 | Checks of generated answers | After training | **Every 50 updates** |
-| Checkpoint evaluated on the final suite | Final step 540 | **Step 450, chosen on validation** |
+| Saved adapter used for final evaluation | Final step 540 | **Step 450, chosen using validation answers** |
 | Final classification accuracy | 54.21% | **88.89%** |
 
 Before the full follow-up, a separate 27-example check confirmed that the setup could learn its own training examples. The full run then started fresh from the base, using all 1,080 examples.
 
-**The lesson:** check generated answers alongside token loss. Lower loss alone missed a serious regression. Gentler updates and validation-based checkpoint selection worked better in this experiment; their individual contributions have not been isolated.
+**The lesson:** check generated answers alongside token loss, the average error in predicting the next token. Lower loss alone missed a serious drop in accuracy. The lower learning rate and choosing a checkpoint using validation answers worked better together; this experiment does not separate their effects.
 
 ## All on one laptop
 
@@ -52,8 +52,8 @@ This is one local learning experiment with one seed and a public synthetic datas
 
 - **[Experiment in a few minutes](EXPERIMENT.md)** — the failure, the fix, the validation curve, and the limits.
 - **[Reproduction guide](REPRODUCING.md)** — setup, training, evaluation, and trying a prompt.
-- **[Run 002 comparison](results/training-002-comparison.json)** — scores, gains, losses, and integrity checks.
-- **[Full technical record](docs/technical-record.md)** — exact settings, dataset provenance, and the diagnosis.
+- **[Results guide](results/README.md)** — what the scores mean, remaining errors, and links to every prediction.
+- **[Full technical record](docs/technical-record.md)** — exact settings, data sources, and the diagnosis.
 
 <details>
 <summary><strong>Files, verification, and data terms</strong></summary>

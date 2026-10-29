@@ -4,7 +4,7 @@
 
 ## Purpose and outcome
 
-The experiment tested whether local QLoRA fine tuning could improve an existing instruction model at classifying customer support messages. It also exercised a complete workflow: establish a baseline on the exact MLX training model, reserve evaluation examples, train a separate adapter, and compare generated answers.
+The experiment tested whether local QLoRA fine tuning could improve an existing instruction model at classifying customer support messages. The workflow measured the exact MLX base model before training, kept evaluation examples separate, trained a new adapter, and compared its answers with the base.
 
 The first adapter reduced classification accuracy from 70.71% to 54.21% and made the three general probes repetitive. A fresh follow-up with a ten-times lower learning rate and validation-based checkpoint selection reached **88.89% (264/297)**, with coherent general probes. This record preserves both runs; the later sections contain the complete follow-up. The first regression's cause has not been fully isolated.
 
@@ -36,11 +36,11 @@ The suite SHA256 is `acb762b389cd6bac8a1e2f850c2edc779e25235dd3cea3c7648000ccaaa
 
 Each example used a fresh conversation with temperature 0 and seed 42. Classification allowed 128 output tokens; general probes allowed 256. No forced JSON schema was used. A pass required the entire response to parse as JSON, contain exactly the key `intent`, and match the expected allowed label. A correct label inside a code fence therefore failed the strict check.
 
-Both MLX runs explicitly supplied the saved system prompts. The before and after runs had identical requests and suite hashes.
+Both first-run evaluations explicitly supplied the saved system prompts. The before and after runs had identical requests and suite hashes.
 
 The general system prompt was `You are Dolphin, a helpful AI assistant.` The classification system prompt, allowed labels, and all messages are retained in the suite and raw results.
 
-## Training configuration
+## Run 001: training configuration
 
 | Setting | Value |
 | --- | --- |
@@ -58,7 +58,7 @@ The general system prompt was `You are Dolphin, a helpful AI assistant.` The cla
 
 Training took 472.68 seconds, approximately 7.9 minutes. Reported peak MLX memory was about 6.20 GB. Final adapter size was 20,983,592 bytes. These are measurements from this machine and run.
 
-## Measured results
+## Run 001: measured results
 
 | Metric | MLX before | MLX after |
 | --- | ---: | ---: |
@@ -68,7 +68,7 @@ Training took 472.68 seconds, approximately 7.9 minutes. Reported peak MLX memor
 | Allowed schema and label | 273 / 297 | 246 / 297 |
 | Request errors | 0 | 0 |
 
-The adapter gained 29 previously failing classifications but lost 78 previously passing ones, for a net loss of 49. Its JSON became consistently parseable while its label choices and allowed-label compliance worsened.
+The first adapter corrected 29 answers the base got wrong, but got 78 previously correct answers wrong: a net loss of 49 correct answers. Its JSON became consistently parseable while its label choices and allowed-label compliance worsened.
 
 The three general questions covered a Python dictionary explanation, simple arithmetic, and rewriting a customer message. The base answers were coherent. All three adapter answers became repetitive and unusable. Three probes establish a failure on those examples, not a broad numerical score of general capabilities.
 
@@ -105,7 +105,7 @@ This diagnosis motivated a fresh adapter at learning rate 1e-5, with generated v
 
 The first run and its diagnostics are preserved above. The lower-learning-rate follow-up is recorded below. A single seed, synthetic public source data, potentially ambiguous labels, strict formatting rules, and a small general probe set limit how far these results can be generalized.
 
-## Evidence files
+## Run 001: evidence files
 
 | Evidence | File |
 | --- | --- |
@@ -173,11 +173,11 @@ After selecting step 450, the exported adapter was reloaded in a separate proces
 | Parseable JSON | 293 / 297 | 297 / 297 | 297 / 297 |
 | Allowed schema and label | 273 / 297 | 246 / 297 | 295 / 297 |
 
-Adapter 002 gained 62 base-model failures and lost 8 base-model successes: a net gain of 54 classifications, or **18.18 percentage points over the base**. There were no request errors. The three general answers were coherent: a valid dictionary explanation and example, correct arithmetic (8 euro change), and a polite rewrite within the requested 30-word limit. This limited check does not establish broad preservation of the base model's general abilities.
+Adapter 002 corrected 62 answers the base got wrong, but got 8 previously correct answers wrong: a net gain of 54 correct answers, or **18.18 percentage points over the base**. There were no request errors. The three general answers were coherent: a valid dictionary explanation and example, correct arithmetic (8 euro change), and a polite rewrite within the requested 30-word limit. This limited check does not establish broad preservation of the base model's general abilities.
 
 The final suite hash, every conversation and generation setting, and the selected adapter checksum were verified against the recorded base evaluation and selected checkpoint. The relative versus absolute model identifiers resolve to the same preserved directory. All 297 strict classification scores were independently recomputed from the final responses.
 
-The result supports the lower-rate, validation-selected recipe for this dataset and model. It does not prove that `0.00001` is optimal, isolate all effects of checkpoint selection, or establish performance across seeds and other tasks. The next useful improvement would target remaining intent confusions using validation data and a new unseen evaluation set before further tuning against these results.
+The result supports using the lower learning rate and selecting a checkpoint with validation data for this dataset and model. It does not prove that `0.00001` is optimal, isolate all effects of checkpoint selection, or establish performance across seeds and other tasks. The next useful improvement would target remaining intent confusions using validation data and a new unseen evaluation set before further tuning against these results.
 
 Evidence: [comparison and checks](../results/training-002-comparison.json), [raw final result](../results/20261028T115822561383Z.json), [readable responses and mismatches](../results/20261028T115822561383Z.txt).
 

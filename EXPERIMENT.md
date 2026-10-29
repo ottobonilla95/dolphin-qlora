@@ -62,10 +62,10 @@ Checkpoint selection was complete before this evaluation. Each model answered th
 | --- | ---: | ---: | ---: |
 | Correct classifications | 210/297 | 161/297 | **264/297** |
 | Accuracy | 70.71% | 54.21% | **88.89%** |
-| Allowed schema and label | 273/297 | 246/297 | **295/297** |
+| Required JSON format and allowed label | 273/297 | 246/297 | **295/297** |
 | Parseable JSON | 293/297 | 297/297 | **297/297** |
 
-The selected adapter fixed **62** base-model failures and lost **8** base-model successes: **54 more correct answers**, a gain of **18.18 percentage points**. The three original general probes were coherent again, including the correct arithmetic answer.
+The selected adapter corrected **62** answers the base got wrong, but also got **8** previously correct answers wrong: a net gain of **54 correct answers**, or **18.18 percentage points**. The three original general questions received coherent answers, including the correct arithmetic answer.
 
 ## What the results show
 
@@ -77,6 +77,7 @@ One seed, public synthetic data, and a previously used final suite limit the con
 
 | Want to inspect… | Open… |
 | --- | --- |
+| What the scores mean and which errors remain | [Results guide](results/README.md) |
 | Every final answer and mismatch | [Readable predictions](results/20261028T115822561383Z.txt) |
 | Final scores, gained/lost cases, integrity checks | [Run 002 comparison](results/training-002-comparison.json) |
 | The validation curve's raw answers | [Checkpoint monitor](experiments/training-002-lr1e5/monitor.json) |
